@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Liveware — a living system, test it yourself</title>
-<meta name="description" content="Liveware is one public page where you verify a whole living software system in your own browser in about ten minutes: plant a signed seed that grows it, attack it and watch every refusal named, race its LIGHT compression against gzip, zstd and brotli, and open a second tab to see two nodes mesh. Every claim is a button, every number has a baseline, and GitHub's runner reproduces the same receipts.">
+<title>Liveware — software that's alive, prove it yourself</title>
+<meta name="description" content="Liveware is one page where you verify a whole living software system in your own browser: a signed seed grows it, it defends itself, compresses losslessly, and meshes with a second tab — every claim a button, every button a receipt, and GitHub's runner reproduces the same answers. Nothing you run leaves your device.">
 <link rel="stylesheet" href="page/app.css">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='5' fill='%2338ffc6'/%3E%3Cg stroke='%232de0ff' stroke-width='1.5' fill='none'%3E%3Cpath d='M16 11V3M16 21v8M11 16H3M21 16h8M12 12 6 6M20 12l6-6M12 20l-6 6M20 20l6 6'/%3E%3C/g%3E%3C/svg%3E">
@@ -14,6 +14,11 @@
 <div class="boot" id="boot">Growing the organism… <noscript>Liveware needs JavaScript modules.</noscript></div>
 <canvas id="myc" aria-hidden="true"></canvas>
 <div class="veil" aria-hidden="true"></div>
+<svg class="dgdefs" aria-hidden="true"><defs>
+  <marker id="aHd" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z"/></marker>
+  <marker id="aGd" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z"/></marker>
+  <marker id="aBd" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z"/></marker>
+</defs></svg>
 
 <header class="top"><div class="wrap brandbar">
   <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="5" fill="#38ffc6"/><g stroke="#2de0ff" stroke-width="1.5" fill="none"><path d="M16 11V3M16 21v8M11 16H3M21 16h8M12 12 6 6M20 12l6-6M12 20l-6 6M20 20l6 6"/></g></svg>
@@ -22,103 +27,186 @@
 </div></header>
 
 <nav class="tabs"><div class="in wrap" id="tabs">
-  <a href="#hero">Top</a><a href="#t5">Compression</a><a href="#t4">Attack it</a><a href="#t1">The seed</a><a href="#t6">The mesh</a><a href="#how">How the proof works</a><a href="#more">More</a>
+  <a href="#hero">Top</a><a href="#t5">Compression</a><a href="#t1">The seed</a><a href="#t4">Attack it</a><a href="#t6">The mesh</a><a href="#wave2">Wave 2</a><a href="#how-it-works">How it works</a><a href="#how">The proof</a><a href="#business">For business</a><a href="#faq">FAQ</a>
 </div></nav>
 
 <main class="wrap">
 
 <section id="hero" class="hero">
-  <h2>A <span class="live">living</span> system.<br>Try to break it.</h2>
-  <p class="lede">Liveware is one page that grows a software organism in your browser, defends itself, and proves everything it does. Don't trust us — run it.</p>
-  <p class="sub">Plant a signed seed that grows the system and reproduces only verified copies. Attack it with forgeries, replays and a mutating swarm and watch every refusal get named. Race its compression against gzip, zstd and brotli on real files. Open a second tab and watch two nodes mesh. Every claim here is a button; every number has a baseline; GitHub's own runner reproduces the same receipts.</p>
+  <p class="eyebrow">LIVEWARE</p>
+  <h2>Software that's <span class="live">alive</span>.<br>Prove it yourself.</h2>
+  <p class="lede">One page. One living system. It grows from a seed, remembers, defends itself, improves only when it can prove it, and shows its work in receipts you can re-run — all in your browser. Nothing sent anywhere.</p>
   <div class="cta">
-    <button class="btn go" id="runall">Run all tests</button>
-    <a class="btn ghost" href="#t5">See the compression race</a>
+    <button class="btn go" id="runall">Run every test</button>
+    <a class="btn ghost" href="#t4">Try to break it</a>
   </div>
-  <p class="runline" id="capline">detecting what your browser can run…</p>
-  <div class="cap" id="caps"></div>
+  <p class="runline">Every claim on this page is a button. Every button gives you a receipt. GitHub's servers run the same tests and get the same answers.</p>
 </section>
 
-<div class="wrap" style="padding:0"><div class="board" id="board"></div></div>
+<p class="oneliner">The AI industry runs on <b>“trust us.”</b> Liveware runs on <span class="brk">“don't trust us. Break it.”</span></p>
+
+<div class="wrap" style="padding:0">
+  <p class="sectlabel" style="margin-top:34px"><b>Your run, live.</b> Green means it passed on your machine, and each receipt should match the expected hash. If anything doesn't, it shows here — never hidden.</p>
+  <div class="board" id="board"></div>
+</div>
 
 <section id="t5">
-  <h3>Compression, against real baselines</h3>
-  <p class="claim">LIGHT is the estate's lossless codec. Here it compresses real files beside gzip, zstd and brotli — and decompresses back byte-for-byte. The featured test, because it is the easiest to check and the hardest to fake.</p>
+  <h3>Watch it race the industry standard <span class="tag proven">PROVEN · receipt</span></h3>
+  <p class="claim">Pick a file, or drop in your own. Liveware's LIGHT compression goes head to head with gzip, zstd and brotli — live, on your machine. Then it unpacks back to the exact original, byte for byte, and proves it with matching fingerprints.</p>
   <div class="panel">
     <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:14px">
       <select id="t5pick" class="btn ghost" aria-label="Pick a sample"></select>
-      <button class="btn go" id="t5run">Run the race</button>
+      <button class="btn go" id="t5run">Start the race</button>
       <span class="pill" id="t5rt"></span>
     </div>
     <div class="race" id="t5race"></div>
     <div id="t5round" class="rhash"></div>
   </div>
   <div class="panel">
-    <div class="scroll"><table id="t5table"><thead><tr><th>Sample</th><th class="num">Original</th><th class="num">LIGHT</th><th class="num">gzip</th><th class="num">zstd</th><th class="num">brotli</th><th>Round-trip</th></tr></thead><tbody></tbody></table></div>
+    <b>Every data type. Every result. Including where we lose.</b>
+    <div class="scroll" style="margin-top:12px"><table id="t5table"><thead><tr><th>Sample</th><th class="num">Original</th><th class="num">LIGHT</th><th class="num">gzip</th><th class="num">zstd</th><th class="num">brotli</th><th>Round-trip</th></tr></thead><tbody></tbody></table></div>
     <p class="scope" id="t5head"></p>
+    <p class="out" style="margin:10px 0 0">Big wins on structured data like agent logs and memory. Smaller wins on prose. Already-compressed files barely move, for anyone. We show all of it, because the honest table is the one you can believe.</p>
+  </div>
+  <div class="panel">
+    <b>From the live estate</b>
+    <p class="rhash" id="t5realworld" style="margin-top:8px">measuring…</p>
   </div>
   <div class="panel">
     <b>Your own file</b> <span class="out">— compressed locally, never uploaded, added to the table.</span>
-    <div class="drop" id="t5drop" tabindex="0" role="button">Drop a file here, or click to choose <input type="file" id="t5file" hidden></div>
+    <div class="drop" id="t5drop" tabindex="0" role="button">Drop any file. It never leaves your device. <input type="file" id="t5file" hidden></div>
   </div>
   <div class="panel" id="t5receipt"></div>
-  <p class="scope"><b>What this does not prove:</b> that LIGHT wins on every kind of data (shown per type), or that it is fast — it is a context-mixing coder, slower than gzip and zstd, and the time is shown.</p>
-</section>
-
-<section id="t4">
-  <h3>Attack it</h3>
-  <p class="claim">A door stands in front of a deliberately naive core that will do whatever any message tells it. Throw forgeries, replays, foreign payloads, fuzz and a mutating swarm at it. An independent referee counts every body that reaches the core it should not — a breach.</p>
-  <div class="panel">
-    <div class="counter">
-      <div><div class="n" id="t4att">0</div><div class="lab">ATTEMPTS</div></div>
-      <div><div class="n bad0" id="t4brk">0</div><div class="lab">BREACHES</div></div>
-      <div><div class="n" id="t4del">0</div><div class="lab">GENUINE DELIVERED</div></div>
-    </div>
-    <div class="attacks" id="t4buttons"></div>
-    <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;align-items:center">
-      <button class="btn go" id="t4all">Run every attack + 10,000 fuzz + the swarm</button>
-      <label class="pill">fuzz <input id="t4n" type="number" value="10000" min="100" max="100000" style="width:90px;background:transparent;border:none;color:var(--spore);font:inherit"></label>
-    </div>
-    <div class="families" id="t4fams"></div>
-    <div class="feed" id="t4feed"></div>
-  </div>
-  <div class="panel" id="t4receipt"></div>
-  <p class="scope"><b>What this does not prove:</b> safety against a stolen signing key, a compromised host or browser, or physical and social attacks. Those are out of scope and stated.</p>
+  <p class="prove-line"><span class="p">Proves:</span> a compact, lossless codec that beats the standard tools on real data and restores byte-for-byte. <span class="d">Doesn't claim:</span> that LIGHT wins on every kind of data (shown per type), or that it is fast — it's a context-mixing coder, slower than gzip and zstd, and the time is shown.</p>
 </section>
 
 <section id="t1">
-  <h3>Plant the seed</h3>
-  <p class="claim">A seed is a small signed file that grows the whole system. It checks its own signature and every block's hash before a line runs, reproduces a byte-identical copy of itself, and refuses to grow if a single byte is changed.</p>
+  <h3>A whole system grows from one small file <span class="tag proven">PROVEN · receipt</span></h3>
+  <p class="claim">Plant the seed. Liveware checks its signature, then grows the full working system right here in your browser. The system writes out a perfect signed copy of itself. Change one byte and it refuses to grow.</p>
   <div class="panel">
     <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px">
-      <button class="btn go" id="t1grow">Germinate the seed</button>
-      <button class="btn ghost" id="t1off" disabled>Reproduce it</button>
-      <button class="btn ghost" id="t1tamper" disabled>Tamper every byte</button>
+      <button class="btn go" id="t1grow">Plant the seed</button>
+      <button class="btn ghost" id="t1off" disabled>Make it copy itself</button>
+      <button class="btn ghost" id="t1tamper" disabled>Tamper one byte</button>
     </div>
     <div class="lamps" id="t1lamps"></div>
     <div id="t1out" class="rhash"></div>
   </div>
   <div class="panel" id="t1receipt"></div>
-  <p class="scope"><b>What this does not prove:</b> autonomous spread — by design it does not copy itself anywhere; copying is your click. And whoever holds the signing key can sign a new seed.</p>
+  <p class="prove-line"><span class="p">Proves:</span> it reproduces, and only verified copies live. <span class="d">Doesn't claim:</span> it never spreads on its own — every copy is your choice, and whoever holds the signing key can sign a new seed.</p>
+</section>
+
+<section id="t4">
+  <h3>Attack it. We'll show you every punch it stops <span class="tag proven">PROVEN · receipt</span></h3>
+  <p class="claim">Forged signatures. Replayed messages. Poisoned files. Oversized inputs. Ten thousand random attacks. A swarm that changes its shape every shot. Liveware checks everything before it reads anything, names the exact check that stopped each attack, and recognises repeat offenders on sight — and a genuine signed message still gets straight through, so you know it isn't just refusing everything.</p>
+  <div class="panel">
+    <div class="counter">
+      <div><div class="n" id="t4att">0</div><div class="lab">ATTACKS</div></div>
+      <div><div class="n bad0" id="t4brk">0</div><div class="lab">GOT THROUGH</div></div>
+      <div><div class="n" id="t4del">0</div><div class="lab">GENUINE DELIVERED</div></div>
+    </div>
+    <div class="attacks" id="t4buttons"></div>
+    <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+      <button class="btn go" id="t4all">Throw the classics + 10,000 random + the swarm</button>
+      <label class="pill">random attacks <input id="t4n" type="number" value="10000" min="100" max="100000" style="width:90px;background:transparent;border:none;color:var(--spore);font:inherit"></label>
+    </div>
+    <div class="families" id="t4fams"></div>
+    <div class="feed" id="t4feed"></div>
+  </div>
+  <div class="panel" id="t4receipt"></div>
+  <p class="prove-line"><span class="p">Proves:</span> defence that learns, by structure — it gets harder to fool the more you hit it. <span class="d">Doesn't claim:</span> protection if someone steals your keys or your device. That's a different layer.</p>
 </section>
 
 <section id="t6">
-  <h3>Open a second tab</h3>
-  <p class="claim">Two instances of this page become peers: they find each other, pin each other's key, share one document that stays consistent, hand a task across, and refuse a forged peer. No server in the middle.</p>
+  <h3>Open a second tab. Watch them connect <span class="tag proven">PROVEN · receipt</span></h3>
+  <p class="claim">Two living copies find each other directly, with no server in the middle. They share state, hand work across, and stay in sync even when you edit both at once. Inject a fake peer and watch it get shut out.</p>
   <div class="panel">
     <div class="nodes" id="t6nodes">
       <div class="node" id="t6self"><div class="ring"><span>this tab</span></div><div class="out">waiting</div></div>
       <div class="node" id="t6peer"><div class="ring"><span>peer</span></div><div class="out">no peer yet</div></div>
     </div>
     <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
-      <button class="btn go" id="t6open">Open a second tab</button>
-      <button class="btn ghost" id="t6task" disabled>Hand a task across</button>
-      <button class="btn ghost" id="t6forge" disabled>Inject a forged peer</button>
+      <button class="btn go" id="t6open">Open a second node</button>
+      <button class="btn ghost" id="t6task" disabled>Hand over a task</button>
+      <button class="btn ghost" id="t6forge" disabled>Send a fake peer</button>
     </div>
     <div id="t6out" class="rhash" style="margin-top:14px"></div>
   </div>
   <div class="panel" id="t6receipt"></div>
-  <p class="scope"><b>What this does not prove:</b> a second <em>device</em> without a relay (same-browser tabs here), or large-scale mesh performance. First contact is trust-on-first-use.</p>
+  <p class="prove-line"><span class="p">Proves:</span> a living network with nobody in charge and nothing to switch off. <span class="d">Doesn't claim:</span> a second <em>device</em> without a relay (same-browser tabs here), or large-scale mesh performance. First contact is trust-on-first-use.</p>
+</section>
+
+<section id="wave2">
+  <h3>Wave 2 — being built in the open</h3>
+  <p class="sectlabel">These are the next five organs. Their design is real and each is a sealed test elsewhere in the estate — but they do not have a live button on <b>this</b> page yet, so there is no receipt to show, and we will not paint a green we can't hand you. Each one lights up here, with its own re-runnable receipt, the moment its sealed test lands — exactly like the four above. This is the whole point: a claim with no button lives here until it has one.</p>
+  <div class="wave2 hiw">
+
+    <div class="organ panel">
+      <h4>It gets smarter — but only when it can prove it <span class="tag build">IN BUILD</span></h4>
+      <p>Each new generation has to beat the last on data it has never seen. If it can't, it's thrown out, right in front of you. Then a final exam it never trained on checks the gains are real.</p>
+      <p class="prove-line"><span class="p">Will prove:</span> self-improvement that can fail, with the failures on show. <span class="d">Won't claim:</span> unlimited or general intelligence.</p>
+      <p class="inbuild">No button yet → no receipt. Lands here as a live, held-out-data test when its gate passes.</p>
+    </div>
+
+    <div class="organ panel">
+      <h4>Close the tab. Come back. It remembers <span class="tag build">IN BUILD</span></h4>
+      <p>Tell it things, restart your browser, and it's all still there with a matching fingerprint. Ask a question in your own words and it finds what it knows by meaning, with where every memory came from. Change one stored byte and it knows. Export the whole memory, open a fresh tab, and it comes back exactly as it was.</p>
+      <p class="prove-line"><span class="p">Will prove:</span> memory that lasts, recalls by meaning, and can't be quietly altered. <span class="d">Won't claim:</span> more than the stored, signed record holds.</p>
+      <p class="inbuild">No button yet → no receipt. Lands here when the persistent, tamper-evident vault passes its sealed test.</p>
+    </div>
+
+    <div class="organ panel">
+      <h4>Code, software and AI, working as one <span class="tag build">IN BUILD</span></h4>
+      <p>Paste in a messy email, invoice or note. An AI on your graphics card reads it, strict checks make sure what it pulled out is valid, a verified core makes the decision and shows its reasoning or says “I don't know,” the AI explains it in plain English, and it's saved to memory with a receipt — arriving in your second tab. Run it again: the wording may change, the decision never does.</p>
+      <p class="prove-line"><span class="p">Will prove:</span> AI that can't make things up where it matters, running entirely on your machine. <span class="d">Won't claim:</span> anything the verified core didn't decide.</p>
+      <p class="inbuild">No button yet → no receipt. Needs WebGPU; skipped and marked where absent, never faked.</p>
+    </div>
+
+    <div class="organ panel">
+      <h4>Aligned by structure — we switch the safety off so you can see it work <span class="tag build">IN BUILD</span></h4>
+      <p>Seven ways agents go wrong: making things up, using tools nobody approved, marking their own homework, claiming success without evidence, overstating results, acting on big decisions alone, inflating their own scores. Watch each get blocked. Then flip the gates off and watch the bad behaviour happen. Flip it back — that's how you know it's the structure doing the work, not luck.</p>
+      <p class="prove-line"><span class="p">Will prove:</span> these specific failures are blocked and caught, with a gates-off control. <span class="d">Won't claim:</span> that alignment is solved, or that the system has values.</p>
+      <p class="inbuild">No button yet → no receipt. Lands here with its gates-on / gates-off control run.</p>
+    </div>
+
+    <div class="organ panel">
+      <h4>The same job, done faster on your own machine <span class="tag build">IN BUILD</span></h4>
+      <p>Runs an AI job twice on your graphics card: once from scratch, once reusing what it already worked out. See the work saved and the time saved, measured on your hardware — its precise definition written before the test.</p>
+      <p class="prove-line"><span class="p">Will prove:</span> measured reuse of prior work, on your GPU. <span class="d">Won't claim:</span> a speed-up where your browser has no WebGPU — there it's skipped and marked.</p>
+      <p class="inbuild">No button yet → no receipt. Lands here when the measurement is defined and sealed.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="how-it-works">
+  <h3>How it works</h3>
+  <p class="sectlabel">Five moves, one loop. A signed <b>seed</b> grows the system; a <b>door</b> on the raw bytes defends a deliberately naive core; <b>LIGHT</b> keeps everything small and lossless; a <b>mesh</b> lets two copies find each other with no server; and every step writes a <b>receipt</b> anyone can re-run. The organism grows, defends, remembers, improves, and proves — then reproduces a verified copy of itself.</p>
+  <div class="panel">
+    <svg class="dg" viewBox="0 0 720 150" role="img" aria-label="The living loop: seed grows the system, which defends, compresses, meshes and proves, then reproduces the seed.">
+      <g text-anchor="middle">
+        <rect class="seg s" x="12" y="54" width="104" height="42" rx="9"/><text x="64" y="72" class="t-on">SEED</text><text x="64" y="87" class="t-sm">signed file</text>
+        <rect class="box" x="156" y="54" width="118" height="42" rx="9"/><text x="215" y="72" class="t-ink">GROWS</text><text x="215" y="87" class="t-sm">verifies every block</text>
+        <rect class="box" x="314" y="30" width="108" height="34" rx="9"/><text x="368" y="51" class="t-ink">DEFENDS</text>
+        <rect class="box" x="314" y="86" width="108" height="34" rx="9"/><text x="368" y="107" class="t-ink">COMPRESSES</text>
+        <rect class="box" x="462" y="30" width="108" height="34" rx="9"/><text x="516" y="51" class="t-ink">MESHES</text>
+        <rect class="box lit" x="462" y="86" width="108" height="34" rx="9"/><text x="516" y="107" class="t-ink">PROVES</text>
+        <rect class="seg s" x="610" y="54" width="98" height="42" rx="9"/><text x="659" y="72" class="t-on">RECEIPT</text><text x="659" y="87" class="t-sm">re-runnable</text>
+      </g>
+      <path class="edge good" d="M116 75 H152"/>
+      <path class="edge" d="M274 68 H310"/><path class="edge" d="M274 82 H310"/>
+      <path class="edge" d="M422 47 H458"/><path class="edge" d="M422 103 H458"/>
+      <path class="edge good" d="M570 47 H596 V70 H606"/><path class="edge good" d="M570 103 H596 V80 H606"/>
+      <path class="edge good" d="M659 96 V128 H64 V100" opacity="0.65"/>
+      <text x="360" y="145" text-anchor="middle" class="t-sm">reproduces a verified copy of the seed — only your click copies it</text>
+    </svg>
+  </div>
+  <div class="grid2" style="margin-top:16px">
+    <div class="panel"><b>The seed</b><p class="out">Magic, length, a LIGHT-encoded genome (every block pinned by SHA-256), a seal, and an Ed25519 signature over everything but itself. It checks magic, length, decode, shape, seal, signature, then each block's hash — only then does a block load.</p></div>
+    <div class="panel"><b>The door &amp; immune system</b><p class="out">A signed-packet door checks size, magic, version, length, dictionary, sender, signature and replay counter on the raw bytes before the body is decoded. Every refusal mints two antibodies: the exact bytes, and their shape.</p></div>
+    <div class="panel"><b>LIGHT compression</b><p class="out">A context-mixing arithmetic coder — seven models blended by weights that learn as they go, integer-only so encoder and decoder agree bit for bit on every engine, and lossless back to the original.</p></div>
+    <div class="panel"><b>The mesh</b><p class="out">Each tab has its own key; they meet over the browser's channel (trust-on-first-use pins the key), then every message is a signed LIGHT packet checked against that key and a replay counter, with one shared document merged by a conflict-free law.</p></div>
+  </div>
 </section>
 
 <section id="how">
@@ -126,31 +214,63 @@
   <div class="grid2">
     <div class="panel"><b>Sealed claims</b><p class="out">The pass criteria were written and committed before any code that measures them. The measurement refuses to run if the sealed file changed, and the commit is on this page.</p><p class="rhash" id="sealat"></p></div>
     <div class="panel"><b>Receipts</b><p class="out">Each test writes a record of its inputs, outputs and verdict; its id is the SHA-256 of that record. Your run's id must match the expected id shown beside each test.</p></div>
-    <div class="panel"><b>CI reproduces it</b><p class="out">GitHub Actions runs the same four tests headlessly on every change and publishes the receipts. A third party reproduces the result, not just us.</p></div>
+    <div class="panel"><b>CI reproduces it</b><p class="out">GitHub Actions runs the same tests headlessly on every change and publishes the receipts. A third party reproduces the result, not just us.</p></div>
     <div class="panel"><b>Mutation testing</b><p class="out">The witness plants a bug in every kernel and fails the build unless a test catches it — proof the tests are real, not decoration. Failures are kept on the record, never hidden.</p></div>
   </div>
   <div class="panel" style="margin-top:16px">
-    <b>Re-run it yourself</b>
+    <b>Don't take the page's word for it either.</b>
+    <p class="out" style="margin:8px 0 12px">Clone the repo and run the same tests on your own machine, or check the public runs on GitHub. The pass rules were written and locked before any code existed. <span id="claimscommit"></span></p>
     <pre>git clone https://github.com/sjgant80-hub/liveware
 cd liveware
 node --test test/*.test.mjs        # the kernels
-node tools/measure.mjs --check     # re-derive the four receipts, byte for byte</pre>
+node tools/measure.mjs --check     # re-derive the receipts, byte for byte</pre>
   </div>
 </section>
 
-<section id="more">
-  <h3>More</h3>
-  <div class="grid2">
-    <div class="panel"><b>What we haven't proven yet</b><p class="out">Wave 2, each added only when its own sealed test passes: gated self-improvement, persistent memory, KV-cache recycling, structural alignment (shown as testable properties, never "solved"), and the organism thinking end to end with an in-browser language model. Geometric compute waits for a definition precise enough to test.</p></div>
-    <div class="panel"><b>How it works, piece by piece</b><p class="out">Every component in plain English — what it is, how it works, where to test it, why it matters — is in the explainer.</p><p><a class="link" href="EXPLAINER.md">EXPLAINER.md</a> · <a class="link" href="CLAIMS.md">the sealed claims</a></p></div>
+<section id="browser">
+  <h3>What your browser can run</h3>
+  <p class="sectlabel">We check what your machine supports. Anything it can't run is skipped and marked — never faked.</p>
+  <div class="panel">
+    <p class="runline" id="capline" style="margin-top:0">detecting what your browser can run…</p>
+    <div class="cap" id="caps"></div>
+  </div>
+</section>
+
+<section id="business">
+  <h3>Want this running on your business?</h3>
+  <p class="sectlabel">Liveware grows into a company one process at a time.</p>
+  <div class="panel biz">
+    <ol class="steps">
+      <li>Pick <b>one</b> painful process.</li>
+      <li>We agree <b>how you'll measure</b> it.</li>
+      <li>We build it on <b>your own hardware</b>.</li>
+      <li>You get a <b>signed receipt</b> showing it beats what you use now.</li>
+    </ol>
+    <p class="out" style="margin:0 0 18px">If it doesn't beat what you use now, you don't pay.</p>
+    <div class="cta bizcta" style="justify-content:center">
+      <a class="btn go" href="#how-it-works">Read the blueprint</a>
+      <a class="btn ghost" href="#how">See a signed baseline</a>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <h3>FAQ</h3>
+  <div class="faq">
+    <details><summary>Is this real or a demo?</summary><p>Every claim on this page runs live in your browser and gives you a receipt you can check. The same tests run publicly on GitHub and get the same answers.</p></details>
+    <details><summary>Does any of my data leave my device?</summary><p>No. The page works offline once loaded. Files you drop in are processed locally and never uploaded.</p></details>
+    <details><summary>Why do you show the tests that fail?</summary><p>Because a record that includes its losses is one you can believe. The compression rows where LIGHT barely wins stay on the table; any failed claim stays on the page.</p></details>
+    <details><summary>Do I need a powerful computer?</summary><p>Most tests run on any modern browser, on plain CPU. The AI tests (Wave 2) need a browser with WebGPU; if yours doesn't have it, they're skipped and marked.</p></details>
+    <details><summary>Can I use this for my company?</summary><p>Yes. Start with one process and a signed baseline — see “For business” above.</p></details>
+    <details><summary>Is it open source?</summary><p>The core is open; see the repository for licences and credits. Code is MIT.</p></details>
   </div>
 </section>
 
 </main>
 
 <footer><div class="wrap">
-  <p><b>LIVEWARE</b> — software that grows, defends itself, and proves everything it does. One page, every claim a button.</p>
-  <p>LIGHT language and the Konomi architecture: Thomas Frumkin. Immune-system and behavioural ideas draw on GEP, Gary W. Floyd (CC BY 4.0), where used. Built by Simon Gant, AI-Native Solutions. Code MIT.</p>
+  <p><b>LIVEWARE</b> — software that grows, defends itself, and proves everything it does.</p>
+  <p>Konomi architecture and the LIGHT language: Thomas Frumkin. GEP and Behavioural Entropy Signatures: Gary W. Floyd (CC BY 4.0), where used. Built by Simon Gant, AI-Native Solutions. Code MIT.</p>
   <p id="offline" class="out"></p>
 </div></footer>
 

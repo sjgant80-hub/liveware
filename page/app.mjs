@@ -79,6 +79,7 @@ const ratioStr = (x) => (x != null ? x.toFixed(2) + '×' : '—');
 const getJSON = (p) => fetch(p, { cache: 'no-cache' }).then((r) => (r.ok ? r.json() : null)).catch(() => null);
 const [expected, detail, manifest] = await Promise.all([getJSON('receipts/wave1.json'), getJSON('receipts/wave1-detail.json'), getJSON('samples/MANIFEST.json')]);
 $('sealat').innerHTML = expected && expected.sealedAt ? 'Sealed at commit <b>' + expected.sealedAt.slice(0, 10) + '</b>' : '';
+if ($('claimscommit') && expected && expected.sealedAt) $('claimscommit').innerHTML = 'Locked at commit <b>' + expected.sealedAt.slice(0, 10) + '</b>.';
 const expId = (t) => (expected && expected[t] ? expected[t].id : null);
 
 // ── scoreboard ───────────────────────────────────────────────────────────────────────────────
@@ -150,6 +151,12 @@ function renderT5Table() {
   }
   const h = detail && detail.T5 && detail.T5.headline;
   if (h) $('t5head').innerHTML = '<b>Honest range:</b> LIGHT runs from ' + ratioStr(h.lowLight) + ' on the ' + h.lowType + ' (gzip ' + ratioStr(h.lowGzip) + ') to ' + ratioStr(h.highLight) + ' on the ' + h.highType + ' (gzip ' + ratioStr(h.highGzip) + '). Every row is measured; the best of the four is lit.';
+  const rw = (type) => { const r = rows.find((x) => x.type === type); return r ? r.light.ratio : null; };
+  const log = rw('structured JSON log'), cat = rw('structured catalogue');
+  if ($('t5realworld')) $('t5realworld').innerHTML =
+    'An AI agent’s answer log packs ' + (log ? '<b>' + ratioStr(log) + '</b>' : '—') +
+    ' smaller; the estate’s public repo catalogue, ' + (cat ? '<b>' + ratioStr(cat) + '</b>' : '—') +
+    ' — both restored byte-identical on unpack. Every number is pulled live from the table above.';
 }
 $('t5run').addEventListener('click', () => runRace($('t5pick').value));
 $('t5pick').addEventListener('change', () => runRace($('t5pick').value));
