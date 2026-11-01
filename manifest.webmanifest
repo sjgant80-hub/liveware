@@ -1,0 +1,14 @@
+{
+  "name": "Liveware — test it yourself",
+  "short_name": "Liveware",
+  "description": "A living software system you verify in your own browser: plant a signed seed, attack it, race its compression, mesh two tabs. Every claim a button.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#05070a",
+  "theme_color": "#05070a",
+  "icons": [
+    { "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' fill='%2305070a'/%3E%3Ccircle cx='96' cy='96' r='30' fill='%2338ffc6'/%3E%3Cg stroke='%232de0ff' stroke-width='8' fill='none'%3E%3Cpath d='M96 66V18M96 126v48M66 96H18M126 96h48M72 72 36 36M120 72l36-36M72 120l-36 36M120 120l36 36'/%3E%3C/g%3E%3C/svg%3E", "sizes": "192x192", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' fill='%2305070a'/%3E%3Ccircle cx='256' cy='256' r='80' fill='%2338ffc6'/%3E%3Cg stroke='%232de0ff' stroke-width='20' fill='none'%3E%3Cpath d='M256 176V48M256 336v128M176 256H48M336 256h128M192 192 96 96M320 192l96-96M192 320l-96 96M320 320l96 96'/%3E%3C/g%3E%3C/svg%3E", "sizes": "512x512", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

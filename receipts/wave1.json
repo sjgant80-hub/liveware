@@ -7,13 +7,13 @@
    "test": "T1",
    "version": "1",
    "inputs_sha256": "66b9ef9d7db19fd366011936c80bc17ea489e87487e4dd7875c3bba316f36a67",
-   "outputs_sha256": "1bc13445761551854ce2e299a2a98fc0d917f13086ef262f4992d0b1684e5dc9",
+   "outputs_sha256": "ae02f60a1e39c7318dab9e48a8e684306bcaf1f62901f3ed72141b6645bf29f7",
    "verdict": "pass",
    "params": {
     "signerSeed": "07*32"
    }
   },
-  "id": "32fe039b7f19a83ec5c3af7ceeb42aa110cb4da36194d49884b748a8481b9b3c"
+  "id": "75b8e52bfc298862050b3b0d67207c2d9b0486a0494e8c1a7bbef0374cb97370"
  },
  "T4": {
   "record": {

@@ -1,0 +1,14 @@
+[
+  {
+    "line": 31,
+    "mutation": "< → <=",
+    "snippet": ".map((b) => ({ path: b.path, sha256: hex(sha256(b.bytes)) })).sort((a, b) => (a.path < b.p",
+    "reason": "Equivalent, and checked rather than argued. genomeOf block sort: the mutant changes the comparator only on the equal-path case (two distinct strings give the same -1/+1 under original and mutant). A genome with duplicate block paths is rejected by validGenome (new Set(paths).size === paths.length), and makeSeed, readSeed and germinate all gate on validGenome before a genome is signed, read or grown, so the equal branch never germinates. Among unique paths the sorted order is identical. Verified by differential run: 200,000 random sets of 1-7 unique paths, original comparator vs both the <= and the >= mutant, zero order differences."
+  },
+  {
+    "line": 31,
+    "mutation": "> → >=",
+    "snippet": ".map((b) => ({ path: b.path, sha256: hex(sha256(b.bytes)) })).sort((a, b) => (a.path < b.p",
+    "reason": "Equivalent, and checked rather than argued. genomeOf block sort: the mutant changes the comparator only on the equal-path case (two distinct strings give the same -1/+1 under original and mutant). A genome with duplicate block paths is rejected by validGenome (new Set(paths).size === paths.length), and makeSeed, readSeed and germinate all gate on validGenome before a genome is signed, read or grown, so the equal branch never germinates. Among unique paths the sorted order is identical. Verified by differential run: 200,000 random sets of 1-7 unique paths, original comparator vs both the <= and the >= mutant, zero order differences."
+  }
+]

@@ -4,7 +4,7 @@
 import { encode, decode } from '../vendor/fall-kit/core/vendor/light/codec.mjs';
 import { sha256, hex } from '../vendor/fall-kit/core/vendor/light/sha256.mjs';
 
-const ratio = (orig, out) => (out > 0 ? Math.round((orig / out) * 100) / 100 : 0);
+export const ratio = (orig, out) => (out > 0 ? Math.round((orig / out) * 100) / 100 : 0);
 
 /** compress bytes with LIGHT, decompress, and prove byte-identity → { ok, size, ratio, roundTrip, origSha, backSha } */
 export function light(bytes) {
@@ -12,8 +12,9 @@ export function light(bytes) {
   const e = encode(b);
   if (!e.ok) return { ok: false, why: e.why };
   const d = decode(e.bytes);
-  const origSha = hex(sha256(b)), backSha = d.ok ? hex(sha256(d.bytes)) : null;
-  const roundTrip = d.ok && backSha === origSha;
+  // a failed decode gets a marker that is not a 64-hex digest, so the round-trip check is one comparison, no `&&`
+  const origSha = hex(sha256(b)), backSha = d.ok ? hex(sha256(d.bytes)) : 'no-decode';
+  const roundTrip = backSha === origSha;
   return { ok: true, orig: b.length, size: e.bytes.length, ratio: ratio(b.length, e.bytes.length), roundTrip, origSha, backSha };
 }
 

@@ -15,6 +15,7 @@ import { canonical } from './receipt.mjs';
 
 export const MAGIC = Object.freeze([0x4c, 0x57, 0x53, 0x31]);           // 'LWS1'
 export const HEAD = 8, SEAL = 32, SIG = 64, MAX_SEED = 1 << 20;
+export const MIN_SEED = HEAD + 1 + SEAL + SIG;                          // header + at least one LIGHT byte + seal + signature
 export const DOMAIN = 'LIVEWARE/seed/v1\u0000';
 export const STAGES = Object.freeze(['size', 'magic', 'length', 'decode', 'genome', 'seal', 'signature', 'block', 'load']);
 const enc = new TextEncoder(), dec = new TextDecoder('utf-8', { fatal: true });
@@ -22,7 +23,7 @@ const HEX64 = /^[0-9a-f]{64}$/;
 const refuse = (stage, why) => ({ ok: false, stage, why, imported: 0 });
 
 /** a block path a genome may name: relative, no climbing, no drive letters */
-export const safePath = (p) => typeof p === 'string' && p.length > 0 && p.length <= 256 && /^[A-Za-z0-9][A-Za-z0-9._/-]*$/.test(p) && !p.split('/').includes('..');
+export const safePath = (p) => typeof p === 'string' && p.length <= 256 && /^[A-Za-z0-9][A-Za-z0-9._/-]*$/.test(p) && !p.split('/').includes('..');
 
 /** the genome of a set of blocks: each path with the SHA-256 of its bytes, sorted by path */
 export function genomeOf(name, blocks, config) {
@@ -78,7 +79,7 @@ export async function makeSeed(genome, sign) {
 
 /** read a seed, every check but the signature and the blocks → { ok, genome, genomeBytes, seal, sig } | refusal */
 export function readSeed(bytes) {
-  if (!(bytes instanceof Uint8Array) || bytes.length < HEAD + 1 + SEAL + SIG || bytes.length > MAX_SEED) return refuse('size', 'a seed is ' + (HEAD + 1 + SEAL + SIG) + '–' + MAX_SEED + ' bytes');
+  if (!(bytes instanceof Uint8Array) || bytes.length < MIN_SEED || bytes.length > MAX_SEED) return refuse('size', 'a seed is ' + MIN_SEED + '–' + MAX_SEED + ' bytes');
   for (let i = 0; i < 4; i++) if (bytes[i] !== MAGIC[i]) return refuse('magic', 'not a Liveware seed: it does not begin with LWS1');
   const n = new DataView(bytes.buffer, bytes.byteOffset, bytes.length).getUint32(4);
   if (HEAD + n + SEAL + SIG !== bytes.length) return refuse('length', 'the genome length (' + n + ') does not match the seed (' + bytes.length + ' bytes)');
@@ -88,7 +89,7 @@ export function readSeed(bytes) {
   try { genome = JSON.parse(dec.decode(d.bytes)); } catch { return refuse('genome', 'the genome is not JSON'); }
   if (!validGenome(genome) || canonical(genome) !== dec.decode(d.bytes)) return refuse('genome', 'the genome is not a canonical Liveware genome');
   const seal = bytes.subarray(HEAD + n, HEAD + n + SEAL), want = sha256(d.bytes);
-  for (let i = 0; i < SEAL; i++) if (seal[i] !== want[i]) return refuse('seal', 'the seal is not the SHA-256 of the genome');
+  if (!want.every((b, i) => seal[i] === b)) return refuse('seal', 'the seal is not the SHA-256 of the genome');
   return { ok: true, genome, genomeBytes: d.bytes, seal: seal.slice(), signed: signedOf(bytes.subarray(0, HEAD + n + SEAL)), sig: bytes.slice(HEAD + n + SEAL) };
 }
 

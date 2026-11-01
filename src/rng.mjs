@@ -12,6 +12,6 @@ export function rng(seed) {
     return (t ^ (t >>> 14)) >>> 0;
   };
   const int = (n) => (Number.isSafeInteger(n) && n > 0 ? next() % n : 0);
-  const bytes = (n) => { const out = new Uint8Array(Number.isSafeInteger(n) && n > 0 ? n : 0); for (let i = 0; i < out.length; i++) out[i] = next() & 255; return out; };
+  const bytes = (n) => { const len = Math.max(0, Number.isSafeInteger(n) ? n : 0); const out = new Uint8Array(len); for (let i = 0; i < len; i++) out[i] = next() & 255; return out; };
   return { next, int, bytes };
 }

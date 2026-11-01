@@ -3,13 +3,14 @@
  "wave": 1,
  "sealedAt": "f33dcd154e7a87c8f2cb0ce167f8c4dcc7c62335",
  "T1": {
-  "id": "32fe039b7f19a83ec5c3af7ceeb42aa110cb4da36194d49884b748a8481b9b3c",
+  "id": "75b8e52bfc298862050b3b0d67207c2d9b0486a0494e8c1a7bbef0374cb97370",
   "verdict": "pass",
   "P1": true,
   "P2": true,
   "P3": true,
   "P4": true,
   "seedBytes": 338,
+  "blocks": 3,
   "tamperRefusals": {
    "magic": 4,
    "length": 4,
