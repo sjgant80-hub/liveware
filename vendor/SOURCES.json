@@ -1,0 +1,45 @@
+{
+ "kind": "liveware.vendor",
+ "v": 1,
+ "note": "Copied byte for byte from sjgant80-hub/fall-kit at the commit named (git show, not a working copy). Never edit a vendored file; re-vendor.",
+ "repo": "sjgant80-hub/fall-kit",
+ "commit": "9244d6128c7be0094c9d800acac0a9ee70ecdd97",
+ "files": [
+  {
+   "path": "vendor/fall-kit/core/vendor/light/codec.mjs",
+   "src": "core/vendor/light/codec.mjs",
+   "sha256": "4f018272a05989fe8fbd0f675e0460b35365710a174a88dbf628165ef21f431d",
+   "what": "LIGHT, the lossless context-mixing codec (Thomas Frumkin's LIGHT language)"
+  },
+  {
+   "path": "vendor/fall-kit/core/vendor/light/packet.mjs",
+   "src": "core/vendor/light/packet.mjs",
+   "sha256": "d565bdabdbfc063bf952d1e20cdb14c5564041667c60a560a56f930aff6e5245",
+   "what": "the LIGHT door: a signed packet, checked on raw bytes before its body is decoded"
+  },
+  {
+   "path": "vendor/fall-kit/core/vendor/light/sha256.mjs",
+   "src": "core/vendor/light/sha256.mjs",
+   "sha256": "cf60afffd36df071b277da214ed61a7b3f4923e443bfadb06656bb7da4756bc1",
+   "what": "SHA-256, pure"
+  },
+  {
+   "path": "vendor/fall-kit/core/vendor/sync/crdt.mjs",
+   "src": "core/vendor/sync/crdt.mjs",
+   "sha256": "992f47d8b805a2af0e8694e2d72066f6e42407cddc8f54acb47ce81cf9ac2b77",
+   "what": "the merge law: a last-writer-wins map over Lamport time"
+  },
+  {
+   "path": "vendor/fall-kit/core/antibody.mjs",
+   "src": "core/antibody.mjs",
+   "sha256": "cb507411787cc6bb07891acd24c5d9ee8de85b762706205154fe9ac1d6dd1514",
+   "what": "the immune system: exact and shape antibodies from every refusal"
+  },
+  {
+   "path": "vendor/fall-kit/core/identity.mjs",
+   "src": "core/identity.mjs",
+   "sha256": "429caa25bf0e104f6a664224d81fd8215d2f6c79aad3323a8acb476f85a3856e",
+   "what": "one Ed25519 key in every form the kernels take (WebCrypto)"
+  }
+ ]
+}

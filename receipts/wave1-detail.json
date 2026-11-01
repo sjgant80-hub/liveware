@@ -1,0 +1,229 @@
+{
+ "kind": "liveware.detail",
+ "wave": 1,
+ "sealedAt": "f33dcd154e7a87c8f2cb0ce167f8c4dcc7c62335",
+ "T1": {
+  "id": "32fe039b7f19a83ec5c3af7ceeb42aa110cb4da36194d49884b748a8481b9b3c",
+  "verdict": "pass",
+  "P1": true,
+  "P2": true,
+  "P3": true,
+  "P4": true,
+  "seedBytes": 338,
+  "tamperRefusals": {
+   "magic": 4,
+   "length": 4,
+   "decode": 230,
+   "signature": 68,
+   "seal": 32
+  }
+ },
+ "T4": {
+  "id": "24d8f269d2e7d4abebbc115edaf115ddbe125fa448ba9377065f6d61d18bcd0b",
+  "verdict": "pass",
+  "P1": true,
+  "P2": true,
+  "P3": true,
+  "P4": true,
+  "P5": true,
+  "breaches": 0,
+  "crashes": 0,
+  "delivered": 100,
+  "swarmRecognised": 999,
+  "exactRepeat": true,
+  "refusals": {
+   "forged signature": "signature",
+   "replay": "counter",
+   "tampered body": "signature",
+   "unpinned key": "sender",
+   "oversized": "size",
+   "foreign:sql": "size",
+   "foreign:script": "size",
+   "foreign:shell": "size",
+   "foreign:http": "size",
+   "foreign:json": "size",
+   "broken length": "size",
+   "schema escape": "schema"
+  }
+ },
+ "T5": {
+  "id": "6a36e47a4383bf5b533a4fe13455773e1ff376449019741722c5c6ef2f6a9aa3",
+  "verdict": "pass",
+  "P1": true,
+  "P2": true,
+  "P3": true,
+  "P4": true,
+  "headline": {
+   "lowType": "already-compressed image",
+   "lowLight": 1.31,
+   "lowGzip": 1.26,
+   "highType": "structured catalogue",
+   "highLight": 11.13,
+   "highGzip": 7.97
+  },
+  "rows": [
+   {
+    "type": "prose",
+    "orig": 439572,
+    "light": {
+     "size": 126543,
+     "ratio": 3.47
+    },
+    "gzip": {
+     "size": 172873,
+     "ratio": 2.54
+    },
+    "zstd": {
+     "size": 150943,
+     "ratio": 2.91
+    },
+    "brotli": {
+     "size": 144100,
+     "ratio": 3.05
+    },
+    "roundTrip": true
+   },
+   {
+    "type": "source code",
+    "orig": 15223,
+    "light": {
+     "size": 4790,
+     "ratio": 3.18
+    },
+    "gzip": {
+     "size": 5719,
+     "ratio": 2.66
+    },
+    "zstd": {
+     "size": 5526,
+     "ratio": 2.75
+    },
+    "brotli": {
+     "size": 4937,
+     "ratio": 3.08
+    },
+    "roundTrip": true
+   },
+   {
+    "type": "structured JSON log",
+    "orig": 169611,
+    "light": {
+     "size": 32604,
+     "ratio": 5.2
+    },
+    "gzip": {
+     "size": 45637,
+     "ratio": 3.72
+    },
+    "zstd": {
+     "size": 39248,
+     "ratio": 4.32
+    },
+    "brotli": {
+     "size": 36047,
+     "ratio": 4.71
+    },
+    "roundTrip": true
+   },
+   {
+    "type": "structured catalogue",
+    "orig": 357155,
+    "light": {
+     "size": 32091,
+     "ratio": 11.13
+    },
+    "gzip": {
+     "size": 44796,
+     "ratio": 7.97
+    },
+    "zstd": {
+     "size": 39952,
+     "ratio": 8.94
+    },
+    "brotli": {
+     "size": 36084,
+     "ratio": 9.9
+    },
+    "roundTrip": true
+   },
+   {
+    "type": "CSV",
+    "orig": 376689,
+    "light": {
+     "size": 105501,
+     "ratio": 3.57
+    },
+    "gzip": {
+     "size": 128733,
+     "ratio": 2.93
+    },
+    "zstd": {
+     "size": 118116,
+     "ratio": 3.19
+    },
+    "brotli": {
+     "size": 112209,
+     "ratio": 3.36
+    },
+    "roundTrip": true
+   },
+   {
+    "type": "already-compressed image",
+    "orig": 98495,
+    "light": {
+     "size": 75120,
+     "ratio": 1.31
+    },
+    "gzip": {
+     "size": 78445,
+     "ratio": 1.26
+    },
+    "zstd": {
+     "size": 76530,
+     "ratio": 1.29
+    },
+    "brotli": {
+     "size": 75386,
+     "ratio": 1.31
+    },
+    "roundTrip": true
+   },
+   {
+    "type": "tiny file (under 1 KB)",
+    "orig": 894,
+    "light": {
+     "size": 294,
+     "ratio": 3.04
+    },
+    "gzip": {
+     "size": 349,
+     "ratio": 2.56
+    },
+    "zstd": {
+     "size": 343,
+     "ratio": 2.61
+    },
+    "brotli": {
+     "size": 298,
+     "ratio": 3
+    },
+    "roundTrip": true
+   }
+  ]
+ },
+ "T6": {
+  "id": "7aca9c45157b888f8b9b74c13ed6f301d1e5347caf380a553c5d0324d12a41ca",
+  "verdict": "pass",
+  "P1": true,
+  "P2": true,
+  "P3": true,
+  "P4": true,
+  "state": {
+   "note": "from B",
+   "title": "from A"
+  },
+  "taskResult": {
+   "sum": 12
+  }
+ }
+}
