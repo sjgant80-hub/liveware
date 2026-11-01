@@ -1,0 +1,53 @@
+{
+ "kind": "bred-minds.witness",
+ "v": 1,
+ "witness": "sjgant80-hub/witness v0.6 (witness.mjs mutate, --cap 600, each kernel against its own test file)",
+ "ran": "2026-10-30",
+ "kernels": [
+  {
+   "kernel": "text",
+   "killed": 28,
+   "total": 28,
+   "clean": true
+  },
+  {
+   "kernel": "trace",
+   "killed": 8,
+   "total": 8,
+   "clean": true
+  },
+  {
+   "kernel": "card",
+   "killed": 14,
+   "total": 14,
+   "clean": true
+  },
+  {
+   "kernel": "stats",
+   "killed": 14,
+   "total": 14,
+   "clean": true
+  },
+  {
+   "kernel": "judge",
+   "killed": 11,
+   "total": 11,
+   "clean": true
+  },
+  {
+   "kernel": "cost",
+   "killed": 18,
+   "total": 18,
+   "clean": true
+  },
+  {
+   "kernel": "breed",
+   "killed": 59,
+   "total": 59,
+   "clean": true
+  }
+ ],
+ "killed": 152,
+ "total": 152,
+ "note": "GitHub's runner re-runs the same gate on every push and fails the build if any mutant survives"
+}

@@ -1,0 +1,63 @@
+{
+ "kind": "liveware.samples",
+ "v": 1,
+ "note": "The pinned inputs for T5. Every file is public. Their hashes are sealed in CLAIMS.md.",
+ "samples": [
+  {
+   "file": "prose-emerson-essays.txt",
+   "type": "prose",
+   "bytes": 439572,
+   "sha256": "5d9d28c12da8bd9aaf3043e9a2d08fbd46116efd5a3736490a393599aef6d278",
+   "what": "Ralph Waldo Emerson, Essays: First Series (1841), Project Gutenberg #2944, public domain",
+   "from": "bred-minds data/texts/pg2944.txt"
+  },
+  {
+   "file": "code-light-codec.mjs.txt",
+   "type": "source code",
+   "bytes": 15223,
+   "sha256": "4f018272a05989fe8fbd0f675e0460b35365710a174a88dbf628165ef21f431d",
+   "what": "LIGHT codec source (MIT), fall-kit/core/vendor/light/codec.mjs",
+   "from": "fall-kit 9244d61"
+  },
+  {
+   "file": "log-agent-answers.json",
+   "type": "structured JSON log",
+   "bytes": 169611,
+   "sha256": "e1e311c204baf885e8f6c36ac71c6ea8d06ffd1e2c6f814be9fe01c2583129f2",
+   "what": "an agent run log: 200 answers a local model wrote, with seeds and timings (bred-minds, MIT)",
+   "from": "bred-minds data/local/perspectives.json"
+  },
+  {
+   "file": "catalogue-public-estate.json",
+   "type": "structured catalogue",
+   "bytes": 357155,
+   "sha256": "6fa7498f6058ab9433960dca83b6840304999c64aa29ec29b9ee6f19e959afbe",
+   "what": "the public estate archive (1,725 public repos, no private ones)",
+   "from": "estate-nest estate.json 5074044"
+  },
+  {
+   "file": "csv-credit-default-4000.csv",
+   "type": "CSV",
+   "bytes": 376689,
+   "sha256": "8297080b2075eb6b5b334f5e03aa55adffb7e5832070733d1e02d01e38c2be91",
+   "what": "UCI Default of Credit Card Clients (CC BY 4.0, DOI 10.24432/C55S3H; Yeh & Lien 2009): header + first 4,000 rows",
+   "from": "break-it feeds/credit-default.csv, head -n 4001"
+  },
+  {
+   "file": "image-mesh.jpg",
+   "type": "already-compressed image",
+   "bytes": 98495,
+   "sha256": "ea0454590da5f27aab38a5976dc177a570dccabe008b99a15df5f7fa2dff35c5",
+   "what": "a JPEG from the company site",
+   "from": "ai-nativesolutions media/images/mesh-no-server.jpg 5031bc6"
+  },
+  {
+   "file": "tiny-receipt.json",
+   "type": "tiny file (under 1 KB)",
+   "bytes": 894,
+   "sha256": "ef412c19a08bd719bfa1ee6ab5ed5ea4f1bda0739891c94f295d42af10d2bc2a",
+   "what": "a 894-byte mutation-gate receipt",
+   "from": "bred-minds data/witness.json"
+  }
+ ]
+}

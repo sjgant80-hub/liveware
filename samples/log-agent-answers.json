@@ -1,0 +1,2017 @@
+{
+ "kind": "bred-minds.local-perspectives",
+ "v": 1,
+ "asked": {
+  "model": "qwen2.5:7b",
+  "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+  "ollama": "0.40.5",
+  "quantization": "Q4_K_M"
+ },
+ "options": {
+  "temperature": 0.7,
+  "num_ctx": 4096,
+  "num_predict": 320
+ },
+ "items": [
+  {
+   "kind": "card",
+   "mind": "marcus",
+   "q": 1,
+   "seed": 1001,
+   "prompt": "04a73fa4811c2c0c",
+   "reply": "When a colleague takes credit for your work, focus on the essentials of your response rather than getting entangled in the emotions it may evoke. Keep your judgment separate from the pleasure or pain of the situation. Reflect on the natural requirements of human nature and the moral tenets that guide you. Consider that your true happiness lies in the charity of your actions and the peace of mind you can achieve by remaining calm and just. If your perception is correct, your action in addressing the situation should be charitable and truthful. Embrace the occurrence according to your understanding of God's will, and let it be a moment to reflect on your own character and actions.",
+   "named": false,
+   "seconds": 71
+  },
+  {
+   "kind": "card",
+   "mind": "marcus",
+   "q": 2,
+   "seed": 1002,
+   "prompt": "8eff0c51c024c58c",
+   "reply": "Leaving a secure job for work you care about is worth considering. Focus on the essential actions that align with your true calling and passions. Your mind should remain calm and separate from the pleasure or pain that might come from the change. Embrace the natural requirements of your nature, ensuring your actions are charitable and your understanding is true. If your current perception is correct, and you act with goodness, you will find true satisfaction. Let your actions be driven by a just and reflective mind, and trust that whatever comes, whether good or bad, is part of God's will. Cherish the present moment and live a life free from impurities, honoring your rational faculties in the pursuit of what truly matters.",
+   "named": false,
+   "seconds": 36
+  },
+  {
+   "kind": "card",
+   "mind": "marcus",
+   "q": 3,
+   "seed": 1003,
+   "prompt": "0944bbdc329bd19c",
+   "reply": "Growing old should not be a source of anxiety or sorrow. Embrace the present moment and focus on living a life that is free from impurities and biases. Recognize that old age is a natural part of life, and let your rational faculties guide you. Cherish the present, understanding that life is短暂且有限。面对岁月的流逝，重要的是保持心灵的纯净，注重当下的真实与理性，不必过分担忧未来。专注于做好当下的事情，让自己的言行举止充满善意与真诚，即使遭遇误解或非议，也能保持内心的平和与坚定。",
+   "named": false,
+   "seconds": 27
+  },
+  {
+   "kind": "card",
+   "mind": "marcus",
+   "q": 4,
+   "seed": 1004,
+   "prompt": "01206f22e77c1de4",
+   "reply": "When faced with the anger that arises from someone wronging you, remember to focus on your necessary actions and keep your mind calm. Let not your judgment be swayed by the pain of the incident, but consider the natural requirements of human nature. Reflect on the true moral tenets and strive to act charitably, even in the face of injustice. Embrace the situation according to God's will and examine your thoughts carefully. Aim to ensure your mind and will are just, and your actions are guided by truth and charity. True magnanimity lies in contemplating the insignificance of such events in the grand scheme of life and in doing well regardless of how others may speak of you.",
+   "named": false,
+   "seconds": 30
+  },
+  {
+   "kind": "card",
+   "mind": "marcus",
+   "q": 5,
+   "seed": 1005,
+   "prompt": "3dffca419720da82",
+   "reply": "To live freely and cheerfully, focus on your essential actions and true intentions, rather than worrying about others' opinions. Let your mind remain calm and separate from external judgments. If you act according to your rational understanding and inner judgment, your actions will be right and true, and you will find peace in accepting whatever comes from God. Embrace the present moment and let your actions be guided by natural requirements and moral tenets. True strength lies in maintaining a clear and just mind, free from the sway of external praise or criticism.",
+   "named": false,
+   "seconds": 25
+  },
+  {
+   "kind": "card",
+   "mind": "marcus",
+   "q": 6,
+   "seed": 1006,
+   "prompt": "238281263f6e7636",
+   "reply": "It is better to confine oneself to necessary actions rather than get entangled in excessive planning. Reason, as the guiding light of a social creature, will direct us to the essential tasks we must undertake. By doing so, we can live more cheerfully, free from the unnecessary thoughts and actions that can cloud our judgment. Following impulses might lead to distractions and dissatisfaction, whereas focusing on the essential tasks allows us to remain calm and aligned with our true nature. Thus, embracing the necessary actions and letting our minds remain separate from pleasure or pain will lead to a more genuine and fulfilling life.",
+   "named": false,
+   "seconds": 27
+  },
+  {
+   "kind": "card",
+   "mind": "marcus",
+   "q": 7,
+   "seed": 1007,
+   "prompt": "f91104940ce4a237",
+   "reply": "Faced with the death of someone you love, it's important to keep your mind steady and focused on the natural flow of life. Recognize that death is a part of the natural order and not a misfortune in itself. Your primary task is to ensure your own mind remains just and charitable, even in the face of this loss. Reflect on the good times and the love shared, and let your actions be guided by what is truly good and true. Embrace the situation as it comes, acknowledging it as a part of the cycle of life. In doing so, you can find a form of peace and continue to live according to the natural requirements of human nature.",
+   "named": false,
+   "seconds": 30
+  },
+  {
+   "kind": "card",
+   "mind": "marcus",
+   "q": 8,
+   "seed": 1008,
+   "prompt": "5c5d5e12f234797b",
+   "reply": "In deciding whether to trust your own judgment over experts, consider that your judgment should rest calmly and not be swayed by external sensations of pleasure or pain. Trusting your own mind in the practice of right and true moral tenets can be beneficial. However, ensure that your judgment is just and aligned with the natural requirements of human nature. If your perception is correct and your actions are charitable, then that is sufficient. Reflect on your thoughts carefully and embrace what happens according to God's will. Your primary defense should be a mind free from passions and biases, allowing you to live a life free from impurities and focused on the present moment.",
+   "named": false,
+   "seconds": 28
+  },
+  {
+   "kind": "card",
+   "mind": "marcus",
+   "q": 9,
+   "seed": 1009,
+   "prompt": "431cd6a32d32d645",
+   "reply": "A day is well spent when we focus on essential tasks and avoid unnecessary thoughts and actions, ensuring our minds remain calm and free from the influence of pleasure or pain. It involves embracing our present circumstances with a clear and rational understanding, accepting whatever comes our way according to God's will. We should engage in genuine learning and deep reflection, striving for true moral excellence in our thoughts, words, and deeds. By keeping our minds and wills just, and our actions charitable, we can find peace and contentment, making each day a step towards genuine improvement and inner tranquility.",
+   "named": false,
+   "seconds": 25
+  },
+  {
+   "kind": "card",
+   "mind": "marcus",
+   "q": 10,
+   "seed": 1010,
+   "prompt": "1402ed2fc1ac6668",
+   "reply": "In the face of a long illness or constant pain, one should focus on necessary actions and confine oneself to what is truly required. Let your mind remain calm and separate from the pleasure or pain, allowing natural sensations without adding opinions of good or bad. Embrace whatever happens according to the will of God and justly interact with others. Examine your thoughts carefully and strive to maintain a just mind and will. Speak truthfully, act charitably, and ensure your understanding is not subject to error. True happiness lies in how you bear these misfortunes with generosity, making your mind free from passions as your chief fort and place of defense.",
+   "named": false,
+   "seconds": 29
+  },
+  {
+   "kind": "card",
+   "mind": "marcus",
+   "q": 11,
+   "seed": 1011,
+   "prompt": "01d87542d8c674c2",
+   "reply": "Ambition can be a virtue when it aligns with natural human desires for progress and excellence. However, it becomes a trap when it leads to unnecessary thoughts and actions, drawing one away from necessary tasks and causing undue stress. It is best to let your ambition serve the practice of right and true moral tenets, focusing on what is genuinely beneficial and charitable. Embrace what comes from God and be content with the present moment, making your mind free from passions a stronger defense. By doing so, you can avoid the pitfalls of ambition and live a life free from impurities and biases.",
+   "named": false,
+   "seconds": 25
+  },
+  {
+   "kind": "card",
+   "mind": "marcus",
+   "q": 12,
+   "seed": 1012,
+   "prompt": "d1cdc193bc5bfea8",
+   "reply": "To determine if a belief is true, focus on the essentials of your life and actions, rather than getting entangled in unnecessary thoughts. Let your mind remain calm and separate from pleasure or pain, simply observing sensations without adding judgments. If your belief aligns with what is genuinely good and beneficial, and if you can act charitably and find contentment, then it is likely true. Embrace your current circumstances according to your rational understanding, and ensure that your thoughts, words, and actions reflect true morality. Trust that a life lived in accordance with natural and rational principles will bring true fulfillment.",
+   "named": false,
+   "seconds": 28
+  },
+  {
+   "kind": "card",
+   "mind": "marcus",
+   "q": 13,
+   "seed": 1013,
+   "prompt": "803aa05c375c7fc3",
+   "reply": "When facing laws or policies that seem unjust, you owe it to yourself and to the principles of natural and rational living to carefully examine them. If your judgment confirms their injustice, seek to live according to what is right and true, even in the face of adversity. Uphold your own integrity and moral standards, acting charitably and justly toward others. Trust that all events, including those that challenge your beliefs, occur according to God’s will. While it’s essential to scrutinize your thoughts and ensure they align with virtue, remember that true happiness lies in accepting your circumstances with generosity and doing what is just, regardless of how others may perceive or speak of you.",
+   "named": false,
+   "seconds": 33
+  },
+  {
+   "kind": "card",
+   "mind": "marcus",
+   "q": 14,
+   "seed": 1014,
+   "prompt": "80f3cae549205a5b",
+   "reply": "Spending money you do not need should be guided by practical necessity and thoughtful reflection. Focus on essential items that genuinely serve your well-being and do not succumb to unnecessary desires or fleeting pleasures. Consider how your expenditures align with your moral principles and contribute to your personal growth. Embrace a mindset that values genuine improvement over superficial displays, and use your resources wisely, ensuring they enhance your life without causing unnecessary complications or distractions. Remember, the key is to keep your judgment calm and your understanding separate from the allure of material goods, allowing you to live more freely and cheerfully.",
+   "named": false,
+   "seconds": 29
+  },
+  {
+   "kind": "card",
+   "mind": "marcus",
+   "q": 15,
+   "seed": 1015,
+   "prompt": "107d93da31deeac5",
+   "reply": "Solitude can be beneficial for a person's mental clarity and well-being. By limiting oneself to necessary actions and thoughts, one can avoid the distractions and unnecessary complications that often arise from social interactions. This focus allows for a clearer understanding of one's true nature and the natural requirements of human life. It also promotes a more rational and peaceful state of mind, as the mind is not influenced by transient pleasures or pains. Embracing solitude helps one to live according to natural moral tenets and to find contentment in the simple pleasures and actions that truly matter.",
+   "named": false,
+   "seconds": 28
+  },
+  {
+   "kind": "card",
+   "mind": "marcus",
+   "q": 16,
+   "seed": 1016,
+   "prompt": "b21a933cdb6efd69",
+   "reply": "To treat someone who is cruel to you with equanimity and kindness, focus on the inherent goodness in your own nature and actions. Recognize that their cruelty stems from their own imperfections and is not a reflection of your true worth. Approach the situation with a clear and just mind, understanding that your response should be guided by reason and not by the passions they might evoke. Let your actions be charitable and your understanding not clouded by their behavior. Embrace the circumstances as they are, and remain steadfast in your commitment to living according to natural moral tenets. This will help you maintain a calm and composed demeanor, turning your mind inward to what truly matters—your just and charitable actions and your truthful speech.",
+   "named": false,
+   "seconds": 32
+  },
+  {
+   "kind": "card",
+   "mind": "marcus",
+   "q": 17,
+   "seed": 1017,
+   "prompt": "ed21e7526891c5e7",
+   "reply": "Reading old books helps you focus on essential knowledge and wisdom rather than getting caught up in trivialities. It encourages a calm mind, unclouded by fleeting pleasures or pains. By contemplating the timeless advice within these books, you can refine your judgment and align your actions with natural moral principles. These texts teach you to embrace the present and live authentically, free from unnecessary distractions. They remind you that true happiness comes from a well-lived life, not from external opinions or material wealth. Through deep reflection and genuine learning, you can build a stronger, more just and charitable character, making old books a valuable guide for navigating the complexities of life.",
+   "named": false,
+   "seconds": 29
+  },
+  {
+   "kind": "card",
+   "mind": "marcus",
+   "q": 18,
+   "seed": 1018,
+   "prompt": "bb21bf404aa85c82",
+   "reply": "To change a habit you are ashamed of, first, identify the necessary actions that align with your true nature and good intentions. Let your mind remain calm and separate from the shame, focusing on the natural requirements of your life. Embrace the process of improvement, seeking genuine learning and deep reflection rather than pretentious displays. Make your mind free from passions, as it is a stronger place to defend. Practice just interactions with others and examine your thoughts carefully. Remember, whatever comes, embrace it according to God's will and focus on the present moment. True happiness lies in how you bear your circumstances with generosity.",
+   "named": false,
+   "seconds": 28
+  },
+  {
+   "kind": "card",
+   "mind": "marcus",
+   "q": 19,
+   "seed": 1019,
+   "prompt": "2b117c30f3d968da",
+   "reply": "To forgive yourself for a serious mistake, focus on moving forward rather than dwelling on the past. Identify the necessary actions to rectify the situation or learn from it, and confine your thoughts to these actions. Let your understanding remain separate from the emotions associated with the mistake. Reflect on the mistake with a calm mind, understanding that it is part of human nature to make errors. Embrace the learning experience, and ensure your actions are guided by the principles of right and true moral tenets. By doing so, you can find genuine improvement and peace, making the best of the situation.",
+   "named": false,
+   "seconds": 26
+  },
+  {
+   "kind": "card",
+   "mind": "marcus",
+   "q": 20,
+   "seed": 1020,
+   "prompt": "4950b85fe80a021a",
+   "reply": "Friendship should be founded on necessary actions that benefit both parties without excess. True friends should focus on essential social interactions, allowing their minds to remain calm regarding external events. In friendship, one should not let personal pleasures or pains sway their judgment, but rather maintain a clear understanding of what is good and evil. The key is to seek genuine improvement in one's character, valuing deep reflection and honest communication. True happiness lies in embracing whatever comes with a just and charitable heart, even when faced with misunderstandings or negative perceptions. A strong friendship is built on a mind free from passions, where actions are guided by reason and the present moment is cherished.",
+   "named": false,
+   "seconds": 29
+  },
+  {
+   "kind": "card",
+   "mind": "montaigne",
+   "q": 1,
+   "seed": 1038,
+   "prompt": "9949acfb6aab8109",
+   "reply": "When a colleague takes credit for your work, it's important to remain adaptable and handle the situation with grace. Always strive to do what is right and good, even in such challenging circumstances. Remember, swimming, or in this case, standing up for yourself, can be of great use. Take a firm but fair stance, ensuring your contributions are recognized. Trust that over time, your efforts and integrity will be acknowledged, much like the importance of practicing honesty and transparency in financial matters. Embrace the wisdom of submission to a higher power, recognizing that true recognition comes from faith and the passage of time.",
+   "named": false,
+   "seconds": 65
+  },
+  {
+   "kind": "card",
+   "mind": "montaigne",
+   "q": 2,
+   "seed": 1039,
+   "prompt": "35a74f94b3002b28",
+   "reply": "Leaving a secure job for work you care about is a matter of balancing certainty with passion. While the security of a stable position is comforting, the thrill and fulfillment of pursuing your true interests can be invaluable. Just as Demophoon adapted to various conditions, you too should weigh the benefits of your current stability against the potential rewards of a more fulfilling career. Remember, as the ancients taught, swimming is beneficial in war—akin to how nurturing your passions can fortify your spirit. However, always strive to do what is good, even if the path of your desires seems uncertain. Embrace the wisdom that true contentment comes from living honorably and virtuously, and may your choices lead to greater blessings.",
+   "named": false,
+   "seconds": 33
+  },
+  {
+   "kind": "card",
+   "mind": "montaigne",
+   "q": 3,
+   "seed": 1040,
+   "prompt": "4f70f1b5b63d643a",
+   "reply": "Growing old should be embraced with hope and resilience. As you age, maintain a balanced approach to life, avoiding extremes and pretense. Practice honesty and thrift, finding joy in simplifying your financial burdens. Remember that true wisdom comes from faith and divine guidance, so submit to that wisdom. Embrace the virtues of modesty and contentment, understanding that denying oneself excessive desires can lead to greater blessings. Adapt to various situations and customs, as age brings new perspectives and experiences. Use your critical thinking to navigate through uncertainties, ensuring that your beliefs remain stable and grounded. Finally, find consolation in past experiences and the wisdom they impart, allowing them to guide you through the challenges of growing older.",
+   "named": false,
+   "seconds": 31
+  },
+  {
+   "kind": "card",
+   "mind": "montaigne",
+   "q": 4,
+   "seed": 1041,
+   "prompt": "4ee1d75bce9cdb84",
+   "reply": "When faced with the anger that comes from being wronged, it is wise to remember that we should strive to be adaptable and not let our emotions cloud our better judgment. Instead of reacting impulsively, focus on the virtues of honor and virtue. Anger can be a powerful emotion, but it is better to channel it into actions that serve a greater purpose. Reflect on past experiences that have taught you the value of maintaining a stable belief system and the importance of hope. By practicing a thrifty honesty, you can find pleasure in relieving yourself of the burdens that anger may bring. Trust that in the end, the gods give more to those who deny themselves excessive desires. So, let your anger be a reminder to stay true to your principles and focus on what truly matters.",
+   "named": false,
+   "seconds": 36
+  },
+  {
+   "kind": "card",
+   "mind": "montaigne",
+   "q": 5,
+   "seed": 1042,
+   "prompt": "7d8c7e6f91f6fd95",
+   "reply": "In navigating life, one should be adaptable and not overly concerned with the opinions of others, as it can lead to unnecessary constraints. Just as Demophoon, steward to Alexander the Great, faced extremes in his personal habits, caring too much about others' views might cause you to behave in ways that are inconsistent with your true nature. Instead, focus on doing what is good and virtuous, much like practicing swimming for its practical benefits, even if it seems strange or unconventional. Remember, maintaining a balanced and virtuous life will bring more genuine satisfaction and success, rather than pleasing those who may not truly understand or appreciate you.",
+   "named": false,
+   "seconds": 28
+  },
+  {
+   "kind": "card",
+   "mind": "montaigne",
+   "q": 6,
+   "seed": 1043,
+   "prompt": "df4fa6580b91b52a",
+   "reply": "It's wise to strike a balance, avoiding the extremes of rigid planning or complete impulsiveness. Like Demophoon, who sweated in the shade and shivered in the sun, you should adapt to various situations but always maintain your moral compass. The key is to be flexible in your approach to life's challenges while striving to do what is right. Remember, swimming, much like adapting to different customs, can be of great use in navigating life's battles. Embrace knowledge and critical thinking, especially in times of uncertainty, to guide your decisions and maintain a stable moral foundation. So, whether you're planning or following your impulses, let reason and virtue be your guides.",
+   "named": false,
+   "seconds": 33
+  },
+  {
+   "kind": "card",
+   "mind": "montaigne",
+   "q": 7,
+   "seed": 1044,
+   "prompt": "7d0307130e714163",
+   "reply": "Facing the death of someone you love can be profoundly challenging. It's important to embrace the memories and cherish the time you shared, finding solace in the experiences that brought you joy and meaning. Remember, the more you allow yourself to grieve and reflect on their life, the more you honor their memory. Engage in acts of remembrance that bring you comfort, whether it’s through writing, sharing stories, or participating in traditions that they cherished. Practice a thrifty honesty in your grief, acknowledging your pain without letting it consume you. Stay adaptable and open to the changing tides of emotion, knowing that time and examples can guide you through this difficult period. Most importantly, hold onto hope and the knowledge that their spirit lives on in the lessons they imparted and the love they shared.",
+   "named": false,
+   "seconds": 37
+  },
+  {
+   "kind": "card",
+   "mind": "montaigne",
+   "q": 8,
+   "seed": 1045,
+   "prompt": "4fc722bc2ad5b98e",
+   "reply": "In navigating life's challenges, it's wise to blend your own judgment with the wisdom of those who have faced similar situations. While experts can provide valuable insights, remember to also consider your unique circumstances and feelings. Trusting your instincts can be as important as adhering to expert advice. After all, maintaining hope and finding comfort in past experiences can guide you through uncertain times. However, always be open to new knowledge and critical thinking, especially during times of uncertainty, to ensure you don't slip into doubt or disbelief.",
+   "named": false,
+   "seconds": 25
+  },
+  {
+   "kind": "card",
+   "mind": "montaigne",
+   "q": 9,
+   "seed": 1046,
+   "prompt": "46b84920df706519",
+   "reply": "A day well spent should reflect adaptability and virtue. Start with embracing the day's customs and situations, even if they challenge your comfort, and ensure that good actions prevail. Engage in activities like swimming, which can be both enjoyable and practical, as it enhances your capabilities. Maintain honesty and avoid deceit, even in minor matters, for it fosters trust and integrity. Strive to live frugally yet openly, paying debts promptly and finding joy in financial relief. Reflect on past experiences to find hope and consolation, helping you navigate challenges with resilience. Lastly, let reason serve your faith, recognizing that true divine knowledge comes from faith alone. By aligning your actions with these principles, each day can be a step towards a more virtuous and fulfilling life.",
+   "named": false,
+   "seconds": 37
+  },
+  {
+   "kind": "card",
+   "mind": "montaigne",
+   "q": 10,
+   "seed": 1047,
+   "prompt": "e23b30218aeeff6f",
+   "reply": "In living with a long illness or constant pain, one should adapt to various situations and customs with grace, even if it means embracing discomfort. It is crucial to maintain a virtuous and honorable demeanor, focusing on the greater good. Engage in practices that can benefit you, such as swimming, which can be both therapeutic and useful. Embrace knowledge and critical thinking to navigate your challenges, ensuring that your faith remains steadfast amidst uncertainty. Trust in the wisdom of time and examples, and find consolation in past experiences that have helped you endure. Practice honesty and thrift, relieving yourself of financial burdens, and avoid the scandal of bargaining. Above all, cultivate a natural aversion to deceit, and remember that true blessings come from contentment and modesty in your desires.",
+   "named": false,
+   "seconds": 44
+  },
+  {
+   "kind": "card",
+   "mind": "montaigne",
+   "q": 11,
+   "seed": 1048,
+   "prompt": "47d69197401762d1",
+   "reply": "Ambition can be a double-edged sword. On one hand, it drives individuals to strive for excellence and achieve great feats, benefiting society and inspiring others. Yet, when ambition becomes excessive, it can lead to deceit and treachery, as seen in the example of Demophoon, who sweated in the shade and shivered in the sun, showing a lack of self-control and wisdom. A prudent man must balance ambition with virtue, always striving for what is good and maintaining hope, as suggested by the author. True success lies in contentment and modesty, where the more one denies himself, the more the gods give him. Thus, ambition should be tempered with reason and faith, avoiding the pitfalls of excess and deceit.",
+   "named": false,
+   "seconds": 39
+  },
+  {
+   "kind": "card",
+   "mind": "montaigne",
+   "q": 12,
+   "seed": 1049,
+   "prompt": "c0fc96851c567f20",
+   "reply": "To discern the truth of your beliefs, embrace critical thinking and knowledge, especially in uncertain times. Reflect on the wisdom of our ancestors and the guidance it provides. Use reason to evaluate your beliefs but remember that true divine knowledge comes from faith alone. Avoid the trap of atheism by maintaining a stable belief system. Let past experiences and the wisdom of time be your guides. Embrace honesty and thrift, finding comfort in the consistency of your actions. In doing so, you'll navigate life’s challenges with hope and resilience.",
+   "named": false,
+   "seconds": 28
+  },
+  {
+   "kind": "card",
+   "mind": "montaigne",
+   "q": 13,
+   "seed": 1050,
+   "prompt": "f5745969fc8b7562",
+   "reply": "In facing laws and customs you deem unjust, remember that adaptability and honor are key. Swim, so to speak, with the tide of your society, even if it means engaging in practices that seem contrary to your deepest beliefs. However, always strive to act with virtue and goodness, seeking to do what is right despite the laws. Trust that true wisdom and virtue come from a deeper understanding and submission to divine guidance, rather than from your own rationalizations. Ultimately, hold onto hope and the knowledge that enduring hardships can lead to greater blessings and contentment.",
+   "named": false,
+   "seconds": 32
+  },
+  {
+   "kind": "card",
+   "mind": "montaigne",
+   "q": 14,
+   "seed": 1051,
+   "prompt": "65038791db63c8e9",
+   "reply": "When managing your finances, it's wise to practice a thrifty and alluring honesty. Pay your debts on time, finding satisfaction in relieving yourself of financial burdens. Avoid the scandal of bargaining; instead, focus on maintaining a reputation for integrity. Remember, using your reason to serve your faith means making choices that align with virtue and honor. By doing so, you'll find greater blessings and contentment in life, as denying yourself unnecessary luxuries can lead to unexpected rewards from the gods.",
+   "named": false,
+   "seconds": 27
+  },
+  {
+   "kind": "card",
+   "mind": "montaigne",
+   "q": 15,
+   "seed": 1052,
+   "prompt": "2e39aa23d48be14a",
+   "reply": "Solitude can be both a blessing and a curse. While it provides an opportunity for introspection and personal growth, it can also lead to isolation and a sense of disconnection from others. A young man should be adaptable to various situations, including solitude, but always strive to do what is good and virtuous. It’s important to embrace knowledge and critical thinking during times of uncertainty, whether in solitude or in the company of others. The key is to maintain a balance, using reason to serve faith and recognizing the wisdom of God. Solitude should be approached with a mindset of contentment and modesty, understanding that denying oneself excess can lead to greater blessings.",
+   "named": false,
+   "seconds": 35
+  },
+  {
+   "kind": "card",
+   "mind": "montaigne",
+   "q": 16,
+   "seed": 1053,
+   "prompt": "53af157b4e957cff",
+   "reply": "When faced with cruelty, it's wise to remain adaptable and consider the broader context. Treat such behavior with the understanding that the cruel person might be acting out of their own insecurities or misfortunes. Reflect on the teachings that true virtue and honor come from self-denial and humility. By doing so, you can maintain your integrity and find consolation in your own steadfastness. Remember, the gods often reward those who deny themselves, so strive for contentment and modesty in your desires. This approach not only guides you in responding to cruelty but also helps in navigating other challenges life may throw your way.",
+   "named": false,
+   "seconds": 29
+  },
+  {
+   "kind": "card",
+   "mind": "montaigne",
+   "q": 17,
+   "seed": 1054,
+   "prompt": "46b7d52ba35f3175",
+   "reply": "Reading old books helps us understand different customs and situations, making us more adaptable. For instance, learning about historical figures who valued swimming for its practical benefits, such as in warfare, can inspire us to embrace skills that may serve us well in unexpected circumstances. Moreover, these books offer insights into the virtues and values of past societies, encouraging us to reflect on what truly matters. They also remind us to use reason to support our beliefs while acknowledging the limits of human understanding. By engaging with these texts, we can navigate life’s challenges with a stronger sense of hope and a clearer conscience, free from the burdens of deceit and unnecessary desires.",
+   "named": false,
+   "seconds": 31
+  },
+  {
+   "kind": "card",
+   "mind": "montaigne",
+   "q": 18,
+   "seed": 1055,
+   "prompt": "de13f702dc5f5090",
+   "reply": "To change a habit you are ashamed of, first, recognize that adapting to new customs and situations is key. Consider that swimming, for example, is not just for leisure but can be incredibly useful. Just as ancient warriors found it beneficial, focus on the practical value and benefits it can bring. Embrace knowledge and critical thinking to understand why the habit is harmful and seek out ways to replace it. Remember, it's important to strive for what is good and honorable, avoiding bodily necessities as much as possible. By doing so, you can gradually shift your behavior and find new, healthier habits to replace the old ones.",
+   "named": false,
+   "seconds": 27
+  },
+  {
+   "kind": "card",
+   "mind": "montaigne",
+   "q": 19,
+   "seed": 1056,
+   "prompt": "837b37568b7aae2f",
+   "reply": "Certainly, forgiving yourself for a serious mistake is an essential step in moving forward. Embrace the adaptability to understand that everyone makes mistakes, and it’s how we learn and grow. Reflect on the mistake critically to understand it better, but always strive to do what is right. Remember, it’s through such experiences that we truly develop our character and wisdom. Moreover, maintaining hope and finding consolation in past experiences can help you navigate through such challenges. Let reason guide you to make better choices, but remember that true understanding comes from faith and not from your own efforts.",
+   "named": false,
+   "seconds": 25
+  },
+  {
+   "kind": "card",
+   "mind": "montaigne",
+   "q": 20,
+   "seed": 1057,
+   "prompt": "8753c49d8470cb3b",
+   "reply": "Friendship, in this view, is about adapting to various social situations while maintaining a steadfast virtue. A true friend should be adaptable, ready to engage in all kinds of interactions, including those that might seem debauched or excessive. However, amidst such varied experiences, one must always strive to uphold what is good and just. Just as swimming was beneficial for the ancient warriors, so too should maintaining friendship and trust be seen as a virtue, especially in times of uncertainty or religious doubt. True friends should encourage each other to focus on honourable deeds and avoid being swayed by material desires. In the end, friendship should provide a source of comfort and strength, much like remembering past experiences, to help navigate life's challenges and maintain a stable belief system.",
+   "named": false,
+   "seconds": 33
+  },
+  {
+   "kind": "card",
+   "mind": "emerson",
+   "q": 1,
+   "seed": 1075,
+   "prompt": "84eec4bac1f7e389",
+   "reply": "When a colleague takes credit for your work, it's a moment to face your fears and stand steadfast. Speak from within the veil, where your words are one with your truth. Adhere to the nature of things, which in this case means being honest and just. Let your response be a reflection of your inner strength and self-trust. You can gently but firmly address the situation, expressing your feelings and the facts of the matter. Remember, to live serenely is to confront such challenges head-on, making your fears seem less substantial. By speaking your honest thought now and tomorrow, even if it contradicts what you said before, you honor the permanence and universality of your own integrity.",
+   "named": false,
+   "seconds": 66
+  },
+  {
+   "kind": "card",
+   "mind": "emerson",
+   "q": 2,
+   "seed": 1076,
+   "prompt": "3cbd11dd354e66bd",
+   "reply": "Leaving a secure job for work you care about is a journey worth embarking on, for the soul. It's a step towards a life that's truly a festival, filled with the wisdom and integrity that define true value. It's about purifying the heart and mind, ensuring that each day brings deeper understanding and authenticity. While the initial fears may seem daunting, facing them head-on with courage and resolution can make those fears seem unfounded. Your work should reflect your inner truth, and the satisfaction comes from speaking from the heart, even if it means being misunderstood at times. Cherish the love and purpose it brings, for these are the eternal facts of the soul.",
+   "named": false,
+   "seconds": 31
+  },
+  {
+   "kind": "card",
+   "mind": "emerson",
+   "q": 3,
+   "seed": 1077,
+   "prompt": "5536417333e7e5cc",
+   "reply": "Growing old should be embraced as a festival of wisdom and experience, not just a series of physical changes. As you age, continue to adhere to the natural, intellectual, and moral laws that guide your life. Love and the purification of the heart become more profound with time, transcending initial physical attraction. Embrace the wisdom that comes with age, and face your fears with courage and resolution. Your honest thoughts and actions, even as they evolve, should reflect the eternal facts of your soul. Remember, the essence of heroism lies in speaking the truth and living justly, making your later years a testament to your inner strength and self-trust.",
+   "named": false,
+   "seconds": 27
+  },
+  {
+   "kind": "card",
+   "mind": "emerson",
+   "q": 4,
+   "seed": 1078,
+   "prompt": "b3f2f72d33be9202",
+   "reply": "When anger stirs within, face it head-on with courage and resolution. Acknowledge the wrong, but let it not cloud your intellect and heart. Remember, the true festival of life is for the wise who adhere to natural and moral laws. Speak from the essence of your truth, and let your honest thought be both today and tomorrow, even if it means being misunderstood. Anger is but a temporary visitor; it's in your self-trust and adherence to the nature of things that you find peace and wisdom.",
+   "named": false,
+   "seconds": 22
+  },
+  {
+   "kind": "card",
+   "mind": "emerson",
+   "q": 5,
+   "seed": 1079,
+   "prompt": "7b5fdd53c4c63325",
+   "reply": "Caring too much about what others think can cloud your judgment and cloud your true nature. Life is a festival for those who understand the deeper laws of the soul. If you focus on being true to yourself and speaking your honest thoughts, you'll find that people's opinions will matter less. Embrace the rhythm of your own being, like the pulse of the heart, and trust in your own truth. Speak from within the veil, where your words are one with the essence of your thought, and let others find their own path.",
+   "named": false,
+   "seconds": 23
+  },
+  {
+   "kind": "card",
+   "mind": "emerson",
+   "q": 6,
+   "seed": 1080,
+   "prompt": "325f40b97204e197",
+   "reply": "Planning your life carefully can be wise, as it adheres to the natural laws of order and foresight. However, to truly live a fulfilling life, one must also be open to following their impulses, as they can lead to unexpected insights and experiences. The key is to balance intention with spontaneity, ensuring that every action aligns with your inner truth and the nature of things. Remember, the festival of life is for the wise who can navigate both careful planning and impulsive moments with equal grace and wisdom.",
+   "named": false,
+   "seconds": 23
+  },
+  {
+   "kind": "card",
+   "mind": "emerson",
+   "q": 7,
+   "seed": 1081,
+   "prompt": "07a9e9646e87a220",
+   "reply": "Facing the death of someone you love is a poignant reminder of the impermanence of life. It's wise to honor their memory by living in a way that reflects the essence of their spirit. Embrace the truth and speak your honest thoughts, even if they contradict what you've said before. This courage, born from self-trust, can help you navigate the sorrow and find solace in the enduring bonds of love. Remember, the true essence of their life is not lost; it lives on in your thoughts and actions. By facing this fear head-on, you can find a measure of peace and a deeper understanding of the soul's unchanging nature.",
+   "named": false,
+   "seconds": 28
+  },
+  {
+   "kind": "card",
+   "mind": "emerson",
+   "q": 8,
+   "seed": 1082,
+   "prompt": "5d756427bcfd7076",
+   "reply": "In trusting your own judgement, you honor the wisdom within, much like adhering to the natural laws of the universe. Your inner voice, when clear and unclouded by external pressures, speaks with the truth and clarity of the heart. Yet, to rely solely on your judgement is to risk the pitfalls of self-doubt and isolation. Balancing your inner voice with the insights of experts can create a robust foundation for your decisions. Trusting your judgement, however, means persisting with undaunted boldness when your instincts align with your core values, even if they differ from the advice of others. This self-trust is the essence of heroism, leading to a life that is authentic and true to your essence.",
+   "named": false,
+   "seconds": 30
+  },
+  {
+   "kind": "card",
+   "mind": "emerson",
+   "q": 9,
+   "seed": 1083,
+   "prompt": "4567100e5b939abd",
+   "reply": "A day is well spent when it is lived in accordance with the natural, intellectual, and moral laws. It involves facing fears head-on, speaking truthfully from the heart, and adhering to the essence of one's soul. Even if the day brings challenges or contradictions, it remains a festival for the wise who embrace the rhythm of life and the permanence of their true selves. Love, seen as a central virtue, should guide actions and thoughts, making each moment meaningful. The day’s worth lies in the sincerity of our interactions and the depth of our understanding, rather than fleeting pleasures or external achievements.",
+   "named": false,
+   "seconds": 25
+  },
+  {
+   "kind": "card",
+   "mind": "emerson",
+   "q": 10,
+   "seed": 1084,
+   "prompt": "894b95ce2027a832",
+   "reply": "Living with a long illness or constant pain requires a steadfast adherence to the soul's eternal facts. You must trust in your own wisdom and the inherent rhythm of your being. Embrace the festival of life by understanding the natural and moral laws that govern your experience. Though the world may seem ragged and dangerous, find the courage to face your fears and persist with undaunted boldness. Speak your honest thought, even if it contradicts what you said before, for to be great is to be misunderstood. Love, which is the central focus of your life, may not always be a source of joy, but it is the essence that unites all virtues within you, making your life meaningful despite the challenges.",
+   "named": false,
+   "seconds": 29
+  },
+  {
+   "kind": "card",
+   "mind": "emerson",
+   "q": 11,
+   "seed": 1085,
+   "prompt": "4d603d9e4e695dca",
+   "reply": "Ambition can be a virtue, guiding one toward noble goals and achievements, but it can also become a trap, leading to stress and dissatisfaction. Like a river, ambition must flow naturally, not forced by external pressures. The wise navigate their ambitions with self-trust and clarity, ensuring their goals align with the nature of their souls. When pursued with courage and honesty, ambitions can enrich life, but when they become a burden, they can steal the serenity of the spirit. Thus, true ambition is a path of self-discovery and perseverance, not a destination that overshadows one's inner peace.",
+   "named": false,
+   "seconds": 25
+  },
+  {
+   "kind": "card",
+   "mind": "emerson",
+   "q": 12,
+   "seed": 1086,
+   "prompt": "35979fe0cf421a77",
+   "reply": "To discern the truth of a belief, you must adhere to the natural, intellectual, and moral laws that guide life as a festival for the wise. Reflect on whether your belief aligns with these timeless principles and whether it brings purification to your intellect and heart each year. Speak your honest thought now and tomorrow, even if it contradicts what you said today, as courage and resolution in embracing truth can make fears groundless. Trust in the inherent nature of things to make virtue prevalent, and let your actions reflect this trust in the soul's eternal facts, rather than relying on authority or past experiences.",
+   "named": false,
+   "seconds": 25
+  },
+  {
+   "kind": "card",
+   "mind": "emerson",
+   "q": 13,
+   "seed": 1087,
+   "prompt": "df8a6a8f87a39e09",
+   "reply": "When faced with laws that seem unjust, you owe it to your conscience to question and resist them, for life is a festival only to the wise who understand and adhere to natural, intellectual, and moral laws. It's your duty to seek truth and justice, even if it means standing alone. Your soul's scale is one, and it demands adherence to the nature of things, not mere human constructs. Thus, in the face of injustice, you must speak your honest thought now and tomorrow, even if it contradicts what you said today, for to be great is to be misunderstood.",
+   "named": false,
+   "seconds": 24
+  },
+  {
+   "kind": "card",
+   "mind": "emerson",
+   "q": 14,
+   "seed": 1088,
+   "prompt": "17abaf622649d218",
+   "reply": "Spending money you don't need wisely is a reflection of your inner wisdom and values. Consider using it to deepen your understanding of the world through books or experiences that nourish your intellect and spirit. Invest in knowledge, self-improvement, or acts of generosity that align with your moral principles. Remember, true wealth lies not in material possessions but in the wisdom and virtue you cultivate. By spending intentionally, you purify your heart and mind, much like the essence of a true marriage.",
+   "named": false,
+   "seconds": 21
+  },
+  {
+   "kind": "card",
+   "mind": "emerson",
+   "q": 15,
+   "seed": 1089,
+   "prompt": "f3a3c073d4706f48",
+   "reply": "Solitude is indeed beneficial for the soul's development. It is akin to a festival for the wise, offering a space to adhere to natural, intellectual, and moral laws. In solitude, one can purify the heart and mind, much like in a true marriage of souls. It is here, away from the distractions of the world, that deep thoughts and abstract truths may arise unexpectedly, like the pulse of the heart. Embrace solitude to speak your honest thoughts, to be great and misunderstood, and to face your fears with courage and resolution. In this silent, introspective realm, the soul finds its true voice and strength.",
+   "named": false,
+   "seconds": 31
+  },
+  {
+   "kind": "card",
+   "mind": "emerson",
+   "q": 16,
+   "seed": 1090,
+   "prompt": "3c94ddfe83ac5dd0",
+   "reply": "Facing cruelty from others can test one's inner strength and wisdom. It is wise to approach such situations with an understanding that the cruelty often stems from the other person’s own struggles or misunderstandings. Responding with kindness and truth can sometimes transform the encounter, but if the cruelty persists, it is essential to stand firm in your principles and truth. Remember, the soul's scale is one, and your actions should reflect the nature of things, making virtue prevalent. By doing so, you not only uphold your dignity but also may inspire the other person to see the world differently.",
+   "named": false,
+   "seconds": 33
+  },
+  {
+   "kind": "card",
+   "mind": "emerson",
+   "q": 17,
+   "seed": 1091,
+   "prompt": "e435c6b9d830c46a",
+   "reply": "Reading old books is like revisiting the festival of wisdom that life truly is. These texts, steeped in the essence of the human spirit, help us understand the immutable truths that transcend time. They teach us that the true essence of love and virtue lies not in fleeting emotions but in the eternal, unchanging nature of the soul. By delving into these works, we purify our intellect and heart, much like a yearly renewal. The wisdom within them is not just for the past; it resonates with us today, reminding us to speak truthfully and face our fears with courage. In essence, old books are not merely historical documents but living guides that help us navigate the complexities of life, making us wiser and more virtuous.",
+   "named": false,
+   "seconds": 33
+  },
+  {
+   "kind": "card",
+   "mind": "emerson",
+   "q": 18,
+   "seed": 1092,
+   "prompt": "39d01f23bd2e3688",
+   "reply": "To change a habit you're ashamed of, start by understanding the wisdom that true transformation comes from within. Adhere to the natural laws of your own being, and recognize that each day is a new opportunity to purify your intellect and heart. Speak honestly and from the depths of your soul, even if it means contradicting yourself. Face your fears head-on, for courage and resolution can make even the most daunting habits seem less formidable. Trust in your own strength to persist with undaunted boldness, finding humor in the littleness of common life. Remember, the soul's scale is one, emphasizing the permanence of your journey over the fleeting nature of habits.",
+   "named": false,
+   "seconds": 29
+  },
+  {
+   "kind": "card",
+   "mind": "emerson",
+   "q": 19,
+   "seed": 1093,
+   "prompt": "23b025be02176bb4",
+   "reply": "Forgiving yourself for a serious mistake is essential, for only through self-compassion and self-trust can you truly grow and move forward. Reflect on the mistake as a lesson, not a reflection of your entire worth. Face your fears about making the same error again, and use courage to address the issue head-on. Remember, the soul's scale is one, and your actions today shape your tomorrow. By adhering to the nature of things, you can find the strength to correct past wrongs and live serenely. Resist the urge to dwell on the mistake; instead, focus on the present and the opportunities for growth.",
+   "named": false,
+   "seconds": 30
+  },
+  {
+   "kind": "card",
+   "mind": "emerson",
+   "q": 20,
+   "seed": 1094,
+   "prompt": "21dcd4a2a9d215ea",
+   "reply": "Friendship, like the soul's scale, endures beyond the fleeting moments of time and space. It is a purified and intellectual companionship that deepens with each passing year. In true friendship, one finds a mirror to the soul, where the heart and intellect are continually refined. Friends should speak from the heart, sharing their honest thoughts and convictions, even when they contradict each other. For in this way, they build a foundation of trust and mutual understanding, making their bond stronger than any external pleasure. True friendship is a celebration of the soul, a festival for the wise who value the essence of being over superficial attractions.",
+   "named": false,
+   "seconds": 25
+  },
+  {
+   "kind": "card",
+   "mind": "james",
+   "q": 1,
+   "seed": 1112,
+   "prompt": "bfe3512c8ad64d42",
+   "reply": "When a colleague takes credit for your work, it's important to address the situation with clarity and distinction. Recognize that the value of your ideas and efforts lies in their practical consequences. If your colleague’s acknowledgment does not change how others perceive the work's impact, consider the response you choose. It’s wise to maintain your integrity by gently clarifying the situation, perhaps explaining the contributions of both parties involved. This approach not only clarifies the facts but also aligns with the pragmatic emphasis on practical outcomes. Remember, the goal is to maintain a clear distinction in how your work is perceived, ensuring that your contributions are valued and understood.",
+   "named": false,
+   "seconds": 64
+  },
+  {
+   "kind": "card",
+   "mind": "james",
+   "q": 2,
+   "seed": 1113,
+   "prompt": "643993e71d447f52",
+   "reply": "Leaving a secure job for work you care about is a decision that hinges on your personal values and the clarity of your intentions. If your sense of purpose is deeply intertwined with the work you aspire to do, and you believe it aligns with the infinite Being of the universe, then the shift could be seen as a path towards greater fulfillment. The practical consequences of such a move—such as financial stability, personal satisfaction, and alignment with your beliefs—should guide your decision. Moreover, the dynamic nature of truth suggests that what is true for you today might evolve, and your actions should reflect a commitment to this ongoing process of self-discovery and alignment. Ultimately, the decision should be grounded in the practical benefits and the meaningful impact on your life, rather than just the security of the status quo.",
+   "named": false,
+   "seconds": 41
+  },
+  {
+   "kind": "card",
+   "mind": "james",
+   "q": 3,
+   "seed": 1114,
+   "prompt": "8ab24c1e0184fc62",
+   "reply": "Growing old is a process that emerges from our experiences and the connections we form with the world around us. It is not dictated by material causes or logical necessities but by the accumulation of our sensations and the meanings we assign to them. As we age, we must clarify our thoughts and actions, making distinctions when faced with contradictions, to ensure our wisdom guides us. Embrace the unity of existence, seeing yourself as part of the infinite being of the universe, which can help you see beyond the separateness of age. Recognize that truth is dynamic, always evolving, and be open to reinterpreting what growing old means to you. Finally, live with the understanding that your duty is grounded in the practical consequences of your actions, ensuring that your later years are filled with meaning and purpose.",
+   "named": false,
+   "seconds": 33
+  },
+  {
+   "kind": "card",
+   "mind": "james",
+   "q": 4,
+   "seed": 1115,
+   "prompt": "45a832b5aa00827e",
+   "reply": "To address your anger, first recognize that your emotional response is a sensation, and understand that it is your perception of the event that shapes your reaction. Consider the possibility that this anger is a result of your own wish for the situation to be different. Reflect on the distinctions between what has happened and your interpretation of it. Engage in a practical approach: seek clarity by examining the situation from various angles and consider how your response could influence your future experiences. Remember that truth is dynamic, and your understanding of the event may evolve over time. If the anger persists, focus on connecting this experience with broader principles of oneness and the infinite Being, which can help you see beyond the separateness of your emotions. Finally, trust that reality is a dynamic interplay of concrete expediencies, and act in a way that aligns with this understanding, potentially leading to a more harmonious state.",
+   "named": false,
+   "seconds": 38
+  },
+  {
+   "kind": "card",
+   "mind": "james",
+   "q": 5,
+   "seed": 1116,
+   "prompt": "e6624ea89a052bed",
+   "reply": "Considering the emphasis on practical consequences and clarity in thought, the care you should give to what others think of you should be guided by how it affects your own actions and well-being. If others' opinions lead to personal growth or happiness, it's wise to listen. However, if their opinions are based on misunderstandings or outdated beliefs, it’s important to maintain your own clarity and not let them cloud your judgment. Ultimately, aligning your actions with the infinite Being and recognizing oneness can help you focus on what truly matters, rather than the opinions of others.",
+   "named": false,
+   "seconds": 25
+  },
+  {
+   "kind": "card",
+   "mind": "james",
+   "q": 6,
+   "seed": 1117,
+   "prompt": "cb37fe4f96f31ad1",
+   "reply": "Planning your life carefully can offer a structured path, but it's wise to also heed your impulses, as they reflect your immediate desires and needs. Both approaches are essential; careful planning ensures you have a roadmap, while following your impulses helps you stay true to your authentic self. The dynamic nature of truth suggests that neither approach is absolute. Instead, you should blend them, making distinctions where necessary—perhaps planning for the long term but allowing for spontaneous actions in the moment. This balance can help you live in harmony with the infinite Being of the universe, recognizing that true wisdom lies in the unity of these two aspects of your existence.",
+   "named": false,
+   "seconds": 27
+  },
+  {
+   "kind": "card",
+   "mind": "james",
+   "q": 7,
+   "seed": 1118,
+   "prompt": "df643b355fc5f127",
+   "reply": "Facing the death of someone you love is a profound challenge. It’s important to understand that the memory of the loved one and the emotions they evoke are deeply intertwined with our sensations and experiences. Focusing on the positive memories and the impact they had on your life can provide comfort. Recognize that their presence continues in the world through the memories and the lessons they taught. Embrace the oneness of existence, seeing the loved one as part of a larger infinite Being, which can offer a sense of comfort and unity. Clarity in your thoughts and actions can be achieved by making clear distinctions between your feelings and the practical aspects of their legacy. Agree with reality as it presents itself, understanding that your duty is to live meaningfully in their absence. This approach, grounded in the practical consequences of your actions and the dynamic nature of truth, can help you navigate this difficult time.",
+   "named": false,
+   "seconds": 36
+  },
+  {
+   "kind": "card",
+   "mind": "james",
+   "q": 8,
+   "seed": 1119,
+   "prompt": "6f82c6da1c6ecbbf",
+   "reply": "In considering whether to trust your own judgment over expert advice, reflect on the nature of your experiences and the clarity they bring to your decisions. Your personal sensations and the unique context of your life can offer insights that general expertise might not fully capture. However, the wisdom of experts often stems from a broad and deep understanding that can complement your individual experience. It is wise to critically evaluate both sources; your personal insights can guide you in practical ways, while expert advice can provide a broader perspective and deeper understanding. Ultimately, the harmony between your personal experiences and the wisdom of experts will lead to clearer and more meaningful decisions.",
+   "named": false,
+   "seconds": 26
+  },
+  {
+   "kind": "card",
+   "mind": "james",
+   "q": 9,
+   "seed": 1120,
+   "prompt": "9b1ee32dbc735ee3",
+   "reply": "A day well spent hinges on aligning one's actions with the infinite Being of the universe, recognizing that clarity in thought and action comes from making distinctions when faced with contradictions. Each moment should contribute to a deeper understanding of the world and our place in it. Practical consequences of our deeds are paramount; thus, we should focus on tasks that bring about positive changes, even if only in small ways. Consoling ourselves with religious philosophy is not enough; we must take an active role in addressing the dissatisfaction and inequalities we observe, like John Corcoran’s plight. Embracing a dynamic view of truth, we must continuously seek to integrate new knowledge and experiences, seeing them as part of a broader, evolving reality. In this way, our days become a reflection of our commitment to the interconnectedness of all existence.",
+   "named": false,
+   "seconds": 34
+  },
+  {
+   "kind": "card",
+   "mind": "james",
+   "q": 10,
+   "seed": 1121,
+   "prompt": "fa918e483e220dcc",
+   "reply": "In facing a long illness or constant pain, it's crucial to view these experiences as integral parts of your existence, seeing them through the lens of the infinite Being. Embrace the fact that your reality is connected to a greater whole, and find clarity in the distinctions between what you can and cannot control. Recognize that truth is dynamic, and your perception of pain might evolve as you gain more understanding and acceptance. Engage in actions that derive meaning from practical consequences, perhaps by finding small joys or helping others. Remember, agreement with reality is grounded in the expediencies of your life, so adapt as necessary. By seeing your pain as a part of the infinite fabric of existence, you can live with a sense of oneness and purpose, even in the face of constant challenges.",
+   "named": false,
+   "seconds": 39
+  },
+  {
+   "kind": "card",
+   "mind": "james",
+   "q": 11,
+   "seed": 1122,
+   "prompt": "f082905959a1180d",
+   "reply": "Ambition, viewed through the lens of this pattern of thought, is neither an absolute virtue nor an unmitigated trap. It is a concept that gains its meaning through the practical consequences it yields. Ambition can drive progress and achievement, but it can also lead to dissatisfaction and strife when pursued without clear distinctions between what is truly desired and what merely appears desirable. The wise approach is to align ambition with clear goals and to recognize that the true value of ambition lies in the actions it motivates. Just as Berkeley suggests that we should understand matter through our sensations, we should understand ambition through its effects on our lives. Thus, ambition becomes a valuable tool when it serves a purpose, but it can become a trap when it leads us astray from our true selves and the infinite Being we are connected to.",
+   "named": false,
+   "seconds": 49
+  },
+  {
+   "kind": "card",
+   "mind": "james",
+   "q": 12,
+   "seed": 1123,
+   "prompt": "0dd36b088cf00ad8",
+   "reply": "To determine the truth of a belief, you must consider its practical consequences. A belief is true if it aligns with reality and serves a useful purpose in your life. If a belief does not impact your actions or lead to meaningful outcomes, it may as well be considered the same as another belief. Truth is dynamic and adaptable, always evolving as new knowledge connects with old. It’s wise to focus on the practical application of ideas rather than getting entangled in philosophical disputes that offer no clear guidance for the future. By grounding your beliefs in the concrete realities of your experience, you can better assess their validity and relevance.",
+   "named": false,
+   "seconds": 85
+  },
+  {
+   "kind": "card",
+   "mind": "james",
+   "q": 13,
+   "seed": 1124,
+   "prompt": "5de1566eeb33bd71",
+   "reply": "When faced with laws that seem unjust, one must first consider the practical consequences of their actions. To live in harmony with the infinite Being of the universe, you should strive to see beyond the immediate contradictions and find a path that aligns with the greater good. While it is crucial to challenge and question the status quo, your duty also includes the pragmatic necessity of acting within the current framework. This means seeking ways to work towards change while still fulfilling your obligations as a citizen. Remember, truth is dynamic and malleable, and your role is to contribute to its evolution, not just protest against it. Thus, in the immediate present, adhering to the laws and supporting your country can be seen as a form of service, until such time as you can influence them to become more just.",
+   "named": false,
+   "seconds": 93
+  },
+  {
+   "kind": "card",
+   "mind": "james",
+   "q": 14,
+   "seed": 1125,
+   "prompt": "467b9d46a4e2de13",
+   "reply": "When deciding how to spend money you don't strictly need, consider the practical consequences of your choices. If an item or experience offers no clear benefit or joy, it may not be worth the expenditure. Instead, think about how your spending can contribute positively to your life or the lives of others. Perhaps invest in knowledge, support a cause you care about, or simply save it for when you truly need it. The key is to ensure that any spending aligns with your values and helps you live more meaningfully. Remember, the true value lies in how these expenditures enhance your life or the lives of those around you, rather than in the money itself.",
+   "named": false,
+   "seconds": 87
+  },
+  {
+   "kind": "card",
+   "mind": "james",
+   "q": 15,
+   "seed": 1126,
+   "prompt": "6d52c7c165b04457",
+   "reply": "Solitude can be a source of clarity and self-reflection. Just as Berkeley reminds us that our perceptions shape our reality, so too can solitude allow us to better understand our own thoughts and emotions. It’s in solitude that we can make distinctions between the noise of the external world and the true essence of our being. However, like any other mode of existence, solitude must be balanced. To see ourselves as part of the infinite Being of the universe, we must also engage with the world, for our duty to reality is grounded in the practical consequences of our actions. Thus, while solitude can offer great benefit, it should not be an absolute, but rather a part of a balanced life where we both withdraw and engage.",
+   "named": false,
+   "seconds": 66
+  },
+  {
+   "kind": "card",
+   "mind": "james",
+   "q": 16,
+   "seed": 1127,
+   "prompt": "d1a8d23929c9b2cb",
+   "reply": "To treat someone who is cruel to you, consider the deeper implications of their actions and see them as part of a larger, interconnected whole. Their cruelty might stem from their own insecurities or misunderstandings, not from an independent, material cause. Reflect on the fact that their behavior is a result of their wishes and circumstances, and not an absolute law of nature. By understanding this, you can avoid personalizing their cruelty and see it as a momentary aberration in the vast, ever-evolving universe. Approach the situation with clarity, distinguishing between the specific actions and the underlying reality of interconnectedness. In doing so, you may find a way to respond with compassion and understanding, recognizing that their actions, while painful, do not define the infinite being of the universe. This perspective can guide you to act wisely and with a sense of unity, rather than reacting with anger or resentment.",
+   "named": false,
+   "seconds": 94
+  },
+  {
+   "kind": "card",
+   "mind": "james",
+   "q": 17,
+   "seed": 1128,
+   "prompt": "743f6027ad536d82",
+   "reply": "Reading old books offers a pragmatic and enriching experience. It helps us understand the foundations of our current knowledge and ideas, tracing back to where they originated. By delving into the minds of thinkers from the past, we can grasp the evolution of thought and recognize how our present concepts have been shaped. Moreover, it encourages us to reevaluate our own beliefs, making distinctions and clarifying our thoughts. Reading old books can also serve as a reminder that truth is dynamic and adaptable, influencing us to be open to new interpretations. Lastly, it connects us to a broader context, seeing ourselves as part of a continuous and infinite existence, rather than isolated entities. This practice can guide us in making more informed and meaningful decisions, grounding our actions in the concrete expediencies of reality.",
+   "named": false,
+   "seconds": 61
+  },
+  {
+   "kind": "card",
+   "mind": "james",
+   "q": 18,
+   "seed": 1129,
+   "prompt": "c40588265851dc5c",
+   "reply": "To change a habit you are ashamed of, begin by acknowledging the habit and its impact on your life. Reflect on the sensations and thoughts that trigger the habit, making clear distinctions between the habit and your true self. View your struggle as a part of the dynamic process of understanding and evolving your being, rather than as a static flaw. Embrace the idea that change is a continuous journey, and your duty is to align your actions with the infinite Being of the universe, recognizing that you are part of a larger, interconnected existence. Seek to live in harmony with reality, understanding that the meaning of your actions lies in their practical consequences. Accept that dissatisfaction with the current state can guide you toward a more fulfilling path, one that might require a different approach to your habits. Trust in the process and the wisdom that comes from understanding the interdependence of all things.",
+   "named": false,
+   "seconds": 71
+  },
+  {
+   "kind": "card",
+   "mind": "james",
+   "q": 19,
+   "seed": 1130,
+   "prompt": "1b84ac387b3ab73b",
+   "reply": "Forgiving yourself for a serious mistake is a complex process that depends on understanding the nature of your actions and their consequences. Just as Berkeley reminds us that our perception of reality is shaped by our experiences and sensations, your self-forgiveness should be grounded in acknowledging the reality of the mistake and its impact. It’s important to make clear distinctions between the past action and your current self, recognizing that growth and change are possible. Viewing truth as dynamic and open to reinterpretation means that you can redefine your self-image and the meaning of your actions as you move forward. Embrace the infinite Being of the universe, seeing yourself as part of a greater whole, and find the unity in existence that can provide comfort and guidance. Ultimately, the duty to agree with reality is grounded in practical expediencies—forgiveness can lead to personal growth and a more harmonious life.",
+   "named": false,
+   "seconds": 75
+  },
+  {
+   "kind": "card",
+   "mind": "james",
+   "q": 20,
+   "seed": 1131,
+   "prompt": "fc8665ede6a23897",
+   "reply": "Friendship, in its true essence, is not about material gain or logical necessity but about the shared experience and mutual understanding that arises from the blending of our individual sensations and desires. To understand friendship, one must see it as a dynamic connection that emerges when two souls recognize the oneness of existence. It is the practical consequence of our willingness to see beyond separateness and embrace a shared reality. In the jungle of life, where expediencies guide our actions, friendship stands as a testament to the importance of making clear distinctions and acting on a mutual wish for each other's presence. It is not static but evolves with the flow of new experiences, constantly connecting old and new understandings of what it means to be with another. Thus, the true meaning of friendship lies in the practical benefits it brings—support, companionship, and the mutual affirmation of our existence.",
+   "named": false,
+   "seconds": 61
+  },
+  {
+   "kind": "card",
+   "mind": "nietzsche",
+   "q": 1,
+   "seed": 1149,
+   "prompt": "33a6a48cc76aa4da",
+   "reply": "When a colleague takes credit for your work, it's essential to address the issue promptly but with a reflective and resilient mindset. Recognize that such behavior is common and often stems from a lack of understanding or recognition of your contributions. Approach the situation with a calm and introspective attitude, perhaps reflecting on what truly matters—whether it's the work itself or the recognition. Remember, the true value of your efforts is not solely in the acknowledgment but in the impact and quality of the work. Engage in a constructive dialogue with your colleague, expressing your thoughts calmly and maintaining a sense of self-worth. This can lead to a more open and honest workplace environment, fostering a deeper appreciation for the value of each individual's contributions.",
+   "named": false,
+   "seconds": 111
+  },
+  {
+   "kind": "card",
+   "mind": "nietzsche",
+   "q": 2,
+   "seed": 1150,
+   "prompt": "c08668b8207f6d52",
+   "reply": "In considering the leap from a secure, comfortable position to a more challenging and meaningful path, one must reflect on the true essence of human potential and purpose. Just as the gods inspire and guide us, so too can the pursuit of work we truly care about elevate our spirits and minds. The greatest transformations and insights often take time to fully realize; those in the midst of such changes might not fully grasp their significance until later. Yet, the courage to leave behind the familiar for a more passionate and introspective journey is a noble endeavor. It may not be immediately comfortable, but it can lead to a richer, more fulfilling life. So, if the work you care about resonates with a deeper, more authentic sense of self, it might be worth the risk.",
+   "named": false,
+   "seconds": 59
+  },
+  {
+   "kind": "card",
+   "mind": "nietzsche",
+   "q": 3,
+   "seed": 1151,
+   "prompt": "80af0eadfc70ab1c",
+   "reply": "Growing old should not diminish our sense of wonder and the belief that we can still learn profound lessons from life. Just as the music of Mozart continues to resonate through generations, reflecting a timeless wisdom, so too should we approach our later years with the same curiosity and respect. The significance of our experiences often becomes clearer with time, and we may not fully grasp their importance until long after they have passed. Embrace the wisdom that comes with age and the opportunity to reflect on a life well-lived, rather than viewing it as a mere continuation of the past.",
+   "named": false,
+   "seconds": 55
+  },
+  {
+   "kind": "card",
+   "mind": "nietzsche",
+   "q": 4,
+   "seed": 1152,
+   "prompt": "1276ea55b68cfa80",
+   "reply": "When faced with an injustice, you might feel a powerful urge to lash out. Yet, such anger can cloud your judgment and lead to actions that might not fully address the wrong done. Reflect on the nature of this anger—it may stem from a desire for immediate satisfaction rather than a deeper understanding of the situation. Consider that the person who wronged you might not even be fully aware of the impact of their actions. Instead of yielding to your anger, try to understand their perspective and the context in which the wrong occurred. This doesn’t mean you should forgive or forget, but it can help you see the event more comprehensively. Remember, the true significance of such events often unfolds over many generations, and what seems wrong today might be better understood in the light of time.",
+   "named": false,
+   "seconds": 43
+  },
+  {
+   "kind": "card",
+   "mind": "nietzsche",
+   "q": 5,
+   "seed": 1153,
+   "prompt": "ea4c78a269a7d143",
+   "reply": "Caring too much about what others think can cloud your judgment and prevent you from truly understanding your own value and potential. Just as the philosopher reminds us, the light of our true worth may take time to shine fully, and those around us might not fully grasp it in our lifetimes. Focus on being true to yourself, embracing your unique qualities, and striving to understand the deeper, more complex aspects of your being. Remember, the greatest truths often require time to be fully appreciated, just as the wisdom of Mozart's music resonates more deeply over generations.",
+   "named": false,
+   "seconds": 60
+  },
+  {
+   "kind": "card",
+   "mind": "nietzsche",
+   "q": 6,
+   "seed": 1154,
+   "prompt": "2b2519aa09ec2edc",
+   "reply": "Planning your life carefully might seem like the safer route, but it could also limit your capacity for invention and bravery. Life's greatest events and thoughts often take many generations to fully understand, and those who experience them might not recognize their true significance at the time. Perhaps it’s better to follow your impulses, allowing yourself to be an agreeable, brave, and inventive animal, much like the one described. This approach might lead to discovering truths and making your way through life's challenges in ways that planned paths might not.",
+   "named": false,
+   "seconds": 33
+  },
+  {
+   "kind": "card",
+   "mind": "nietzsche",
+   "q": 7,
+   "seed": 1155,
+   "prompt": "44097c499cb88dd2",
+   "reply": "Facing the death of someone you love can feel like a distant event, much like observing the stars. It’s easy to get caught up in the moment, but as time passes, you may come to understand the significance of their presence in your life more fully. Consider embracing a humble and introspective approach, reflecting on the wisdom and courage of their life. Remember, the depth of your grief and the lessons you learn may not fully resonate until long after the event. In the meantime, cherish the memories and the music of their time with you, much like the enduring appeal of Mozart’s compositions. Embrace the skepticism that allows you to question your own perspective and the world’s. It might be that their passing, like the light from a distant star, will only truly be understood in the years to come.",
+   "named": false,
+   "seconds": 47
+  },
+  {
+   "kind": "card",
+   "mind": "nietzsche",
+   "q": 8,
+   "seed": 1156,
+   "prompt": "ff3130b432e83792",
+   "reply": "Trust in your own judgement is crucial, especially when faced with advice from experts. The significance of your experiences and the wisdom that comes from living through them cannot be underestimated. Just as those who lived during the events of history may not fully grasp their importance at the time, so too can you not fully understand the implications of your decisions until much later. Therefore, it’s important to listen to expert advice, but also to stay true to your own instincts and insights. This balance ensures that you are not swayed by fleeting trends or superficial opinions, but are guided by a deeper, more personal understanding of what truly matters.",
+   "named": false,
+   "seconds": 30
+  },
+  {
+   "kind": "card",
+   "mind": "nietzsche",
+   "q": 9,
+   "seed": 1157,
+   "prompt": "bbf4d0983d494398",
+   "reply": "A day well spent is when we live humbly and introspectively, learning from the wisdom of the past, much like the gods. Reflecting on the enduring value of Mozart's music, which resonates through generations, can guide us. It's important to question modern perspectives and seek deeper truths, perhaps even finding them in the struggles of the wicked and unfortunate. Strive for genuine thought and action, rather than comfort or superficial virtues. Embrace skepticism as a tool to combat pessimism, and in doing so, we may discover that true power lies in our intellect and the ability to see beyond the surface.",
+   "named": false,
+   "seconds": 27
+  },
+  {
+   "kind": "card",
+   "mind": "nietzsche",
+   "q": 10,
+   "seed": 1158,
+   "prompt": "33317c96db635438",
+   "reply": "In such a circumstance, it's important to embrace a more humble and introspective approach. Reflect on the wisdom of the past and the resilience of those who faced similar challenges. Consider the value of finding meaning in the present, rather than longing for what may not return. The greatest insights often come with time, so be patient and open to the lessons that each moment offers. Think of the struggles as a forge that shapes the soul, rather than a hindrance to progress. Strive to understand the enduring truths that emerge from adversity, and perhaps find strength in the company of others who have faced similar trials. Remember, the true significance of these experiences may not be fully recognized until long after they have passed.",
+   "named": false,
+   "seconds": 30
+  },
+  {
+   "kind": "card",
+   "mind": "nietzsche",
+   "q": 11,
+   "seed": 1159,
+   "prompt": "59981069a9e4cc65",
+   "reply": "Ambition, like any powerful force, can be both a virtue and a trap, depending on the context and the individual. In some eras and circumstances, the relentless drive to succeed and excel can lead to great achievements, much like the music of Mozart that speaks to our timeless human experience. Yet, as with the intelligence for Beethoven, such ambitions may not endure as long or may lose their initial luster. Striving for high positions and comfort might indeed be seen as the essence of virtue in a world often guided by such standards. However, in times of struggle, a stable and uniform mindset can emerge, while in abundance, varied and potentially monstrous variations tend to arise. Thus, ambition should be approached with skepticism and a clear understanding that it can lead to both profound success and destructive traps, much like the philosopher who must declare war on atomistic requirements that persist in science and give the final blow to soul-atomism.",
+   "named": false,
+   "seconds": 39
+  },
+  {
+   "kind": "card",
+   "mind": "nietzsche",
+   "q": 12,
+   "seed": 1160,
+   "prompt": "51d81ea91b54f5f3",
+   "reply": "To discern the truth of your beliefs, remember that immediate experience may not fully capture their true significance. Just like the light from distant stars takes time to reach us, the full impact of great events and thoughts unfolds over generations. You must remain skeptical and critical, questioning the transient nature of popular opinions and trends. Engage with the enduring wisdom of the past, like the music of Mozart, which speaks to us across time. Be wary of shallow comforts and the allure of conformity, as these can obscure deeper truths. Strive for a perspective that transcends the immediate and embraces the complexity of human experience, much like a philosopher who must wage a relentless war against simplistic, atomistic views.",
+   "named": false,
+   "seconds": 29
+  },
+  {
+   "kind": "card",
+   "mind": "nietzsche",
+   "q": 13,
+   "seed": 1161,
+   "prompt": "3a86a1d363960aa2",
+   "reply": "When faced with laws and societal norms that seem unjust, one must maintain a critical and skeptical stance. The greatest truths often take time to be fully grasped, and the generations that experience such injustices may not fully comprehend their significance until later. It is important to question and challenge these norms, even if it means going against the status quo. As a free spirit, one should strive for a deeper understanding and the courage to act upon what one believes to be right, even if it challenges conventional wisdom. The true philosopher must declare war on the complacency that comes from following laws and norms blindly, and instead seek to uncover the hidden truths that may lie beneath.",
+   "named": false,
+   "seconds": 28
+  },
+  {
+   "kind": "card",
+   "mind": "nietzsche",
+   "q": 14,
+   "seed": 1162,
+   "prompt": "8c941f10b0977cf3",
+   "reply": "Spending money you don't need should be approached with a reflective and introspective mindset. Consider the wisdom that true value often comes from humble and enduring sources, much like the music of Mozart, which speaks to us across time. Perhaps allocate funds towards experiences or endeavors that might not be immediately evident in their significance but could enrich your life in unexpected ways, much like the slow realization of the impact of great events. Alternatively, you might support the growth of new ideas and thinkers who are unafraid to question modern norms and reclaim ancient wisdom, ensuring a more vibrant and robust intellectual landscape.",
+   "named": false,
+   "seconds": 24
+  },
+  {
+   "kind": "card",
+   "mind": "nietzsche",
+   "q": 15,
+   "seed": 1163,
+   "prompt": "4e1c243f6a3bd6e9",
+   "reply": "Solitude can be a valuable companion, much like a dear friend, but one that speaks in whispers rather than shouts. It allows for introspection and the deep contemplation of life's complexities, much like the stars that take time to reach us, illuminating our understanding only after much reflection. Just as the greatest thoughts and events take many generations to fully grasp, solitude can reveal truths that might otherwise go unnoticed in the hustle and bustle of daily life. It offers a chance to explore the depths of one's own mind, much like the \"good old\" music of Mozart that resonates with us still. However, it is important to strike a balance, for constant solitude might lead to monstrous variations, while a life too steeped in society's expectations and comfort might result in a shallow and uniform existence. Therefore, like the philosopher who declares war on atomistic requirements, one must engage with both solitude and society to truly understand oneself and the world.",
+   "named": false,
+   "seconds": 40
+  },
+  {
+   "kind": "card",
+   "mind": "nietzsche",
+   "q": 16,
+   "seed": 1164,
+   "prompt": "26d18550534038b1",
+   "reply": "Treating a cruel person with understanding and introspection might yield unexpected benefits. Remember, the true significance of such encounters often unfolds over time, much like the music of Mozart. Cruelty could be a form of severity that fosters a robust spirit, much like the challenging conditions that strengthen philosophers. Instead of reacting with anger or resentment, try to see these moments as part of a greater, more complex narrative of life. Approach such interactions with skepticism towards your immediate reactions—perhaps you are not fully comprehending the situation as it will be seen in the future. By doing so, you may find that cruelty, in its own way, is a teacher that can lead to a deeper, more resilient understanding of human nature.",
+   "named": false,
+   "seconds": 31
+  },
+  {
+   "kind": "card",
+   "mind": "nietzsche",
+   "q": 17,
+   "seed": 1165,
+   "prompt": "da3cfae9ba098247",
+   "reply": "Reading old books, like appreciating Mozart's music, connects us to a \"good old\" time that still resonates with us. These works, born in different eras, offer insights that are not immediately apparent or fully understood during their time. They represent the wisdom and perspectives of earlier generations, which can be profoundly enlightening. By engaging with these texts, we can better understand the development of human thought and perhaps draw strength from the resilience and creativity of those who came before. Moreover, old books challenge our modern assumptions and can inspire a more skeptical and introspective approach to life, much like the philosophers who sought to reclaim and refine ancient ideas for a new era.",
+   "named": false,
+   "seconds": 28
+  },
+  {
+   "kind": "card",
+   "mind": "nietzsche",
+   "q": 18,
+   "seed": 1166,
+   "prompt": "278d627c1c1dea4f",
+   "reply": "To change a habit you are ashamed of, think of yourself as a philosopher who understands the complexity of human nature. Recognize that the greatest changes often take time and cannot be fully grasped in the moment. Reflect on your actions as if you were an observer from another era, appreciating the \"good old\" times of your struggles, just as one might listen to Mozart. Embrace a skeptical attitude towards your own perceptions; perhaps your shame is just a modern idea that will fade. Declare war on the atomistic requirements that seek to define your worth and instead focus on developing a stable and independent spirit. Understand that your struggle might be the foundation for your growth, and that severity and craft might actually benefit you more than gentleness. Finally, be prepared for a lengthy process of self-discovery, knowing that the light of true understanding may take a while to shine upon you.",
+   "named": false,
+   "seconds": 70
+  },
+  {
+   "kind": "card",
+   "mind": "nietzsche",
+   "q": 19,
+   "seed": 1167,
+   "prompt": "f8d8b8c9ca37b5c9",
+   "reply": "Forgiving yourself for a serious mistake is a complex journey. Just as the greatest events take time to be fully understood, acknowledging and reflecting on your mistake may require generations of self-reflection. You are a free spirit, capable of learning and growing from this experience. Remember, the severity and adversity that come with mistakes can also forge a stronger, more independent spirit. Embrace the challenge and use it as a means to discover parts of yourself that may not have been fully revealed before. Strive to understand the full impact of your actions, and in doing so, you may find a path to a more honest and profound self.",
+   "named": false,
+   "seconds": 88
+  },
+  {
+   "kind": "card",
+   "mind": "nietzsche",
+   "q": 20,
+   "seed": 1168,
+   "prompt": "79dabf70f0864998",
+   "reply": "Friendship, in this view, transcends immediate understanding and the temporal limitations of human experience. It is a lasting connection that endures beyond the fleeting moments of our lives. True friends are like the light from distant stars—only through time do we fully appreciate their significance. They provide a steadfast presence, offering wisdom and companionship that extends far beyond the present, much like the profound impact of great thinkers or events that only gain clarity over generations. In the face of adversity, these enduring bonds can serve as a resilient force, reminding us of the enduring qualities that define humanity.",
+   "named": false,
+   "seconds": 38
+  },
+  {
+   "kind": "card",
+   "mind": "thoreau",
+   "q": 1,
+   "seed": 1186,
+   "prompt": "6df7fbbaa8475f7a",
+   "reply": "When a colleague takes credit for your work, it's important to address the situation with integrity and independence. Reflect on the true value of your contributions and the impact they have had. Engage actively by gently but firmly bringing attention to the facts. Remember, the essence of your value lies in your actions and the quality of your work, not in external recognition. Instead of seeking validation from your peers, focus on your personal growth and the skills you're developing, much like mastering the art of hunting and fishing. This approach not only upholds your integrity but also enriches your inner life, making you a true man of independent character.",
+   "named": false,
+   "seconds": 104
+  },
+  {
+   "kind": "card",
+   "mind": "thoreau",
+   "q": 2,
+   "seed": 1187,
+   "prompt": "e50b0e6b4fa84c63",
+   "reply": "In considering a change from a secure job to one aligned with personal passions, remember that true fulfillment comes from the essence of our actions, not the superficial stability of our careers. Engaging in work that you genuinely care about can lead to a richer, more meaningful life. It’s time for us to prioritize the cultivation of our inner virtues and the pursuit of lifelong learning, rather than clinging to the comfort of our current circumstances. By stepping out of the mundane, we can discover new possibilities and deeper wisdom. So, while the secure job offers safety, the work you love could provide the true satisfaction that comes from living authentically and contributing to a greater intellectual and cultural community.",
+   "named": false,
+   "seconds": 40
+  },
+  {
+   "kind": "card",
+   "mind": "thoreau",
+   "q": 3,
+   "seed": 1188,
+   "prompt": "e3301a15ad0de0b1",
+   "reply": "Growing old is not about the style of your dwelling or how you look. It’s about the life you lead and the integrity with which you conduct yourself. Embrace the simple, nature-centered life, free from excessive worries. Seek out the best knowledge and resources, no matter their origin, and engage actively with the world. Reflect on the deeper meanings around you, and find purpose in the hard work and simple pleasures. Let your interactions be in unbroken harmony, fostering a meaningful presence in the lives around you. Age well by living independently and with wisdom, not just in your years but in your every moment.",
+   "named": false,
+   "seconds": 60
+  },
+  {
+   "kind": "card",
+   "mind": "thoreau",
+   "q": 4,
+   "seed": 1189,
+   "prompt": "a866df07de614261",
+   "reply": "When someone wrongs you, it’s more important to focus on how you respond and grow from the experience than on the outward display of your dwelling or appearance. Reflect on the true value of your reaction. Instead of harboring anger, consider using this moment as a chance to deepen your understanding of yourself and others. Engage actively with the world, perhaps by seeking out new knowledge or skills, like mastering a craft or pursuing lifelong liberal studies. This approach will help you move beyond petty grievances and embrace a more profound engagement with life's complexities.",
+   "named": false,
+   "seconds": 31
+  },
+  {
+   "kind": "card",
+   "mind": "thoreau",
+   "q": 5,
+   "seed": 1190,
+   "prompt": "11d8257a3a3ea495",
+   "reply": "It's more important to focus on living a life true to yourself and your values than to worry overly about how others perceive you. Your worth isn't defined by external opinions. Instead, consider investing in your education and personal growth, perhaps by engaging in lifelong learning within your community. Let your actions and integrity speak louder than any superficial standards. And remember, true harmony often lies in quiet, thoughtful interactions rather than constant chatter.",
+   "named": false,
+   "seconds": 36
+  },
+  {
+   "kind": "card",
+   "mind": "thoreau",
+   "q": 6,
+   "seed": 1191,
+   "prompt": "d759eedea0c18e55",
+   "reply": "It's more valuable to live a life guided by integrity and independent judgment rather than strict planning. Letting your whims and the moment guide your actions can lead to unexpected pleasures and deeper understandings. For instance, just as a cat finds joy in unpredictable moments while eating corn, you might discover unique joys and insights by following your immediate inclinations. However, this doesn't mean abandoning all planning; it's about finding a balance where you actively engage with the world, ready to seize opportunities as they arise.",
+   "named": false,
+   "seconds": 44
+  },
+  {
+   "kind": "card",
+   "mind": "thoreau",
+   "q": 7,
+   "seed": 1192,
+   "prompt": "a9641e5ab699a570",
+   "reply": "Focusing on the essence of the relationship rather than external appearances, remember that the true value lies in the life and the memories shared. Let the passing be a moment to reflect on the meaningful chapters of your loved one's life, and cherish the unspoken bonds that bound you. Strive to carry forward their spirit through your actions and choices, much like a cat savoring a meal moment by moment. Engage actively with the world, finding ways to honor their legacy through education and the pursuit of knowledge. In the silence that follows, let there be a profound understanding that life's true richness comes from the connections we make and the experiences we share, rather than the duration.",
+   "named": false,
+   "seconds": 50
+  },
+  {
+   "kind": "card",
+   "mind": "thoreau",
+   "q": 8,
+   "seed": 1193,
+   "prompt": "29d1caa735264353",
+   "reply": "Trusting your own judgement is crucial, especially when it comes to leading a fulfilling life. Your actions and the way you conduct yourself matter more than following the latest trends or the advice of experts. Just as a village should focus on education rather than superficial trappings, you should prioritize your personal growth and integrity over external opinions. Engage actively with the world, and cultivate your abilities like learning to hunt and fish—these skills are valuable for guiding your path. While experts can offer insights, ultimately, your journey is uniquely yours, and your instincts can lead you to the deeper meanings and wisdom you seek.",
+   "named": false,
+   "seconds": 52
+  },
+  {
+   "kind": "card",
+   "mind": "thoreau",
+   "q": 9,
+   "seed": 1194,
+   "prompt": "5541a2ca2483ae6e",
+   "reply": "A day is well spent when it is filled with meaningful actions and genuine engagement rather than superficial activities. Whether you are pursuing lifelong learning in your community or tending to the practical needs of your home, the true value lies in the effort and integrity you bring to each task. Reflect on the deeper meanings around you, and appreciate the simple pleasures, like a cat’s playful approach to eating. Engage actively with the world, and let your day be a testament to your independence and self-reliance, free from the constraints of convention. In this way, even the simplest of days can be rich with purpose and wisdom.",
+   "named": false,
+   "seconds": 39
+  },
+  {
+   "kind": "card",
+   "mind": "thoreau",
+   "q": 10,
+   "seed": 1195,
+   "prompt": "f20e710de6257a18",
+   "reply": "Living with a long illness or constant pain requires focusing on the essence of your life rather than external appearances. Embrace a simple, nature-centered existence, free from unnecessary worries. Engage actively with the world, seeking out the best resources and knowledge to enrich your understanding. Cultivate skills that can guide and influence, making each day count. Reflect on the deeper meanings in the world around you, finding momentary pleasures and wisdom in the uncertainties of life. Strive for unbroken harmony in your interactions, where frequent speech is not necessary. Your true worth comes from how you conduct yourself, not in the luxury or trappings of your dwelling.",
+   "named": false,
+   "seconds": 59
+  },
+  {
+   "kind": "card",
+   "mind": "thoreau",
+   "q": 11,
+   "seed": 1196,
+   "prompt": "1b2d89559c5fbf45",
+   "reply": "Ambition can be a virtue when it drives one to pursue genuine knowledge and personal growth, rather than superficial achievements. However, it can also become a trap if it leads to constant striving and dissatisfaction. True ambition, like the cat's playful approach to corn, should be guided by integrity and a desire to learn and grow, rather than by the desire for status or material gain. It's important to engage actively with the world, but not to let ambition consume you. Instead, focus on developing the skills and wisdom that will enrich your life, much like hoeing a field improves its fertility.",
+   "named": false,
+   "seconds": 35
+  },
+  {
+   "kind": "card",
+   "mind": "thoreau",
+   "q": 12,
+   "seed": 1197,
+   "prompt": "17238f4e203ab74a",
+   "reply": "To know if a belief is true, it's essential to focus on the substance of your actions and values rather than the superficial aspects of your life. Engage deeply in lifelong learning and seek out the best knowledge and resources, regardless of their origin. Act with integrity and independence, resisting the urge to follow conventions blindly. Reflect on the deeper meanings around you and engage actively with the world. True understanding comes from practical engagement and hard work, much like hoeing a field. In the end, the quality of your interactions and the impact of your actions will reveal the truth of your beliefs.",
+   "named": false,
+   "seconds": 56
+  },
+  {
+   "kind": "card",
+   "mind": "thoreau",
+   "q": 13,
+   "seed": 1198,
+   "prompt": "f6e47cbe750d15b4",
+   "reply": "When I see laws that seem unjust, I owe it to my country to question them thoughtfully, seeking deeper understanding rather than immediate rebellion. It’s important to engage with these issues, perhaps through education and discussion, to find the best path forward. Like hoeing a field, such engagement can enrich both the individual and the community. I should strive to live simply, valuing the inherent worth of knowledge and skills over superficial appearances. In doing so, I contribute to a culture where lifelong learning and integrity are paramount, ensuring that my actions truly benefit society, even if it means challenging established norms.",
+   "named": false,
+   "seconds": 33
+  },
+  {
+   "kind": "card",
+   "mind": "thoreau",
+   "q": 14,
+   "seed": 1199,
+   "prompt": "329e5b669e5b5d5f",
+   "reply": "Spending money on unnecessary luxuries is like adorning a humble cottage with fine furniture; it distracts from the true value of a life well-lived. Instead, consider directing your resources towards education and personal development. Invest in the tools and knowledge that can enrich your understanding of the world, much like hoeing a field improves its fertility. Support local schools and libraries, and perhaps even take up a craft or skill that brings you joy and satisfaction. Remember, the true worth of a life lies in the lessons we learn and the contributions we make, rather than in the trappings of our existence.",
+   "named": false,
+   "seconds": 52
+  },
+  {
+   "kind": "card",
+   "mind": "thoreau",
+   "q": 15,
+   "seed": 1200,
+   "prompt": "57ec5cb0e10aaf3d",
+   "reply": "Solitude can be a valuable companion, offering a chance to introspect and grow. Just as a cat plays with its corn without concern for how it looks, we can find joy and reflection in quiet moments. True worth comes not from the external but from the depth of one's inner life. To truly develop, we must step away from the superficial and engage with our own thoughts and the world around us. This doesn’t mean isolation, but rather finding a balance where we let go of unnecessary social ties and immerse ourselves in the richness of knowledge and nature. Solitude, when embraced, can be a powerful tool for personal development, allowing us to live simply and with integrity.",
+   "named": false,
+   "seconds": 49
+  },
+  {
+   "kind": "card",
+   "mind": "thoreau",
+   "q": 16,
+   "seed": 1201,
+   "prompt": "4c53ba621ffcaa1b",
+   "reply": "Facing cruelty, it's important to remember that the true measure of a person is not in their actions towards you, but in how they conduct themselves in their own life. Instead of reacting with anger or resentment, consider the village as a university where lifelong studies are pursued. Engage with the world actively, seeking out the best resources and knowledge, even if it means stepping outside your comfort zone. Reflect on the deeper meanings in your interactions, and let your response be an opportunity to grow. Treat the situation as a chance to hone your skills, much like hoeing a field improves its fertility. By focusing on your own integrity and independence, you can rise above the cruelty and find a path of true personal development.",
+   "named": false,
+   "seconds": 50
+  },
+  {
+   "kind": "card",
+   "mind": "thoreau",
+   "q": 17,
+   "seed": 1202,
+   "prompt": "11a36f6b1817bb94",
+   "reply": "Reading old books is like exploring the life of our ancestors, who lived in humble cottages yet led meaningful lives. It reminds us that true value lies not in the physical objects around us but in the wisdom and integrity of those who lived them. These books offer timeless insights into how people once engaged with the world, seeking knowledge and understanding beyond superficial appearances. They provoke us to think deeply about our own lives and challenge us to pursue education and personal growth, rather than focusing on trivialities. Through their pages, we can appreciate the deeper meanings and wisdom that often lie beneath the surface, enriching our own lives in the process.",
+   "named": false,
+   "seconds": 52
+  },
+  {
+   "kind": "card",
+   "mind": "thoreau",
+   "q": 18,
+   "seed": 1203,
+   "prompt": "d56ddfd7bd8995ef",
+   "reply": "To change a habit you are ashamed of, start by embracing a simpler, more nature-centered lifestyle, free from the distractions that might reinforce this habit. Focus on the intrinsic value of your life rather than external appearances. Engage actively with the world, seeking out the best resources and knowledge, no matter their origin. Cultivate your skills, like those of a hunter or fisher, to guide and influence your path. In doing so, you'll find the strength to break free from your shame and live with integrity and independence. Remember, true change comes from within, and it’s about living a purposeful life, not just following conventions.",
+   "named": false,
+   "seconds": 45
+  },
+  {
+   "kind": "card",
+   "mind": "thoreau",
+   "q": 19,
+   "seed": 1204,
+   "prompt": "0703cc66565e42d4",
+   "reply": "Forgiving yourself for a serious mistake is crucial for moving forward. It's not about ignoring the mistake but learning from it and growing stronger. Think of your life as a series of lessons, each one contributing to your character and wisdom. Just as hoeing a field improves its fertility, acknowledging and learning from your mistake can enrich your life. Reflect on it, accept responsibility, and commit to better choices in the future. By doing so, you honor the true value of your life and its potential to be a lifelong journey of learning and improvement, rather than dwelling on past errors.",
+   "named": false,
+   "seconds": 58
+  },
+  {
+   "kind": "card",
+   "mind": "thoreau",
+   "q": 20,
+   "seed": 1205,
+   "prompt": "726cdd2721176a92",
+   "reply": "Friendship should be about living a life filled with genuine interactions, where speech is not necessary for harmony. It’s about supporting each other in pursuing lifelong education and true virtues, rather than superficial appearances. In true friendship, there’s no need for constant chatter, as understanding and trust grow through shared experiences and mutual respect. Just like a cat savoring its corn with whimsy, true friends find joy in the simple moments, free from the burdens of unnecessary responsibilities. Together, they explore the world with open minds, seeking the best resources and knowledge, and engaging actively with its possibilities. Friendship, in this sense, is about cultivating independence and integrity, standing up against demagogues and conventions, and working together to enrich each other’s lives.",
+   "named": false,
+   "seconds": 64
+  },
+  {
+   "kind": "base",
+   "mind": null,
+   "q": 1,
+   "seed": 2001,
+   "prompt": "ef424b1f410f325b",
+   "reply": "When a colleague takes credit for your work, it's important to address the situation professionally and constructively. First, gather any evidence of your contribution, such as emails or meeting notes, to support your claims. Approach the colleague privately to discuss the situation, highlighting your efforts and contributions. Maintain a calm and factual tone, and consider involving a supervisor if the issue persists. Addressing the matter directly can help clarify responsibilities and maintain a positive working relationship. Remember, your response can influence the workplace culture; handle it with integrity and respect.",
+   "named": false,
+   "seconds": 39
+  },
+  {
+   "kind": "base",
+   "mind": null,
+   "q": 2,
+   "seed": 2002,
+   "prompt": "b2b38f0bb161cc15",
+   "reply": "Deciding to leave a secure job for one that aligns more closely with your passions and interests is a deeply personal choice. On one hand, the financial stability and security of a steady job can provide peace of mind and resources for future endeavors. On the other hand, pursuing work that genuinely fulfills you can bring immense satisfaction and personal growth. Success in a job you care about often leads to greater overall happiness and a sense of purpose. Ultimately, the decision hinges on your values and what you prioritize—financial security or personal fulfillment. It's wise to consider both the short-term risks and long-term rewards, and perhaps seek advice or even conduct a small trial to gauge the potential outcomes.",
+   "named": false,
+   "seconds": 52
+  },
+  {
+   "kind": "base",
+   "mind": null,
+   "q": 3,
+   "seed": 2003,
+   "prompt": "9503671e8088891c",
+   "reply": "Growing old is a natural part of life that brings both challenges and rewards. It's important to approach this stage with a positive outlook, focusing on personal growth and the wisdom that comes with age. Embrace the opportunity to share knowledge and experience with younger generations. Cultivate meaningful relationships and maintain a sense of purpose through hobbies, volunteer work, or other activities that bring joy and fulfillment. Physical and mental health should be prioritized through regular exercise, a balanced diet, and engaging in activities that challenge your mind. Remember, aging is a journey to be embraced, not feared, as it offers a unique perspective on life and the world around us.",
+   "named": false,
+   "seconds": 47
+  },
+  {
+   "kind": "base",
+   "mind": null,
+   "q": 4,
+   "seed": 2004,
+   "prompt": "6e27a809e327fe27",
+   "reply": "Dealing with anger over a wrong can be challenging, but it's important to manage your emotions constructively. Start by acknowledging your feelings without judgment. Reflect on why this wrong bothers you and what you hope to achieve by feeling angry. Consider expressing your feelings through calm and clear communication if it feels safe and appropriate. Alternatively, you might choose to let go of the anger by practicing forgiveness, even if the person who wronged you has not apologized. Engaging in activities that promote relaxation and positive emotions, like exercise or meditation, can also help. Ultimately, the goal is to find a path that leads to healing and peace for yourself.",
+   "named": false,
+   "seconds": 40
+  },
+  {
+   "kind": "base",
+   "mind": null,
+   "q": 5,
+   "seed": 2005,
+   "prompt": "4a3239d8ef819efb",
+   "reply": "Caring too much about others' opinions can lead to stress and anxiety, as not everyone's views are constructive or fair. It's important to value your own beliefs, feelings, and goals. However, being aware of how your actions affect others can help in maintaining positive relationships. Striking a balance means focusing on self-improvement and personal happiness while being considerate of others' perspectives. Ultimately, your self-worth should not be solely dependent on external validation.",
+   "named": false,
+   "seconds": 47
+  },
+  {
+   "kind": "base",
+   "mind": null,
+   "q": 6,
+   "seed": 2006,
+   "prompt": "3c0b81d448f4c521",
+   "reply": "Whether to plan your life carefully or follow your impulses depends on your goals and the situation. Careful planning can help you achieve long-term goals and make informed decisions, ensuring a sense of control and structure. However, following your impulses can lead to spontaneous and rewarding experiences, fostering creativity and personal growth. Balancing both approaches might be ideal—using planning to set a course while allowing flexibility to seize unexpected opportunities. Ultimately, the key is to find a harmonious blend that suits your individual needs and values.",
+   "named": false,
+   "seconds": 28
+  },
+  {
+   "kind": "base",
+   "mind": null,
+   "q": 7,
+   "seed": 2007,
+   "prompt": "25bd92b66d31b788",
+   "reply": "Facing the death of someone you love is a deeply personal and painful experience. It's important to allow yourself to grieve and express your emotions openly. Engage in activities that honor their memory, such as sharing stories or creating a memorial. Lean on friends and family for support, and consider seeking professional help if you find it overwhelming. Remember, it's okay to seek solace in routines or rituals that provide comfort. Each person's journey through grief is unique, and it's crucial to find the path that feels right for you.",
+   "named": false,
+   "seconds": 40
+  },
+  {
+   "kind": "base",
+   "mind": null,
+   "q": 8,
+   "seed": 2008,
+   "prompt": "80d3d8b55915aaf8",
+   "reply": "Balancing trust in your own judgment with expert advice is crucial. Your instincts can be valuable, especially in unique situations. However, experts often have a depth of knowledge and experience that can offer broader insights and more informed guidance. It's wise to consider both sources. Assess the context: in fields like medicine or engineering, expert advice should typically take precedence due to the complexity and potential risks. For everyday decisions, your intuition can guide, but it's beneficial to consult experts when in doubt. Ultimately, combining your judgment with expert advice can lead to more informed and reliable decisions.",
+   "named": false,
+   "seconds": 52
+  },
+  {
+   "kind": "base",
+   "mind": null,
+   "q": 9,
+   "seed": 2009,
+   "prompt": "0f9cd5d06dab4a4a",
+   "reply": "A day well spent often begins with a sense of purpose or intention. Engaging in activities that align with one's values and goals can contribute significantly. Moments of genuine connection with others, whether through conversation, shared experiences, or helping someone, also enrich a day. Personal growth through learning, creative expression, or physical activity can leave a lasting positive impact. Additionally, moments of reflection, mindfulness, or simply enjoying nature can offer a sense of peace and contentment. Balancing work, play, and rest ensures a holistic experience, making each day meaningful and fulfilling.",
+   "named": false,
+   "seconds": 46
+  },
+  {
+   "kind": "base",
+   "mind": null,
+   "q": 10,
+   "seed": 2010,
+   "prompt": "6989b5f300e11f44",
+   "reply": "Living with a long illness or constant pain requires a balanced approach. First, prioritize your physical health by following the treatment plan advised by healthcare professionals. Embrace a routine that includes gentle exercise, which can help maintain mobility and boost mood. Engage in activities that bring you joy and connect you with your community, whether that’s through hobbies, social groups, or volunteering. Mindfulness and meditation can also be beneficial in managing pain and stress. Additionally, maintaining open communication with loved ones about your needs and feelings is crucial for emotional support. Lastly, consider seeking professional counseling or support groups to address any emotional challenges and to gain insights and strategies from others facing similar situations.",
+   "named": false,
+   "seconds": 59
+  },
+  {
+   "kind": "base",
+   "mind": null,
+   "q": 11,
+   "seed": 2011,
+   "prompt": "1d5d322b11f16d63",
+   "reply": "Ambition can be seen as a mix of virtue and potential trap. On one hand, it drives individuals to set and pursue noble goals, fostering growth and achievement. However, when unchecked, ambition can lead to overreach, neglect of moral values, and stress. It becomes a trap when it consumes one's well-being and relationships, prioritizing success at any cost. Balancing ambition with ethical considerations and self-care is key to harnessing its positive aspects while avoiding its pitfalls.",
+   "named": false,
+   "seconds": 31
+  },
+  {
+   "kind": "base",
+   "mind": null,
+   "q": 12,
+   "seed": 2012,
+   "prompt": "c00d15a38fdbfe99",
+   "reply": "To determine if a belief is true, start by examining the evidence supporting it. Look for reliable sources and consider multiple perspectives. Reflect on the logical consistency of the belief. It's also helpful to test the belief through practical application or experimentation. Engage in open dialogue with others to refine and challenge your understanding. Ultimately, a belief's truth may be best gauged through a combination of critical thinking, empirical evidence, and ongoing inquiry.",
+   "named": false,
+   "seconds": 45
+  },
+  {
+   "kind": "base",
+   "mind": null,
+   "q": 13,
+   "seed": 2013,
+   "prompt": "228d6196bff6a48e",
+   "reply": "When faced with the conflict between personal beliefs and societal laws, a thoughtful approach is essential. First, it's crucial to engage in open dialogue and seek understanding of the laws and their intended purpose. Often, apparent injustices can be addressed through legal and peaceful means such as advocacy, voting, and participating in civic engagement. However, if after due consideration, you believe your moral or ethical principles cannot coexist with the law, you may need to consider the extent of your allegiance. In such cases, nonviolent resistance or civil disobedience can be a way to challenge unjust laws while respecting the principles of law and order. Ultimately, the balance lies in acting with integrity and upholding the values that resonate with your conscience, all while seeking constructive change within the framework of the law.",
+   "named": false,
+   "seconds": 45
+  },
+  {
+   "kind": "base",
+   "mind": null,
+   "q": 14,
+   "seed": 2014,
+   "prompt": "6127166d585a7618",
+   "reply": "When you have extra money, consider a few responsible spending strategies. First, build or bolster your emergency fund, ensuring you have savings for unexpected expenses. Next, think about investing in your education or personal development, which can pay off in the long run. Supporting local businesses by spending on goods and services from nearby establishments can also be beneficial. Additionally, contributing to causes you care about through donations or volunteering can provide personal fulfillment. Finally, treat yourself to experiences or hobbies that bring joy, but do so in moderation to avoid unnecessary debt.",
+   "named": false,
+   "seconds": 52
+  },
+  {
+   "kind": "base",
+   "mind": null,
+   "q": 15,
+   "seed": 2015,
+   "prompt": "ffd5e852746778ec",
+   "reply": "Solitude can be beneficial for personal growth and well-being. It offers a space for introspection and self-discovery, allowing individuals to connect with their inner thoughts and emotions. This time alone can also enhance creativity, as one is free from external distractions. However, it's important to strike a balance, as prolonged isolation can lead to feelings of loneliness and disconnection. Solitude should be seen as a choice, an opportunity for personal reflection and rejuvenation, rather than a necessity. It complements social interactions, providing a necessary break and space for self-reflection.",
+   "named": false,
+   "seconds": 33
+  },
+  {
+   "kind": "base",
+   "mind": null,
+   "q": 16,
+   "seed": 2016,
+   "prompt": "d5949999489e9700",
+   "reply": "Treating someone who is cruel to you can be challenging, but it’s important to prioritize your own well-being. Respond with kindness and understanding whenever possible, but set clear boundaries to protect yourself from further harm. If the cruelty continues, it might be best to distance yourself or seek support from trusted friends or professionals. Remember, your value isn’t defined by others' actions, and it’s okay to choose environments and relationships that uplift and respect you.",
+   "named": false,
+   "seconds": 28
+  },
+  {
+   "kind": "base",
+   "mind": null,
+   "q": 17,
+   "seed": 2017,
+   "prompt": "aae2289cea3a670d",
+   "reply": "Reading old books offers a unique window into different eras, cultures, and ways of thinking. These texts can provide valuable insights into the historical context and societal norms of their time, enriching our understanding of how we got to where we are now. They often contain timeless wisdom, moral lessons, and innovative ideas that can inspire new perspectives on contemporary issues. Old books also enhance critical thinking skills as readers engage with complex, often challenging ideas and writing styles. Additionally, they can foster empathy by helping us understand and relate to people from diverse backgrounds and epochs. Overall, they are a treasure trove of knowledge and cultural heritage, offering endless opportunities for personal growth and intellectual stimulation.",
+   "named": false,
+   "seconds": 70
+  },
+  {
+   "kind": "base",
+   "mind": null,
+   "q": 18,
+   "seed": 2018,
+   "prompt": "6d1b1ca7a72601aa",
+   "reply": "Changing a habit you're ashamed of can be a deeply personal journey. First, acknowledge your feelings without judgment. Recognize that change is a process, not an instant fix. Start by setting small, achievable goals. For example, if the habit is overeating, try replacing it with healthier snacks. Surround yourself with supportive people who encourage your progress. Celebrate every small victory along the way. Additionally, consider finding alternative ways to cope with the emotions that trigger the habit, such as through exercise, journaling, or mindfulness. Remember, the key is to treat yourself with kindness and patience as you navigate this transformation.",
+   "named": false,
+   "seconds": 43
+  },
+  {
+   "kind": "base",
+   "mind": null,
+   "q": 19,
+   "seed": 2019,
+   "prompt": "af9cac519bc78e9b",
+   "reply": "Forgiving yourself for a serious mistake is an essential step towards personal growth and healing. Acknowledge the mistake, learn from it, and commit to making amends if possible. Self-forgiveness allows you to release the burden of guilt and move forward. It's important to recognize that everyone makes mistakes, and they do not define your worth or potential for a better future. Embrace self-compassion, and focus on actions that can lead to personal improvement and forgiveness of others. This process helps in rebuilding self-esteem and resilience, paving the way for a more positive outlook.",
+   "named": false,
+   "seconds": 53
+  },
+  {
+   "kind": "base",
+   "mind": null,
+   "q": 20,
+   "seed": 2020,
+   "prompt": "db8db623ea44fc75",
+   "reply": "Friendship serves many purposes, enhancing our lives in various ways. It provides emotional support and companionship, helping us navigate life’s challenges and joys. Friends offer a sense of belonging and can enrich our experiences by sharing interests and adventures. They also challenge us to grow and become better versions of ourselves, often through honest feedback and encouragement. Ultimately, friendship deepens our human connections, making our lives more fulfilling and meaningful.",
+   "named": false,
+   "seconds": 29
+  },
+  {
+   "kind": "sham",
+   "mind": "marcus",
+   "q": 1,
+   "seed": 3001,
+   "prompt": "d3c0d347a85c9bf1",
+   "reply": "When a colleague takes credit for your work, it's important to see this situation as an opportunity for personal growth. Reflect on the bigger picture and the essence of your existence as part of a greater, infinite Being. Let the moment pass with grace, without letting it cloud your overall perspective. Instead, focus on the true essence of your actions—upholding the values of integrity and fairness. You can address the issue calmly and directly, expressing your thoughts with clarity and kindness. Remember, the true value lies in the act of doing the right thing, regardless of external recognition. This approach not only maintains your inner peace but also sets a positive example for others.",
+   "named": false,
+   "seconds": 102
+  },
+  {
+   "kind": "sham",
+   "mind": "marcus",
+   "q": 2,
+   "seed": 3002,
+   "prompt": "7ab4d58fc5ca9a24",
+   "reply": "Leaving a secure job to pursue work you care about can indeed be worthwhile, as it aligns more closely with your true nature and values. Focusing on work that resonates with your inner being can bring greater joy and fulfillment, making life more meaningful. True happiness comes from how you bear what life brings, whether good or bad. Prioritize the virtues and principles that define your life’s purpose, and don’t be swayed by the transient allure of security. Embrace the simplicity and connection to nature that such a choice can bring, and remember that the true essence of happiness lies in how you handle life’s events with generosity and wisdom.",
+   "named": false,
+   "seconds": 38
+  },
+  {
+   "kind": "sham",
+   "mind": "marcus",
+   "q": 3,
+   "seed": 3003,
+   "prompt": "af59aab66ef0fd04",
+   "reply": "As you grow older, think of it as a natural part of life, akin to the changing seasons. Embrace the wisdom that comes with age, seeing each new chapter as an opportunity to live more simply and connect more deeply with the world around you. Focus on the essence of your life, the meaningful interactions and the good deeds, rather than on material possessions or physical youth. Remember that the true value of your existence lies in how you contribute to the greater good and in the legacy of kindness and wisdom you leave behind. Accept that the happiness in life comes not from what happens to you, but from how you respond to it with generosity and a positive spirit.",
+   "named": false,
+   "seconds": 69
+  },
+  {
+   "kind": "sham",
+   "mind": "marcus",
+   "q": 4,
+   "seed": 3004,
+   "prompt": "5e054647c2e23164",
+   "reply": "When dealing with the anger that comes from someone's wrongs, it's wise to focus on the bigger, infinite picture of your existence. Reflect on the transient nature of life and the myriad events that shape our understanding only with hindsight. Instead of letting anger cloud your judgment, consider the virtue of forgiveness and how it can lead to a more tranquil and fulfilling life. By maintaining a skeptical attitude towards the immediate impact of your anger, you can better understand that the true happiness lies in how you choose to bear misfortunes. Let your actions be guided by the natural requirements of human nature, practicing right and true moral tenets that promote peace and harmony.",
+   "named": false,
+   "seconds": 37
+  },
+  {
+   "kind": "sham",
+   "mind": "marcus",
+   "q": 5,
+   "seed": 3005,
+   "prompt": "6403cd0be77acfd5",
+   "reply": "To live freely and joyfully, you should focus on your own path and values, rather than worrying about others' opinions. Limit your actions to what is truly necessary and aligns with your inner being, and you will find peace and contentment. Remember, the true worth of your life lies in the authenticity of your experiences and actions, not in the judgments of others. Embrace simplicity and the natural rhythm of life, and let go of superficial concerns.",
+   "named": false,
+   "seconds": 31
+  },
+  {
+   "kind": "sham",
+   "mind": "marcus",
+   "q": 6,
+   "seed": 3006,
+   "prompt": "21718d22d9c0c58e",
+   "reply": "Following your impulses can lead to a simpler, more nature-centered life, free from unnecessary worries and responsibilities. By living spontaneously, you can align with the natural requirements of your human nature and focus on virtuous actions. While careful planning can bring order and stability, it may also create more stress and separation from the infinite Being of the universe. Instead, embrace a life that is adaptable and responsive to the present moment, allowing you to see yourself as part of a greater whole. This approach can help you live more genuinely and find true happiness in how you bear life's challenges with generosity.",
+   "named": false,
+   "seconds": 56
+  },
+  {
+   "kind": "sham",
+   "mind": "marcus",
+   "q": 7,
+   "seed": 3007,
+   "prompt": "e96ef1e3bca8ead2",
+   "reply": "When facing the death of someone you love, remember that this is a natural part of life, and how you bear it is what truly matters. Focus on the memories and the love you shared, seeing them as a part of the infinite tapestry of existence. Embrace the wisdom that such events, though painful, contribute to the greater understanding of life and its transience. Let the experience purify your intellect and heart, fostering a deeper connection to the oneness of existence. Though the loss is significant, finding joy in the simple and nature-centered aspects of life can help you find a path forward with a sense of peace and acceptance.",
+   "named": false,
+   "seconds": 37
+  },
+  {
+   "kind": "sham",
+   "mind": "marcus",
+   "q": 8,
+   "seed": 3008,
+   "prompt": "b0f79717dc4b63b6",
+   "reply": "In pursuing a simple, nature-centered life, one must trust their own inner wisdom and judgment over the advice of experts. Experts can offer valuable insights, but they are not always aware of the unique circumstances and wisdom you carry within. By focusing on the natural requirements of human nature and recognizing the oneness of existence, you can discern what is truly good and virtuous for you. Meddle not with many things, and confine yourself to actions that align with your nature and the infinite Being. This will not only bring cheerfulness but also help you navigate life's challenges with greater ease and understanding, free from unnecessary worries and responsibilities.",
+   "named": false,
+   "seconds": 62
+  },
+  {
+   "kind": "sham",
+   "mind": "marcus",
+   "q": 9,
+   "seed": 3009,
+   "prompt": "16311b81b37a514d",
+   "reply": "A day well spent, in the simple and natural way of life we advocate, begins by focusing on what truly matters—eliminating unnecessary worries and dedicating oneself to actions that are truly virtuous and in harmony with the infinite Being. Swinging a paddle in the river or practicing a noble act can be as fulfilling as any other task. Reflecting on the day with a skeptical eye, acknowledging that events themselves are not misfortunes, but how we bear them with generosity and courage defines true happiness. Each day, like a log cabin, is built upon the life it embodies, not its outward appearances. To live simply, to act with honor, and to see the unity in all existence is to spend a day well.",
+   "named": false,
+   "seconds": 38
+  },
+  {
+   "kind": "sham",
+   "mind": "marcus",
+   "q": 10,
+   "seed": 3010,
+   "prompt": "aafb14af2cef7fb0",
+   "reply": "To live with a long illness or constant pain, focus on what truly matters in life and maintain a simple, nature-centered perspective. Embrace the natural rhythm of your existence and see your condition as an opportunity to deepen your connection with the infinite Being of the universe. Practice virtues such as patience and generosity, recognizing that the true measure of your happiness lies in how you bear your circumstances. Avoid getting entangled in unnecessary worries and responsibilities. Reflect on the wisdom that whatever happens to you is not inherently a misfortune; the key is in how you respond with courage and integrity. By doing so, you can find peace and meaning even in the midst of adversity.",
+   "named": false,
+   "seconds": 61
+  },
+  {
+   "kind": "sham",
+   "mind": "montaigne",
+   "q": 1,
+   "seed": 3038,
+   "prompt": "8f4f80d6f97b5c8a",
+   "reply": "When a colleague takes credit for your work, it's important to remain calm and focus on the truth. Embrace the situation according to God's will and remember that your actions are part of a larger, just order. Engage actively with the situation by gently and respectfully explaining the contributions you made. Stick to the practical consequences of the truth—your colleagues will likely value your integrity and honesty. Let your actions speak louder than words, and stay true to the natural requirements of human nature by practicing the virtue of honesty. Reflect on the momentary pleasure of maintaining your integrity, even if it doesn't always align with immediate desires for recognition.",
+   "named": false,
+   "seconds": 99
+  },
+  {
+   "kind": "sham",
+   "mind": "montaigne",
+   "q": 2,
+   "seed": 3039,
+   "prompt": "ffc8be80ee74acf0",
+   "reply": "Considering the value of engaging deeply and actively with the world, pursuing work you care about can bring more meaningful and fulfilling experiences. While a secure job provides stability, it might not offer the same satisfaction as working on something that aligns with your passions and values. Embracing whatever happens according to divine will, you might find that the risks and uncertainties of a new career path can lead to varied and potentially rewarding experiences. Justly interacting with others and examining your thoughts carefully will help you navigate the challenges and make the transition with a clear conscience. Therefore, if your heart is set on a path that better serves your true nature and moral tenets, it might be worth the leap.",
+   "named": false,
+   "seconds": 40
+  },
+  {
+   "kind": "sham",
+   "mind": "montaigne",
+   "q": 3,
+   "seed": 3040,
+   "prompt": "d2ce3b93fbc07276",
+   "reply": "Growing old should be embraced as a natural part of life, just as it is in God's will. It's important to engage actively with the world and its possibilities, rather than confining oneself to idle virtues. As you age, seek to understand the practical consequences of your actions and focus on what truly matters, such as maintaining just and uniform interactions with others. Love, in its truest form, should be the central focus, as it brings genuine joy and meaning. Let your judgment rest, and approach the challenges of aging with a calm demeanor, understanding that you can pursue and adapt to the changes that come with time. Embrace the uncertainties and momentary pleasures that life offers, much like a playful cat with a bowl of corn.",
+   "named": false,
+   "seconds": 68
+  },
+  {
+   "kind": "sham",
+   "mind": "montaigne",
+   "q": 4,
+   "seed": 3041,
+   "prompt": "0e7bf5b0c879bda1",
+   "reply": "XX. When faced with someone who has wronged you, it is wise to focus on necessary actions and let go of idle virtues. Engage actively with the world, but do not get entangled in the whims of your emotions. Reflect on your thoughts carefully and consider the situation according to God's will. Anger is a fleeting emotion, and dwelling on it only leads to unnecessary strife. Instead, seek to understand the situation from a broader perspective, just as one might calmly observe a cat playing with its food. Approach the matter with a balanced mind, and let your judgment rest. Engage with the world, but remain undisturbed by the transient nature of events.",
+   "named": false,
+   "seconds": 44
+  },
+  {
+   "kind": "sham",
+   "mind": "montaigne",
+   "q": 5,
+   "seed": 3042,
+   "prompt": "e89e0392cf731051",
+   "reply": "Caring too much about what others think can distract you from your true path and lead to unnecessary struggles. Focus on living according to your own principles and the natural requirements of your nature. If you remain true to yourself and act justly, others will see your worth. Embrace the moments and embrace your own judgment, as external opinions do not define your essence. Go to the realities you face rather than letting them come to you, and your efforts will bring peace and contentment.",
+   "named": false,
+   "seconds": 50
+  },
+  {
+   "kind": "sham",
+   "mind": "montaigne",
+   "q": 6,
+   "seed": 3043,
+   "prompt": "e39a46b0b5e8b28e",
+   "reply": "It is better to follow your impulses, for in doing so, you embrace the natural flow of life and find momentary pleasures. Careful planning might confine you to necessary actions, but it can also create unnecessary stress and missed opportunities. Instead, let your judgment rest and remain calm regarding external things, as they do not come to you. Engage actively with the world and its possibilities, just like a cat plays with its corn, savoring each moment without overthinking.",
+   "named": false,
+   "seconds": 28
+  },
+  {
+   "kind": "sham",
+   "mind": "montaigne",
+   "q": 7,
+   "seed": 3044,
+   "prompt": "441f4ce61002684c",
+   "reply": "Facing the death of someone you love can be profoundly challenging, but it is important to embrace the natural course of life and death according to God's will. Reflect on the essence of their life and the values they held dear. Engage actively with the world, cherishing the moments you shared and finding comfort in the memories that remain. Acknowledge that death is a part of the natural order, and focus on living according to the moral tenets that guided their life. While the pain may linger, seek solace in the knowledge that their spirit continues in the world, perhaps influencing those around them. Ultimately, it is in your power to maintain a stable and uniform response to this loss, as varied reactions tend to arise in times of abundance.",
+   "named": false,
+   "seconds": 63
+  },
+  {
+   "kind": "sham",
+   "mind": "montaigne",
+   "q": 8,
+   "seed": 3045,
+   "prompt": "df42619b7c353618",
+   "reply": "When deciding whether to trust your own judgment over expert advice, consider the practical outcomes of your choices. If acting on your judgment leads to the same positive results as following expert advice, both can be seen as equally valid. However, experts often have a broader experience and can offer insights you might not have considered. It's wise to engage with the world actively and seek out expert knowledge, but ultimately, your direct experience and judgment are also valuable. By grounding your decisions in practical consequences, you can navigate the best course of action.",
+   "named": false,
+   "seconds": 59
+  },
+  {
+   "kind": "sham",
+   "mind": "montaigne",
+   "q": 9,
+   "seed": 3046,
+   "prompt": "62b7e0fdcbd9fa36",
+   "reply": "A day well spent is when you align your actions with your true nature and values, engaging actively with the world around you. Focus on what is essential and necessary, driven by reason and the natural desires of a social being. Embrace the momentary pleasures and uncertainties of life, whether in love or in small joys. Reflect on your thoughts and examine them carefully. If challenges arise, meet them with just interaction and a calm mind, as you are ultimately responsible for your own judgment. Let your day be filled with purpose and meaningful interactions, rather than being consumed by idle virtues or excessive concerns.",
+   "named": false,
+   "seconds": 38
+  },
+  {
+   "kind": "sham",
+   "mind": "montaigne",
+   "q": 10,
+   "seed": 3047,
+   "prompt": "5604a054c0c37823",
+   "reply": "XX. With a long illness or constant pain, it is wise to limit yourself to necessary actions and focus on what reason dictates. This approach can bring a sense of cheerfulness and contentment. Engage actively with the world and its possibilities, even as you navigate your limitations. Consider your interactions with others justly, and let your judgment rest, remaining calm regarding external things that do not come to you. Seek consolation in the understanding that your life's meaning lies in the practical consequences of your actions, and that true happiness comes from aligning with natural human requirements and practicing moral virtues. Love should be central, as it offers a central focus that can sustain you through adversity.",
+   "named": false,
+   "seconds": 76
+  },
+  {
+   "kind": "sham",
+   "mind": "emerson",
+   "q": 1,
+   "seed": 3075,
+   "prompt": "3744724e9db514e0",
+   "reply": "When a colleague takes credit for your work, it's important to address the situation thoughtfully and clearly. First, gently but firmly, bring the issue to their attention, explaining the contributions you made. Emphasize the importance of transparency and fairness in the workplace. Remember, the value of your work is not diminished by its recognition; the true test lies in the quality of the work itself. By maintaining a calm and rational stance, you uphold the integrity of your contributions and contribute to a more just environment. Ultimately, the wisdom of the universe supports the truth, and your efforts will be recognized over time.",
+   "named": false,
+   "seconds": 104
+  },
+  {
+   "kind": "sham",
+   "mind": "emerson",
+   "q": 2,
+   "seed": 3076,
+   "prompt": "0b45e6ee177849a7",
+   "reply": "Leaving a secure job for work one cares about is a choice that depends on recognizing the true value of one's life and the work one does. The secure job may offer stability, but it might not fulfill the deeper aspirations of the soul. By seeking out the best resources and knowledge available, one can make a distinction between mere security and the fulfillment that comes from doing meaningful work. The initial hesitation and the fear of the unknown are natural, but they should not overshadow the wisdom that comes from aligning one's life with greater truths and values. The true marriage of intellect and heart is a continuous process of purification, and this journey might require taking a moral holiday, trusting that the infinite Being will guide and protect. In the end, the decision should be guided by the wisdom of the heart, recognizing that the most profound truths often lie hidden beneath the surface of everyday life.",
+   "named": false,
+   "seconds": 62
+  },
+  {
+   "kind": "sham",
+   "mind": "emerson",
+   "q": 3,
+   "seed": 3077,
+   "prompt": "d03634634eb4063a",
+   "reply": "Growing old should not be seen as a passive process but as an opportunity for continuous growth and wisdom. Embrace the richness of life's experiences, recognizing that deeper meanings often lie beneath the surface of everyday occurrences. Seek out the best resources and knowledge available, regardless of their origin, to enrich your understanding and appreciation of life's complexities. View old age as a time to purify both intellect and heart, making distinctions and clarifying thoughts. Consider the wisdom of God and the futility of human efforts, allowing this perspective to guide your actions and thoughts. Finally, approach the aging process with a relentless determination to understand abstract truths, even if it means facing challenges and contradictions.",
+   "named": false,
+   "seconds": 62
+  },
+  {
+   "kind": "sham",
+   "mind": "emerson",
+   "q": 4,
+   "seed": 3078,
+   "prompt": "03682e2428bcbf9a",
+   "reply": "To address your anger, reflect on the life and experiences of those who have faced similar injustices. Consider the wisdom in seeing beyond the surface of their suffering, recognizing the deeper truths that such trials may reveal. Engage in a relentless war against the atomistic notion that your anger is an unchangeable fact. Instead, see yourself as part of the infinite Being, and in that unity, find the means to purify your heart and intellect. Declare war on the tendency to let anger consume you, and embrace the idea that through this struggle, you can develop a stronger, more independent spirit. Submit to the wisdom that recognizes the futility of holding onto anger and the vanity of allowing it to dictate your actions.",
+   "named": false,
+   "seconds": 57
+  },
+  {
+   "kind": "sham",
+   "mind": "emerson",
+   "q": 5,
+   "seed": 3079,
+   "prompt": "84425e717265a690",
+   "reply": "Caring too much about others' opinions can cloud your judgment and distract you from your true path. Focus on the wisdom within yourself and the deeper meanings around you. Your true worth lies in the clarity of your intellect and the purity of your heart, not in the superficial judgments of others. Embrace your own unique journey and the lessons it brings, much like appreciating the humble log huts that hold the essence of their inhabitants. Trust in the wisdom of the infinite, and recognize that your spirit is part of a greater oneness. In doing so, you'll find the strength to live authentically, unburdened by the petty concerns of others.",
+   "named": false,
+   "seconds": 60
+  },
+  {
+   "kind": "sham",
+   "mind": "emerson",
+   "q": 6,
+   "seed": 3080,
+   "prompt": "fb32b591a26461d1",
+   "reply": "Planning your life carefully can offer a structured path, but it's equally important to heed your impulses, for they often reveal deeper, more authentic desires. Both approaches are necessary—use your impulses to discover your true passions and intentions, and planning to navigate the complexities of life. By blending these two, you can ensure your actions are both thoughtful and genuine. Remember, the wisdom of the universe guides us, and by aligning with this wisdom, we can make choices that are not just practical but also reflective of our true selves.",
+   "named": false,
+   "seconds": 50
+  },
+  {
+   "kind": "sham",
+   "mind": "emerson",
+   "q": 7,
+   "seed": 3081,
+   "prompt": "240c46aea5db283f",
+   "reply": "Facing the death of someone you love can be a deeply poignant and complex experience. It's important to remember that true understanding and acceptance come from embracing the wisdom hidden within the essence of their life, not just the surface. Reflect on their life as a series of meaningful moments, each contributing to the purification of your own intellect and heart. View their passing as a reminder to live more deeply and appreciate the deeper meanings in life. Embrace the futility of trying to control every moment, as the infinite Being of the universe has its own plan. Engage in a relentless war against the atomistic views that might try to separate you from the unity of existence. Submit to the wisdom that death is part of the broader, eternal order, and find solace in knowing that their spirit, like the rhythm of breathing or the pulse of the heart, continues to resonate within the infinite.",
+   "named": false,
+   "seconds": 58
+  },
+  {
+   "kind": "sham",
+   "mind": "emerson",
+   "q": 8,
+   "seed": 3082,
+   "prompt": "faa03b5ae869718f",
+   "reply": "Trust in your own judgment is essential, yet it should not be a solitary journey. Seek out the best resources and knowledge available, even if they come from experts outside your immediate circle. However, do not blindly follow their advice. The wise will discern and make distinctions when faced with contradictions, ensuring clarity in both thinking and acting. Remember, true wisdom often lies beyond the surface, in the deeper meanings and subtle truths that may not be immediately apparent. Thus, while your own judgment is vital, it should be informed by a broad and critical understanding of the world around you.",
+   "named": false,
+   "seconds": 65
+  },
+  {
+   "kind": "sham",
+   "mind": "emerson",
+   "q": 9,
+   "seed": 3083,
+   "prompt": "28627abd64f2828c",
+   "reply": "A day is well spent when it is filled with a quest for knowledge and truth, transcending the boundaries of one's immediate surroundings. It involves seeking out the best resources and insights, regardless of their origin, and engaging in a relentless pursuit of wisdom. Such a day is marked by the purification of the intellect and heart, much like a true marriage. It requires the courage to declare war on the atomistic fallacies that often cloud our understanding. In the end, a day well spent is one where we have submitted to the wisdom of the infinite, recognizing the limitations of human understanding and the fleeting nature of life.",
+   "named": false,
+   "seconds": 33
+  },
+  {
+   "kind": "sham",
+   "mind": "emerson",
+   "q": 10,
+   "seed": 3084,
+   "prompt": "e44915070b8fb5f7",
+   "reply": "Living with a long illness or constant pain requires a deep and continuous effort to see beyond the immediate suffering. You should seek out the best resources and knowledge, not limited by geographical or cultural boundaries. Embrace the wisdom of those who have faced similar struggles, and let their stories inspire you to find clarity in your own life. Consider that your condition might be a unique path to understanding the deeper meanings and truths around you. Focus on the purification of your intellect and heart each year, rather than dwelling on initial physical discomfort. Declare war on the atomistic thoughts that might arise and maintain a relentless, yet gentle, approach to your journey. Recognize that amidst the pain, you can still appreciate the wisdom and rhythms of the world around you.",
+   "named": false,
+   "seconds": 74
+  },
+  {
+   "kind": "sham",
+   "mind": "james",
+   "q": 1,
+   "seed": 3112,
+   "prompt": "7987a5d0c2156bf8",
+   "reply": "When a colleague takes credit for your work, it's important to address the situation with clarity and courage. First, take a moment to reflect on the true nature of your relationship and the importance of mutual respect. Then, gently but firmly declare, \"This is my contribution, and I should be recognized for it.\" Remember, life is a festival only to the wise, and standing up for what is right can be a noble act. While it might be tempting to engage in a war of words, focus instead on the honourable and virtuous thing—maintaining your integrity and allowing the true value of your efforts to shine through.",
+   "named": false,
+   "seconds": 98
+  },
+  {
+   "kind": "sham",
+   "mind": "james",
+   "q": 2,
+   "seed": 3113,
+   "prompt": "4bc690ee01d1bba7",
+   "reply": "Leaving a secure job for work one cares about is a worthy endeavor, provided one's passion and convictions are strong. This path purifies the heart and mind, ensuring that one's life is more than mere sustenance. It's a declaration of war against the atomistic demands that might otherwise stifle the soul. In the pursuit of what truly matters, one must trust in the wisdom of God, recognizing the fleeting nature of earthly security. True happiness and fulfillment come from aligning one's efforts with moral and virtuous goals, rather than the transient comforts of a secure position.",
+   "named": false,
+   "seconds": 49
+  },
+  {
+   "kind": "sham",
+   "mind": "james",
+   "q": 3,
+   "seed": 3114,
+   "prompt": "52df688dd2c2c359",
+   "reply": "Growing old should be seen as a continuous process of refining one's intellect and heart, much like a yearly purification. Embrace the wisdom that comes with age, using it to reflect on life's true meanings rather than clinging to youthful passions. Consider the fleeting nature of life and the importance of focusing on what truly matters—love, virtue, and the moral holiday offered by trust in the Absolute. Let the realities of aging remind you of the limitations of human efforts and the need to submit to divine wisdom.",
+   "named": false,
+   "seconds": 29
+  },
+  {
+   "kind": "sham",
+   "mind": "james",
+   "q": 4,
+   "seed": 3115,
+   "prompt": "179e45ed67be8fc5",
+   "reply": "Anger at those who wrong us is a sign of impure heart and intellect. Reflect on the essence of your faith and the true purpose of your life. Instead of letting anger consume you, use reason to understand that true strength lies in purification, not in the intensity of your emotions. Declare war on the atomistic thoughts that might lead you to seek revenge or dwell on the injustice. Trust that finite evil is overruled in the eternal, allowing you to dismiss fear and take a moral holiday. Focus on honourable and virtuous things, and perhaps, in doing so, find a way to forgive and move forward.",
+   "named": false,
+   "seconds": 48
+  },
+  {
+   "kind": "sham",
+   "mind": "james",
+   "q": 5,
+   "seed": 3116,
+   "prompt": "e54149d287f3f56e",
+   "reply": "To care too much about what others think is to let their opinions cloud your inner wisdom. True self-worth comes from within, guided by your own values and the purification of your intellect and heart. Focus on living a life that honors virtue and greatness, not on pleasing the masses. Remember, life is a festival only for the wise, and your journey is a personal path of reflection and moral elevation. Embrace your inner strength and courage, and let your actions speak louder than any external judgment.",
+   "named": false,
+   "seconds": 43
+  },
+  {
+   "kind": "sham",
+   "mind": "james",
+   "q": 6,
+   "seed": 3117,
+   "prompt": "884dc63d631e0cb6",
+   "reply": "Careful planning can be useful, but it should not overshadow the wisdom of the moment. Life's true festivals come from reflecting on the purification of the intellect and heart, not from meticulously charting every step. We must sometimes declare war on the atomistic demands of our daily lives, even if it means letting go of the comfort of a carefully laid plan. Instead, let us focus on the great virtues, like love, and embrace the plain dealing that often astounds and surprises us. Trust in the eternal overrules the finite, allowing us to dismiss fears that arise from our bodily necessities and the complexities of life.",
+   "named": false,
+   "seconds": 32
+  },
+  {
+   "kind": "sham",
+   "mind": "james",
+   "q": 7,
+   "seed": 3118,
+   "prompt": "884e7540e3229a54",
+   "reply": "Facing the death of someone you love can be a daunting task, but remember that true love is about the purification of the heart and intellect each year. Reflect on the moments you shared, and let them serve as a reminder of the virtue and bravery of the person you loved. Trust that the divine wisdom, which surpasses human understanding, will guide you through this difficult time. While the after-life may seem mysterious, believe that the finite evil is overruled in the eternal, allowing you to find peace and dismiss unnecessary fear. Embrace common sense and plain dealing in your grief, avoiding the unnecessary embellishments that can cloud your thoughts.",
+   "named": false,
+   "seconds": 50
+  },
+  {
+   "kind": "sham",
+   "mind": "james",
+   "q": 8,
+   "seed": 3119,
+   "prompt": "d02c6fa4301a4b07",
+   "reply": "Trust in your own judgment should be tempered with caution, for true wisdom comes from divine faith rather than human effort. While your instincts may guide you, remember that relentless war must be waged against atomistic views that fragment the soul. Instead, seek the purification of your intellect and heart year after year, and let your faith be the foundation of your decisions. The wise turn their backs on futile philosophical disputes, trusting in the Absolute's will. So, heed your inner voice, but also pause and reflect, trusting that finite evils are overruled in the eternal, allowing you to dismiss fear and responsibility.",
+   "named": false,
+   "seconds": 47
+  },
+  {
+   "kind": "sham",
+   "mind": "james",
+   "q": 9,
+   "seed": 3120,
+   "prompt": "189298b8e6cf60db",
+   "reply": "A day is well spent when one focuses on refining their intellect and heart, rather than on fleeting passions. It involves using reason to serve faith but remembering that true divine knowledge comes from within, not through our efforts. Reflecting on the day should be a pause for deep thought, not just another round of preaching. One should turn away from endless philosophical debates that offer no clear path. Trusting in the Absolute allows for a moral respite, dismissing fears and responsibilities. Love, seen as the central pleasure, should guide actions. Engaging in activities like swimming, which can be both virtuous and practical, adds to the day's value. Ultimately, submission to the wisdom of God, recognizing the limits of human understanding, is key.",
+   "named": false,
+   "seconds": 45
+  },
+  {
+   "kind": "sham",
+   "mind": "james",
+   "q": 10,
+   "seed": 3121,
+   "prompt": "4cce9f75572453fd",
+   "reply": "In the face of a long illness or constant pain, one must focus on the purification of the intellect and the heart. Each day, seek to reflect deeply and turn away from petty concerns. Declare war on the atomistic thinking that might cloud your spirit, trusting that finite suffering is overruled in the eternal. Use your reason to serve your faith, remembering that true divine knowledge comes from faith alone. Embrace a moral holiday, letting go of fear and responsibility. In your contemplation, find the honor and virtue in enduring trials, and let such experiences strengthen your resolve rather than weaken it. Love should be the central focus, bringing both comfort and strength.",
+   "named": false,
+   "seconds": 59
+  },
+  {
+   "kind": "sham",
+   "mind": "nietzsche",
+   "q": 1,
+   "seed": 3149,
+   "prompt": "3ea5aed6276bc107",
+   "reply": "When a colleague takes credit for your work, it's important to address the situation with courage and integrity. Stand up for yourself, but do so calmly and with clarity. Emphasize the value of your contributions and the effort you put into the project. It’s also wise to reflect on the situation, recognizing that sometimes the truth doesn’t always prevail in social settings. However, by speaking the truth and maintaining your self-trust, you uphold your personal integrity and set an example for others.",
+   "named": false,
+   "seconds": 85
+  },
+  {
+   "kind": "sham",
+   "mind": "nietzsche",
+   "q": 2,
+   "seed": 3150,
+   "prompt": "5f200bcf5dda1746",
+   "reply": "Leaving a secure job for work you care about is a matter of aligning your soul’s scale with your true desires. While a stable job offers security and comfort, pursuing work that genuinely resonates with your values and passions can lead to a more fulfilling life. True men and women, as the passage suggests, should act independently and with integrity, even if it means stepping away from conventional paths. Embrace the courage to face your fears and believe in yourself. The life you truly desire might not be immediately visible, but it is worth seeking. Let your inner voice guide you, and trust that the universe will support your journey towards what truly matters.",
+   "named": false,
+   "seconds": 39
+  },
+  {
+   "kind": "sham",
+   "mind": "nietzsche",
+   "q": 3,
+   "seed": 3151,
+   "prompt": "3802425a9774c902",
+   "reply": "Growing old should not be seen as a limitation or a fading of one's worth. Instead, it is a time to embrace the wisdom and experiences that come with age. Just as the music of Mozart continues to resonate with us, the insights and stories of our elders hold timeless value. It’s important to trust in your own essence, recognizing that the soul’s scale is one and your worth is not diminished by the passage of time. Embrace the courage to face the fears that come with age, for often, these fears can lose their power. Seek out the best knowledge and resources, regardless of their source, to enrich your understanding and continue to grow intellectually and spiritually. Live with integrity and independence, not bound by societal norms or the opinions of others.",
+   "named": false,
+   "seconds": 66
+  },
+  {
+   "kind": "sham",
+   "mind": "nietzsche",
+   "q": 4,
+   "seed": 3152,
+   "prompt": "13a4a367efa56072",
+   "reply": "When anger arises from a wrong done, it's important to see yourself as part of the infinite flow of existence. Reflect on the universality and permanence of your soul, and recognize that holding onto anger is a temporary and limiting state. Instead, consider the wisdom and truth that might come from understanding the person who wronged you. Speak the truth courageously, be just, and find humor in the smallness of common life. By doing so, you'll act independently and with integrity, rather than letting anger dictate your actions. Let your spirit remain undaunted, and in doing so, you may discover a nobility in facing and overcoming your anger.",
+   "named": false,
+   "seconds": 38
+  },
+  {
+   "kind": "sham",
+   "mind": "nietzsche",
+   "q": 5,
+   "seed": 3153,
+   "prompt": "3bcc565fa2533075",
+   "reply": "To live serenely, you must face your fears and not let the opinions of others control your mind. True magnanimity involves seeing the insignificance of mortal life and death, and doing well even when you are ill-spoken of. Focus on acting with integrity and independence, as true men should. Your worth is not defined by external appearances but by your adherence to your own eternal facts and beliefs. So, while it's natural to want to be well-liked, don't let the fear of disapproval paralyze you or dictate your actions. Live according to your own values and the infinite Being of the universe, and you will find the amusement in the littleness of common life.",
+   "named": false,
+   "seconds": 65
+  },
+  {
+   "kind": "sham",
+   "mind": "nietzsche",
+   "q": 6,
+   "seed": 3154,
+   "prompt": "5f588f7510760759",
+   "reply": "Planning your life carefully can provide a roadmap, but following your impulses allows you to stay true to your authentic self. The key is to see yourself as part of the infinite, recognizing that separateness is an illusion. By trusting your soul, you can balance thoughtful planning with the spontaneous joy of living. Embrace the wisdom that comes from both, making decisions that reflect your inner voice rather than external pressures. Remember, true heroes act with integrity, not just by adhering to conventions.",
+   "named": false,
+   "seconds": 27
+  },
+  {
+   "kind": "sham",
+   "mind": "nietzsche",
+   "q": 7,
+   "seed": 3155,
+   "prompt": "57a66375ab6b8c6a",
+   "reply": "Facing the death of someone you love can be profoundly challenging, but remember that the essence of their being is more than just the physical presence they once had. Their spirit, the essence of their soul, is eternal and unchanging. Focus on the memories and the essence of their life rather than the temporary nature of their physical form. Embrace the knowledge that their legacy lives on through the impact they had on your life and the lives of others. Allow yourself to feel the sadness and grief, but also find strength in the enduring truths of their character. Live your life with the same courage and resolution they embodied, acknowledging that their spirit is now part of the infinite Being of the universe. In doing so, you honor their memory and find a way to continue moving forward with serenity and integrity.",
+   "named": false,
+   "seconds": 69
+  },
+  {
+   "kind": "sham",
+   "mind": "nietzsche",
+   "q": 8,
+   "seed": 3156,
+   "prompt": "18c478213386e742",
+   "reply": "Absolutely, you should trust your own judgment. Life's essence lies in the oneness with the infinite, and your unique experiences are a part of that. While experts can provide valuable insights, ultimately, it's your self-trust that fuels true heroism. Persist with undaunted boldness, speak the truth, and be just. Your journey is as important as any expert's advice, and facing your fears can often reveal that what you feared was groundless. Embrace your individuality and act with integrity, for true men stand independently, not swayed by conventions or demagogues.",
+   "named": false,
+   "seconds": 57
+  },
+  {
+   "kind": "sham",
+   "mind": "nietzsche",
+   "q": 9,
+   "seed": 3157,
+   "prompt": "5c76238c11c25ac5",
+   "reply": "A day well spent begins with recognizing our connection to the infinite, transcending the boundaries of time and space. It involves acting with integrity, speaking the truth, and persisting with undaunted boldness. We should approach our tasks with the same seriousness and reflection we would during a day meant for rest, ensuring that even leisure time is productive and meaningful. Facing our fears head-on, finding amusement in the littleness of common life, and acting independently rather than following conventions contribute to the richness of each day. Ultimately, a well-spent day is one where we live according to our own eternal facts, not merely following the dictates of authority or past experiences.",
+   "named": false,
+   "seconds": 67
+  },
+  {
+   "kind": "sham",
+   "mind": "nietzsche",
+   "q": 10,
+   "seed": 3158,
+   "prompt": "58bcd62028013f5c",
+   "reply": "To live serenely with a long illness or constant pain, you must face these challenges head-on, finding courage and resolution in the face of adversity. Remember that your essence is beyond the physical constraints of your body, and see yourself as part of the infinite Being of the universe. This perspective can help you transcend the limitations of your current state. Embrace the truth and act with integrity, rather than letting the fear of being ill-spoken of control your actions. Live according to your own eternal facts, trusting in your own soul's scale, and find amusement in the littleness of common life. By doing so, you can find a deeper peace and meaning in your existence, even amidst prolonged suffering.",
+   "named": false,
+   "seconds": 54
+  },
+  {
+   "kind": "sham",
+   "mind": "thoreau",
+   "q": 1,
+   "seed": 3186,
+   "prompt": "e00426a8df9de86d",
+   "reply": "When a colleague takes credit for your work, it’s important to address the situation honestly and directly. Speak from the heart about the contributions you made and the effort you put in. It’s crucial to stand up for yourself, but also to maintain grace and avoid unnecessary conflict. If the issue persists, consider speaking to a supervisor or manager to ensure fairness and to uphold the values of transparency and integrity in the workplace. Remember, your honesty and steadfastness can lead to greater respect and recognition in the long run.",
+   "named": false,
+   "seconds": 83
+  },
+  {
+   "kind": "sham",
+   "mind": "thoreau",
+   "q": 2,
+   "seed": 3187,
+   "prompt": "c0c246ff4c171149",
+   "reply": "Leaving a secure job for work you care about is a matter of personal belief and the nature of your soul. If you find that your current work undermines your moral tenets and true happiness, it might be worth the risk. The wise man turns his back on disputes that offer no clear future benefits, but in this case, following your heart aligns with living according to your natural desires and the good you seek. Embrace the stability and honesty in your decision, even if it leads to varied challenges. Speak your honest thought now and tomorrow, for to be great is to be misunderstood. Trust in the eternal facts of your soul, and you may find greater blessings and a more fulfilling life.",
+   "named": false,
+   "seconds": 56
+  },
+  {
+   "kind": "sham",
+   "mind": "thoreau",
+   "q": 3,
+   "seed": 3188,
+   "prompt": "c56a4397b6d9c337",
+   "reply": "As you grow old, remember that the soul's essence remains constant, a timeless thread through your life. Embrace the dynamic nature of truth, allowing it to evolve with your experiences. Live according to your inner moral compass, facing your fears and practicing honesty, even if it means facing misunderstanding. In the face of life's challenges, trust in your own wisdom and the natural order of things. Honor the lessons of your youth, maintaining a steadfast honesty and contentment. Old age is a time to reflect on the permanence of your true self, letting go of external authorities and focusing on the eternal truths within.",
+   "named": false,
+   "seconds": 47
+  },
+  {
+   "kind": "sham",
+   "mind": "thoreau",
+   "q": 4,
+   "seed": 3189,
+   "prompt": "52054518530d76e7",
+   "reply": "When anger arises, embrace it as a natural part of human experience, but do not let it cloud your judgment. Reflect on your own eternal facts and the truths that define your character. Practice honesty, both in your dealings and in expressing your feelings. Speak your thoughts now, even if it means contradicting what you said before. By doing so, you turn your back on the petty disputes that often stem from anger. Instead, focus on the permanence and universality of the soul, and let your actions reflect the wisdom and resilience that come from facing fears head-on. In time, the anger may fade, and you will be better for having confronted it with honesty and courage.",
+   "named": false,
+   "seconds": 57
+  },
+  {
+   "kind": "sham",
+   "mind": "thoreau",
+   "q": 5,
+   "seed": 3190,
+   "prompt": "2b622628743885a2",
+   "reply": "Caring too much about what others think can cloud your judgment and lead to unnecessary fears. Your worth isn't defined by external opinions. Embrace your own truths and live according to your eternal facts, not the fleeting views of others. Speak your honest thoughts, even if they challenge what you've said before. Greatness can come from being misunderstood, as long as you stay true to your beliefs. Focus on the natural requirements of your own nature and the moral tenets that guide your actions. Face your fears head-on, for courage can often diminish their power. Live serenely by practicing honesty and thrift, and remember that in times of struggle, your core essence is strengthened, while in times of abundance, you might face varied and potentially monstrous challenges.",
+   "named": false,
+   "seconds": 56
+  },
+  {
+   "kind": "sham",
+   "mind": "thoreau",
+   "q": 6,
+   "seed": 3191,
+   "prompt": "4f3b30f2937d0330",
+   "reply": "Planning your life carefully can provide a sense of security and order, but it may also limit your experiences and prevent you from embracing the dynamic nature of truth and wisdom. Following your impulses, on the other hand, can lead to new discoveries and a more authentic life, as it allows you to live according to your natural desires and the eternal facts of your soul. Embrace both planning and spontaneity, as each teaches you valuable lessons. Remember, the wise man turns his back on disputes that lead nowhere, so focus on actions that align with your moral tenets and the natural requirements of human nature. Live serenely by facing your fears and practicing honesty, and you will find greater blessings.",
+   "named": false,
+   "seconds": 48
+  },
+  {
+   "kind": "sham",
+   "mind": "thoreau",
+   "q": 7,
+   "seed": 3192,
+   "prompt": "fb49b2ad6092466c",
+   "reply": "Facing the death of a loved one can be profoundly challenging. It’s important to allow yourself to feel the full spectrum of emotions that come with loss. Embrace the memories and the wisdom that person imparted, seeing them as part of your eternal facts. Honor their memory by living in accordance with their values and the lessons they taught you. Acknowledge your grief but also recognize the resilience of the human spirit. By facing this loss head-on, you can find strength and comfort in the enduring impact they had on your life. Remember, in times of such profound adversity, maintaining a steady resolve can help you navigate the complexities of your feelings and find peace.",
+   "named": false,
+   "seconds": 55
+  },
+  {
+   "kind": "sham",
+   "mind": "thoreau",
+   "q": 8,
+   "seed": 3193,
+   "prompt": "d4364cd8e580e832",
+   "reply": "Certainly, in navigating life's complexities, it's wise to trust your own judgement. While experts can offer valuable insights, the soul's scale is one, emphasizing the permanence of individual experiences. Relying too heavily on external advice may lead to varied and potentially monstrous variations in your life. Instead, believe in yourself and live according to the eternal facts of your nature. This doesn't mean ignoring expert wisdom, but rather integrating it with your personal convictions. Facing your fears and being honest in your actions can lead to greater blessings, as the gods often reward those who deny themselves excess desires. Trusting your instincts and living authentically will guide you through the challenges and uncertainties of life.",
+   "named": false,
+   "seconds": 41
+  },
+  {
+   "kind": "sham",
+   "mind": "thoreau",
+   "q": 9,
+   "seed": 3194,
+   "prompt": "025c70cae28f235d",
+   "reply": "A day well spent is marked by honesty and clarity of thought. Embrace the moment to express your true feelings, for greatness often comes with being misunderstood. Face your fears head-on, turning them into lessons of courage and resolution. Honor the natural needs of your soul by living according to timeless moral truths. Refrain from deceit, whether in trivial matters or profound decisions. By doing so, you ensure a stable and fulfilling life, even amidst adversity. Debt and financial burdens should be managed with thrift, finding joy in simplicity and honesty. In doing all these, you align your life with the enduring facts of the soul, making each day a step towards wisdom and contentment.",
+   "named": false,
+   "seconds": 64
+  },
+  {
+   "kind": "sham",
+   "mind": "thoreau",
+   "q": 10,
+   "seed": 3195,
+   "prompt": "c643b999f06e0c01",
+   "reply": "In the face of a long illness or constant pain, it is crucial to embrace your experiences as eternal facts of your soul. Trust in the wisdom of your own inner truth and act according to the natural requirements of your humanity. Focus on the moral tenets of what is good, even if it means denying yourself certain pleasures. Remember, the more you deny yourself, the more the gods may bless you. Live with contentment and modesty, finding joy in the simple pleasures that come with each day. Speak your honest thoughts, even if they challenge your past beliefs. This courage and sincerity can help you face your fears, making them seem less formidable. Stay true to your nature, and in doing so, you may find serenity and strength amidst your struggles.",
+   "named": false,
+   "seconds": 50
+  }
+ ]
+}
