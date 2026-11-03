@@ -1,0 +1,87 @@
+{
+ "kind": "liveware.vendor",
+ "v": 1,
+ "note": "Copied byte for byte from sjgant80-hub/ai-first-company at the commit named (git show, not a working copy). Never edit a vendored file; re-vendor.",
+ "repo": "sjgant80-hub/ai-first-company",
+ "commit": "2e69755e7deb48e4ca46d7888188a6dc0c0afbac",
+ "files": [
+  {
+   "path": "vendor/ai-first-company/src/distill.mjs",
+   "src": "src/distill.mjs",
+   "sha256": "28eaacc439a15e28d53a92eb563953a2f94edce6df3d11666b561dd15dbaa48b",
+   "what": "teacher distillation after the teacher: parse, split, gate, score, sign (the three sealed demos, one pure kernel)"
+  },
+  {
+   "path": "vendor/ai-first-company/src/baseline.mjs",
+   "src": "src/baseline.mjs",
+   "sha256": "a4b4504cd4d53d4fc46c58e268a0b367485560de6376b6dfc0f3c81ee4f515eb",
+   "what": "the signed baseline agreement: beats the baseline or the charge is waived"
+  },
+  {
+   "path": "vendor/ai-first-company/src/experiment.mjs",
+   "src": "src/experiment.mjs",
+   "sha256": "e75a63da05b4aa36fffa6b4af9354190ee8bad052c82675556b2aaf936301496",
+   "what": "the verdict the agreement reuses (sample, margin, sealed critical value)"
+  },
+  {
+   "path": "vendor/ai-first-company/src/journal.mjs",
+   "src": "src/journal.mjs",
+   "sha256": "6077dbc8b605143334f6ad028ab9bdbca9d5a75120310d4c7861a3807dfe4992",
+   "what": "canonical JSON and SHA-256 hashing"
+  },
+  {
+   "path": "vendor/ai-first-company/vendor/fall-kit/light/sha256.mjs",
+   "src": "vendor/fall-kit/light/sha256.mjs",
+   "sha256": "cf60afffd36df071b277da214ed61a7b3f4923e443bfadb06656bb7da4756bc1",
+   "what": "SHA-256, pure"
+  },
+  {
+   "path": "vendor/ai-first-company/data/mint-demo-car.data",
+   "src": "data/mint-demo-car.data",
+   "sha256": "b703a9ac69f11e64ce8c223c0a40de4d2e9d769f7fb20be5f8f2e8a619893d83",
+   "what": "UCI Car Evaluation, pinned"
+  },
+  {
+   "path": "vendor/ai-first-company/data/mint-demo-mushroom.data",
+   "src": "data/mint-demo-mushroom.data",
+   "sha256": "e65d082030501a3ebcbcd7c9f7c71aa9d28fdfff463bf4cf4716a3fe13ac360e",
+   "what": "UCI Mushroom, pinned"
+  },
+  {
+   "path": "vendor/ai-first-company/data/mint-demo-run.json",
+   "src": "data/mint-demo-run.json",
+   "sha256": "fce226204f19bf3d8f8e977fbe5c52a4b0cbc154be25f21fceb1e8c9bcda6242",
+   "what": "run v1, committed f1802f5 (with the recorded teacher reply)"
+  },
+  {
+   "path": "vendor/ai-first-company/data/mint-demo-v2-run.json",
+   "src": "data/mint-demo-v2-run.json",
+   "sha256": "143e46f3c565ccb46cd1c5f2fb07b962d810a388a30b5dd434a96b4b0452b22f",
+   "what": "run v2, committed a45dd93 (with the recorded teacher reply)"
+  },
+  {
+   "path": "vendor/ai-first-company/data/mint-demo-v3-run.json",
+   "src": "data/mint-demo-v3-run.json",
+   "sha256": "3e072c28b8b102e2c5a9249b9a9142578cf4469696c0475603de2b4448048e4f",
+   "what": "run v3, committed 71b7d72 (with the recorded teacher reply)"
+  },
+  {
+   "path": "vendor/ai-first-company/data/mint-demo-prereg.json",
+   "src": "data/mint-demo-prereg.json",
+   "sha256": "87e0d661bf44ecdd04c1cf3222dc924e1432900f9745d6ed2087268c427ffbfe",
+   "what": "run v1 seal, committed 364f29a before it ran"
+  },
+  {
+   "path": "vendor/ai-first-company/data/mint-demo-v2-prereg.json",
+   "src": "data/mint-demo-v2-prereg.json",
+   "sha256": "8fa7d8cd077810a1c99410f950d93c71e62dabb907f58ee9623a3b1f2e790800",
+   "what": "run v2 seal, committed 3620ff0 before it ran"
+  },
+  {
+   "path": "vendor/ai-first-company/data/mint-demo-v3-prereg.json",
+   "src": "data/mint-demo-v3-prereg.json",
+   "sha256": "d2a310c68347c671e4ecbc289dbb807a33f6a128a141ed2261aa6529a16c6a63",
+   "what": "run v3 seal, committed 9ec04b0 before it ran"
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+{
+ "kind": "liveware.receipts",
+ "test": "T11",
+ "sealedAt": "97c2f4e402fef1ef3c61fd46fbaca6dc6a434d6c",
+ "record": {
+  "test": "T11",
+  "version": "1",
+  "inputs_sha256": "f60573393407f6b46fbd91d897b6c1eeeab08fd24c7fa2d870e64907a88e0cf0",
+  "outputs_sha256": "323dff42f6d3a84545256ea799bb1e15086ad057285c596750c0456a3f3cfd1e",
+  "verdict": "pass",
+  "params": {
+   "splitSeed": 20261103,
+   "teacher": "qwen2.5:7b, recorded once, never re-run here"
+  }
+ },
+ "id": "f63930aadf44d3adb285cbe4a79bc006dce29304e7390d9b8edf11b5a796fba1"
+}

@@ -6,6 +6,8 @@ import { makeIdentity, verifyBytes } from '../vendor/fall-kit/core/identity.mjs'
 import { prepare, finish } from '../vendor/fall-kit/core/vendor/light/packet.mjs';
 import { makePeer } from '../src/mesh.mjs';
 import { shaHex, canonical } from '../src/receipt.mjs';
+import { t11, T11_IDS, T11_FILES, SEALED } from '../src/t11.mjs';
+import { RUNS as MINT_RUNS, rowsOf, splitOf, majorityOf, distil, score, flipped } from '../vendor/ai-first-company/src/distill.mjs';
 
 const $ = (id) => document.getElementById(id);
 const el = (tag, attrs, ...kids) => { const e = document.createElement(tag); for (const [k, v] of Object.entries(attrs || {})) { if (v == null || v === false) continue; if (k === 'class') e.className = v; else if (k === 'html') e.innerHTML = v; else e.setAttribute(k, v === true ? '' : v); } for (const c of kids.flat()) if (c != null) e.append(c instanceof Node ? c : String(c)); return e; };
@@ -81,9 +83,12 @@ const [expected, detail, manifest] = await Promise.all([getJSON('receipts/wave1.
 $('sealat').innerHTML = expected && expected.sealedAt ? 'Sealed at commit <b>' + expected.sealedAt.slice(0, 10) + '</b>' : '';
 if ($('claimscommit') && expected && expected.sealedAt) $('claimscommit').innerHTML = 'Locked at commit <b>' + expected.sealedAt.slice(0, 10) + '</b>.';
 const expId = (t) => (expected && expected[t] ? expected[t].id : null);
+// T11 is sealed on its own (CLAIMS-T11.md), so its expected id and measured detail have their own receipts
+const [exp11, det11] = await Promise.all([getJSON('receipts/t11.json'), getJSON('receipts/t11-detail.json')]);
+if ($('sealat11') && exp11 && exp11.sealedAt) $('sealat11').innerHTML = 'T11 sealed on its own at commit <b>' + exp11.sealedAt.slice(0, 10) + '</b>';
 
 // ── scoreboard ───────────────────────────────────────────────────────────────────────────────
-const TESTS = [['T5', 'Compression'], ['T4', 'Attack it'], ['T1', 'The seed'], ['T6', 'The mesh']];
+const TESTS = [['T5', 'Compression'], ['T4', 'Attack it'], ['T1', 'The seed'], ['T6', 'The mesh'], ['T11', 'The guarantee']];
 const chips = {};
 $('board').append(...TESTS.map(([id, name]) => {
   const state = el('span', { class: 'state' }, el('span', { class: 'dot' }), el('span', {}, 'not run'));
@@ -267,6 +272,202 @@ async function scoreT6() {
   return ran;
 }
 
+// ══ T11 · the guarantee, run for real ═════════════════════════════════════════════════════════
+// Renders only from a run — GitHub's published one until the visitor presses run, then the visitor's own. The words
+// below are the datasets' codebooks and the runs' names; every accuracy, count and receipt comes from the run.
+const T11_NAMES = { v1: ['Run 1', 'UCI Car Evaluation', 'one-condition rules'], v2: ['Run 2', 'UCI Car Evaluation', 'rules of up to three conditions'], v3: ['Run 3', 'UCI Mushroom', 'one-condition rules'] };
+const CLASS_WORD = { unacc: 'unacceptable', acc: 'acceptable', good: 'good', vgood: 'very good', e: 'edible', p: 'poisonous' };
+const FEATURE_WORD = { buying: 'buying price', maint: 'upkeep cost', doors: 'doors', persons: 'seats', lug_boot: 'boot size', safety: 'safety', odor: 'odour', 'gill-color': 'gill colour', 'cap-color': 'cap colour', 'veil-color': 'veil colour', 'spore-print-color': 'spore print colour', 'stalk-color-above-ring': 'stalk colour above the ring', 'stalk-color-below-ring': 'stalk colour below the ring', 'ring-type': 'ring type', 'ring-number': 'number of rings', 'cap-shape': 'cap shape', 'cap-surface': 'cap surface', 'gill-size': 'gill size', 'gill-spacing': 'gill spacing', 'gill-attachment': 'gill attachment', 'stalk-root': 'stalk root', 'stalk-shape': 'stalk shape', 'veil-type': 'veil type' };
+const CAR_WORD = { vhigh: 'very high', high: 'high', med: 'medium', low: 'low', small: 'small', big: 'big', more: 'more than 4', '5more': '5 or more' };
+// the UCI Mushroom codebook (agaricus-lepiota.names, UCI Machine Learning Repository)
+const MUSHROOM_WORD = {
+  'cap-shape': { b: 'bell', c: 'conical', x: 'convex', f: 'flat', k: 'knobbed', s: 'sunken' },
+  'cap-surface': { f: 'fibrous', g: 'grooved', y: 'scaly', s: 'smooth' },
+  'cap-color': { n: 'brown', b: 'buff', c: 'cinnamon', g: 'grey', r: 'green', p: 'pink', u: 'purple', e: 'red', w: 'white', y: 'yellow' },
+  bruises: { t: 'bruises', f: 'no bruising' },
+  odor: { a: 'almond', l: 'anise', c: 'creosote', y: 'fishy', f: 'foul', m: 'musty', n: 'none', p: 'pungent', s: 'spicy' },
+  'gill-attachment': { a: 'attached', d: 'descending', f: 'free', n: 'notched' },
+  'gill-spacing': { c: 'close', w: 'crowded', d: 'distant' },
+  'gill-size': { b: 'broad', n: 'narrow' },
+  'gill-color': { k: 'black', n: 'brown', b: 'buff', h: 'chocolate', g: 'grey', r: 'green', o: 'orange', p: 'pink', u: 'purple', e: 'red', w: 'white', y: 'yellow' },
+  'stalk-shape': { e: 'enlarging', t: 'tapering' },
+  'stalk-root': { b: 'bulbous', c: 'club', u: 'cup', e: 'equal', z: 'rhizomorphs', r: 'rooted', '?': 'missing' },
+  'stalk-surface-above-ring': { f: 'fibrous', y: 'scaly', k: 'silky', s: 'smooth' },
+  'stalk-surface-below-ring': { f: 'fibrous', y: 'scaly', k: 'silky', s: 'smooth' },
+  'stalk-color-above-ring': { n: 'brown', b: 'buff', c: 'cinnamon', g: 'grey', o: 'orange', p: 'pink', e: 'red', w: 'white', y: 'yellow' },
+  'stalk-color-below-ring': { n: 'brown', b: 'buff', c: 'cinnamon', g: 'grey', o: 'orange', p: 'pink', e: 'red', w: 'white', y: 'yellow' },
+  'veil-type': { p: 'partial', u: 'universal' },
+  'veil-color': { n: 'brown', o: 'orange', w: 'white', y: 'yellow' },
+  'ring-number': { n: 'none', o: 'one', t: 'two' },
+  'ring-type': { c: 'cobwebby', e: 'evanescent', f: 'flaring', l: 'large', n: 'none', p: 'pendant', s: 'sheathing', z: 'zone' },
+  'spore-print-color': { k: 'black', n: 'brown', b: 'buff', h: 'chocolate', r: 'green', o: 'orange', u: 'purple', w: 'white', y: 'yellow' },
+  population: { a: 'abundant', c: 'clustered', n: 'numerous', s: 'scattered', v: 'several', y: 'solitary' },
+  habitat: { g: 'grasses', l: 'leaves', m: 'meadows', p: 'paths', u: 'urban', w: 'waste ground', d: 'woods' },
+};
+const T11_LAMPS = [['P1', 'inputs are the committed ones'], ['P2', 'every number re-derives'], ['P3', 'the whole record, losses included'], ['P4', 'the exam never picks a rule'], ['P5', 'one changed answer changes the receipt']];
+const pct = (x) => (x * 100).toFixed(1) + '%';
+const pts = (x) => (x < 0 ? '−' : '+') + Math.abs(x * 100).toFixed(1) + ' pts';
+const short = (h) => String(h || '').slice(0, 12) + '…';
+const commit = (sha) => el('a', { class: 'link', href: 'https://github.com/sjgant80-hub/ai-first-company/commit/' + sha, target: '_blank', rel: 'noopener' }, sha);
+const word = (c) => CLASS_WORD[c] || c;
+const valueWord = (f, v) => (MUSHROOM_WORD[f] && MUSHROOM_WORD[f][v]) || CAR_WORD[v] || v;
+// a kept rule as its run file wrote it: 'f==v[ AND f==v]=>c (p=0.98,fires=404)'
+function parseKept(s) {
+  const m = /^(.*?) ?=> ?(\S+) \(p=([\d.]+),fires=(\d+)\)$/.exec(s);
+  return m ? { conds: m[1].split(' AND ').map((x) => x.split('==')), c: m[2], p: Number(m[3]), fires: Number(m[4]) } : null;
+}
+const plain = (k) => k.conds.map(([f, v]) => (FEATURE_WORD[f] || f) + ' is ' + valueWord(f, v)).join(' and ') + ' → ' + word(k.c);
+
+function whyLine(r, kept) {
+  if (r.charge === 'due') return 'The kept rules beat the baseline on the exam by more than the guarantee demands, by a clear margin — so the charge is due.';
+  if (!kept.length) return 'None of its rules held up on the check split, so nothing was kept and the exam was answered by the baseline itself. No gain, no charge.';
+  if (kept.every((k) => k.c === r.trainMajority)) return 'Every rule it kept only ever predicted the commonest answer (“' + word(r.trainMajority) + '”) — exactly what the baseline already guesses. No gain, no charge.';
+  return 'The kept rules did not beat the baseline by enough. No charge.';
+}
+function renderT11(d, live) {
+  if (!d || !Array.isArray(d.runs)) return;
+  const host = $('t11runs'); host.innerHTML = '';
+  for (const r of d.runs) {
+    const [title, data, how] = T11_NAMES[r.id] || [r.id, '', ''];
+    const kept = (r.rulesKept || []).map(parseKept).filter(Boolean);
+    const match = r.receipt && r.receipt === r.committedReceipt;
+    host.append(el('div', { class: 'run ' + (r.charge || 'none') },
+      el('div', { class: 'runtop' }, el('b', {}, title), el('span', { class: 'charge ' + (r.charge || '') }, r.charge === 'due' ? 'CHARGE DUE' : r.charge === 'waived' ? 'CHARGE WAIVED' : 'DID NOT RUN')),
+      el('p', { class: 'meta' }, data + ' · ' + how),
+      r.charge ? el('div', { class: 'stats' },
+        el('span', { class: 'stat' }, el('small', {}, 'baseline'), el('b', {}, pct(r.baselineAccuracy))),
+        el('span', { class: 'arrow' }, '→'),
+        el('span', { class: 'stat grown' }, el('small', {}, 'kept rules'), el('b', {}, pct(r.grownAccuracy))),
+        el('span', { class: 'imp' }, pts(r.improvement))) : el('p', { class: 'nums' }, r.why || 'no result'),
+      r.charge ? el('p', { class: 'meta' }, 'The AI wrote ' + r.rulesParsed + ' usable rules; the gate kept ' + kept.length + '. Exam: ' + fmt(r.exam) + ' rows.') : null,
+      r.charge ? el('p', { class: 'why' }, whyLine(r, kept)) : null,
+      el('p', { class: 'rhash' }, 'sealed ', commit(r.seal || MINT_RUNS[r.id].seal), ' before it ran · result ', commit(r.run || MINT_RUNS[r.id].run)),
+      r.receipt ? el('p', { class: 'rhash' }, 'receipt ', el('b', {}, short(r.receipt)), live ? (match ? ' ✓ equals the one published with the result' : ' ✗ differs from the one published with the result') : ' (GitHub’s run)') : null,
+    ));
+  }
+  const w = d.runs.find((r) => r.id === 'v3');
+  if (w && w.charge) {
+    $('t11sub').textContent = '— UCI Mushroom, ' + fmt(w.exam) + ' exam rows the rules never saw';
+    const race = $('t11race'); race.innerHTML = '';
+    for (const [name, cls, acc, note] of [['baseline', 'base', w.baselineAccuracy, 'always “' + word(w.trainMajority) + '”'], ['kept rules', 'grown', w.grownAccuracy, 'no AI at answer time']]) {
+      const fill = el('span', { class: 'fill ' + cls, title: note, style: 'width:0' });
+      race.append(el('div', { class: 'row' }, el('span', { class: 'name' }, name), el('span', { class: 'track' }, fill), el('span', { class: 'val' }, el('b', {}, pct(acc)))));
+      void fill.offsetWidth;                                  // a reflow, so the width animates without waiting on a frame
+      fill.style.width = Math.max(2, acc * 100) + '%';
+    }
+    $('t11head').innerHTML = '<b>' + fmt(w.grown.hits) + ' of ' + fmt(w.grown.n) + '</b> exam answers right with the kept rules, against <b>' + fmt(w.base.hits) + '</b> for always guessing “' + word(w.trainMajority) + '” — ' + pts(w.improvement) + (w.improvement >= 0.08 ? ', clear of the guarantee’s 8-point bar.' : ', short of the guarantee’s 8-point bar.');
+    const kept = (w.rulesKept || []).map(parseKept).filter(Boolean);
+    const tb = $('t11rules').querySelector('tbody'); tb.innerHTML = '';
+    for (const k of kept) tb.append(el('tr', {}, el('td', { class: 'mono' }, k.conds.map(([f, v]) => f + ' == ' + v).join(' AND ') + ' → ' + k.c), el('td', {}, plain(k)), el('td', { class: 'num' }, Math.round(k.p * 100) + '%'), el('td', { class: 'num' }, fmt(k.fires) + '×')));
+    $('t11dropped').textContent = 'The AI wrote ' + w.rulesParsed + ' usable rules; ' + (w.rulesParsed - kept.length) + ' did not hold up on the check split and were thrown out. Only the ' + kept.length + ' above ever saw the exam.';
+  }
+  renderLamps($('t11lamps'), T11_LAMPS, d);
+}
+// the inputs, fetched once from this site: the pinned datasets and the three committed runs (with the recorded replies)
+let t11in = null;
+async function loadT11() {
+  if (t11in) return t11in;
+  const get = (p, as) => fetch(p, { cache: 'no-cache' }).then((r) => { if (!r.ok) throw new Error(p + ' ' + r.status); return as === 'json' ? r.json() : r.text(); });
+  const [texts, runs] = await Promise.all([Promise.all(T11_FILES.data.map((p) => get(p))), Promise.all(T11_FILES.runs.map((p) => get(p, 'json')))]);
+  t11in = { data: Object.fromEntries(Object.keys(SEALED.datasets).map((f, i) => [f, texts[i]])), runs: Object.fromEntries(T11_IDS.map((id, i) => [id, runs[i]])) };
+  return t11in;
+}
+// the AI missed the strongest single clue? measured here from the data, never typed in
+function missedClue(inputs) {
+  const spec = MINT_RUNS.v3, sp = splitOf(rowsOf(inputs.data[spec.dataset], spec)), reply = inputs.runs.v3.teacherReply || '', maj = majorityOf(sp.train);
+  let best = null;
+  for (const f of spec.names) {
+    const by = {};
+    for (const r of sp.train) { by[r[f]] = by[r[f]] || {}; by[r[f]][r.class] = (by[r[f]][r.class] || 0) + 1; }
+    const pick = (v) => (by[v] ? Object.entries(by[v]).sort((a, b) => b[1] - a[1])[0][0] : maj);
+    const acc = sp.final.filter((r) => pick(r[f]) === r.class).length / sp.final.length;
+    if (!best || acc > best.acc) best = { f, acc };
+  }
+  return best && !new RegExp('^\\s*' + best.f + '\\s*==', 'im').test(reply) ? best : null;
+}
+// T11 in a module worker so the page never freezes; inline only where this browser can't start one
+function t11Inline(inputs) { const t0 = performance.now(), ran = t11(inputs); return { ran, ms: Math.round(performance.now() - t0) }; }
+function t11OffThread(inputs) {
+  return new Promise((resolve) => {
+    let w = null;
+    try { w = new Worker(new URL('./t11-worker.mjs', import.meta.url), { type: 'module' }); } catch { return resolve(t11Inline(inputs)); }
+    const fallback = () => { w.terminate(); resolve(t11Inline(inputs)); };
+    w.onmessage = (e) => { if (!e.data || !e.data.ok) return fallback(); w.terminate(); resolve({ ran: e.data.ran, ms: e.data.ms }); };
+    w.onerror = (e) => { e.preventDefault(); fallback(); };
+    w.postMessage(inputs);
+  });
+}
+function publishedLine(host, id, verdict) {
+  host.innerHTML = '';
+  host.append(
+    el('div', {}, el('span', { class: 'verdict ' + (verdict === 'pass' ? 'pass' : 'fail') }, verdict.toUpperCase()), ' ', el('span', { class: 'pill' }, 'GitHub’s published run')),
+    el('p', { class: 'rhash' }, 'published receipt  ', el('b', {}, id.slice(0, 24)), '…  press re-run to compute your own — it must match'),
+  );
+}
+async function runT11() {
+  $('t11run').disabled = true; setState('T11', 'run', 'running');
+  try {
+    $('t11src').textContent = 'fetching the pinned data and the recorded runs…';
+    const inputs = await loadT11();
+    $('t11src').textContent = 're-running all three, then attacking every receipt…';
+    const { ran, ms } = await t11OffThread(inputs);
+    renderT11(ran.detail, true);
+    const tampers = ran.detail.runs.reduce((n, r) => n + (r.exam || 0), 0);
+    $('t11src').textContent = 'your browser’s run · ' + fmt(ms) + ' ms · ' + fmt(tampers) + ' tampered exams tried';
+    const miss = missedClue(inputs);
+    if (miss) $('t11dropped').textContent += ' It never even proposed the strongest single clue in the data — ' + (FEATURE_WORD[miss.f] || miss.f) + ', which on its own gets ' + pct(miss.acc) + ' of the exam right. The guarantee didn’t need the AI to be brilliant: the gate let through only what held up, and the charge is only for what that earned.';
+    setState('T11', ran.record.verdict === 'pass' ? 'pass' : 'fail', ran.record.verdict);
+    receiptLine($('t11receipt'), ran, exp11 && exp11.id);
+    return ran;
+  } catch (e) {
+    $('t11src').textContent = 'could not load the pinned files (' + e.message + ') — reconnect and press again';
+    setState('T11', 'fail', 'not loaded');
+  } finally { $('t11run').disabled = false; }
+}
+$('t11run').addEventListener('click', runT11);
+// try to break it: the winning run, re-scored with the same kept rules on an exam the visitor changes
+let t11ctx = null, t11next = 0;
+async function winCtx() {
+  if (t11ctx) return t11ctx;
+  const inputs = await loadT11(), spec = MINT_RUNS.v3, split = splitOf(rowsOf(inputs.data[spec.dataset], spec));
+  t11ctx = { spec, split, d: distil(spec, split, inputs.runs.v3.teacherReply), committed: inputs.runs.v3.receipt };
+  t11next = Math.floor(Math.random() * split.final.length);
+  return t11ctx;
+}
+function t11say(lines) { const o = $('t11out'); o.innerHTML = ''; o.append(...lines.map(([cls, html]) => el('p', { class: cls || '', html }))); }
+$('t11one').addEventListener('click', async () => {
+  try {
+    const c = await winCtx(), n = c.split.final.length, i = t11next; t11next = (t11next + 211) % n;
+    const row = c.split.final[i], to = flipped(row.class, c.spec, c.d.trainMajority), exam = c.split.final.slice();
+    exam[i] = { ...row, class: to };
+    const s = score(c.spec, exam, c.d.kept, c.d.trainMajority);
+    t11say([
+      ['', 'Exam row <b>' + fmt(i + 1) + '</b> of ' + fmt(n) + ': its answer changed from “' + word(row.class) + '” to “' + word(to) + '”. Nothing else touched.'],
+      ['', 'Kept rules now get <b>' + fmt(s.grown.hits) + '</b> of ' + fmt(n) + ' right (signed: ' + fmt(c.d.grown.hits) + '); always guessing “' + word(c.d.trainMajority) + '” now gets <b>' + fmt(s.base.hits) + '</b> (signed: ' + fmt(c.d.base.hits) + '). One answer is too small to move a percentage — it is not too small for the receipt.'],
+      [s.receipt === c.committed ? 'good' : 'bad', 'New receipt <b>' + short(s.receipt) + '</b> ' + (s.receipt === c.committed ? '— still equals the signed one (this should never happen)' : '✗ no longer matches the signed receipt ' + short(c.committed) + '. One changed answer, and the signature shows it.')],
+      ['out', 'Press again for another row. Every one of the ' + fmt(n) + ' is tried in the full run above.'],
+    ]);
+  } catch (e) { t11say([['bad', 'could not load the pinned files (' + e.message + ')']]); }
+});
+$('t11every').addEventListener('click', async () => {
+  try {
+    const c = await winCtx(), n = c.split.final.length;
+    const exam = c.split.final.map((r) => ({ ...r, class: flipped(r.class, c.spec, c.d.trainMajority) }));
+    const d2 = distil(c.spec, { ...c.split, final: exam }, t11in.runs.v3.teacherReply);
+    const same = canonical(d2.rulesKept) === canonical(c.d.rulesKept);
+    t11say([
+      ['', 'Every one of the <b>' + fmt(n) + '</b> exam answers changed, then the whole run redone.'],
+      [same ? 'good' : 'bad', same ? '✓ The kept rules are exactly the same ' + c.d.rulesKept.length + ' — the exam never chose a rule, so rigging the exam can’t change what was built.' : '✗ The kept rules changed — the exam leaked into the build.'],
+      ['', 'The rules now score <b>' + pct(d2.grownAccuracy) + '</b> against a baseline of ' + pct(d2.baselineAccuracy) + ' — the charge would be <b>' + d2.charge + '</b>.'],
+      [d2.receipt === c.committed ? 'good' : 'bad', 'Receipt <b>' + short(d2.receipt) + '</b> ' + (d2.receipt === c.committed ? '— equals the signed one (this should never happen)' : '✗ not the signed one. A different exam is a different receipt.')],
+    ]);
+  } catch (e) { t11say([['bad', 'could not load the pinned files (' + e.message + ')']]); }
+});
+$('t11reply').closest('details').addEventListener('toggle', async (e) => {
+  if (!e.target.open || $('t11reply').dataset.done) return;
+  try { const inputs = await loadT11(); $('t11reply').textContent = inputs.runs.v3.teacherReply; $('t11reply').dataset.done = '1'; } catch (err) { $('t11reply').textContent = 'could not load the recorded run (' + err.message + ')'; }
+});
+
 // ── run all ──────────────────────────────────────────────────────────────────────────────────
 $('runall').addEventListener('click', async () => {
   $('runall').disabled = true;
@@ -274,6 +475,7 @@ $('runall').addEventListener('click', async () => {
   await runT4All();
   await runT1();
   await scoreT6();
+  await runT11();
   $('runall').disabled = false;
 });
 
@@ -283,6 +485,12 @@ renderT5Table();
 scoreT5();
 // the receipts for the other three show their expected verdict immediately; pressing a button recomputes live
 if (detail) { for (const t of ['T1', 'T4', 'T6']) if (detail[t]) setState(t, detail[t].verdict === 'pass' ? 'pass' : 'fail', detail[t].verdict + ' (press to run)'); }
+if (det11) {
+  renderT11(det11, false);
+  setState('T11', det11.verdict === 'pass' ? 'pass' : 'fail', det11.verdict + ' (press to run)');
+  publishedLine($('t11receipt'), det11.id, det11.verdict);
+  $('t11src').textContent = 'showing GitHub’s run — press to redo it yourself';
+} else $('t11src').textContent = 'no published run yet — press to run it yourself';
 $('boot').style.display = 'none';
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
 $('offline').textContent = 'Installable · works offline after first load · nothing you run here leaves your device.';

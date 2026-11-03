@@ -1,0 +1,137 @@
+{
+ "kind": "liveware.detail",
+ "test": "T11",
+ "sealedAt": "97c2f4e402fef1ef3c61fd46fbaca6dc6a434d6c",
+ "id": "f63930aadf44d3adb285cbe4a79bc006dce29304e7390d9b8edf11b5a796fba1",
+ "verdict": "pass",
+ "P1": true,
+ "P2": true,
+ "P3": true,
+ "P4": true,
+ "P5": true,
+ "runs": [
+  {
+   "id": "v1",
+   "p1": true,
+   "p2": true,
+   "p4": true,
+   "p5": true,
+   "seal": "364f29a",
+   "run": "f1802f5",
+   "dataset": "data/mint-demo-car.data",
+   "splitSizes": {
+    "train": 864,
+    "gate": 432,
+    "final": 432
+   },
+   "trainMajority": "unacc",
+   "rulesParsed": 6,
+   "rulesKept": [
+    "safety==low=>unacc (p=1.00,fires=134)",
+    "buying==vhigh=>unacc (p=0.83,fires=117)",
+    "maint==vhigh=>unacc (p=0.80,fires=111)"
+   ],
+   "base": {
+    "n": 432,
+    "hits": 304
+   },
+   "grown": {
+    "n": 432,
+    "hits": 304
+   },
+   "baselineAccuracy": 0.703704,
+   "grownAccuracy": 0.703704,
+   "improvement": 0,
+   "decision": "DROP",
+   "charge": "waived",
+   "receipt": "8b84bd2c127486eb14094c3eab079f6abcdc7f2b871877b314d345b84fecd6c4",
+   "committedReceipt": "8b84bd2c127486eb14094c3eab079f6abcdc7f2b871877b314d345b84fecd6c4",
+   "exam": 432,
+   "changed": 432
+  },
+  {
+   "id": "v2",
+   "p1": true,
+   "p2": true,
+   "p4": true,
+   "p5": true,
+   "seal": "3620ff0",
+   "run": "a45dd93",
+   "dataset": "data/mint-demo-car.data",
+   "splitSizes": {
+    "train": 864,
+    "gate": 432,
+    "final": 432
+   },
+   "trainMajority": "unacc",
+   "rulesParsed": 7,
+   "rulesKept": [],
+   "base": {
+    "n": 432,
+    "hits": 304
+   },
+   "grown": {
+    "n": 432,
+    "hits": 304
+   },
+   "baselineAccuracy": 0.703704,
+   "grownAccuracy": 0.703704,
+   "improvement": 0,
+   "decision": "DROP",
+   "charge": "waived",
+   "receipt": "8b84bd2c127486eb14094c3eab079f6abcdc7f2b871877b314d345b84fecd6c4",
+   "committedReceipt": "8b84bd2c127486eb14094c3eab079f6abcdc7f2b871877b314d345b84fecd6c4",
+   "exam": 432,
+   "changed": 432
+  },
+  {
+   "id": "v3",
+   "p1": true,
+   "p2": true,
+   "p4": true,
+   "p5": true,
+   "seal": "9ec04b0",
+   "run": "71b7d72",
+   "dataset": "data/mint-demo-mushroom.data",
+   "splitSizes": {
+    "train": 4062,
+    "gate": 2031,
+    "final": 2031
+   },
+   "trainMajority": "e",
+   "rulesParsed": 55,
+   "rulesKept": [
+    "gill-color==b=>p (p=1.00,fires=426)",
+    "population==a=>e (p=1.00,fires=113)",
+    "population==n=>e (p=1.00,fires=108)",
+    "habitat==w=>e (p=1.00,fires=38)",
+    "veil-color==n=>e (p=1.00,fires=24)",
+    "veil-color==o=>e (p=1.00,fires=20)",
+    "gill-color==o=>e (p=1.00,fires=15)",
+    "spore-print-color==y=>e (p=1.00,fires=15)",
+    "spore-print-color==h=>p (p=0.98,fires=404)",
+    "habitat==m=>e (p=0.97,fires=64)",
+    "gill-color==u=>e (p=0.86,fires=117)",
+    "population==c=>e (p=0.83,fires=75)",
+    "ring-type==p=>e (p=0.80,fires=1005)"
+   ],
+   "base": {
+    "n": 2031,
+    "hits": 1045
+   },
+   "grown": {
+    "n": 2031,
+    "hits": 1897
+   },
+   "baselineAccuracy": 0.514525,
+   "grownAccuracy": 0.934023,
+   "improvement": 0.419498,
+   "decision": "PROMOTE",
+   "charge": "due",
+   "receipt": "801202316f57b4870b833603751b6d3035e4d327bdaf476a8cebcc25fd09bb49",
+   "committedReceipt": "801202316f57b4870b833603751b6d3035e4d327bdaf476a8cebcc25fd09bb49",
+   "exam": 2031,
+   "changed": 2031
+  }
+ ]
+}

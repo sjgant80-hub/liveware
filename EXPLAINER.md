@@ -47,6 +47,22 @@ Pieces marked **ROADMAP** are designed but not on the page yet; each moves up wh
 - **Test it:** T6 — open a second tab; hand a task across; inject a forged peer (refused).
 - **Why it matters:** no central server to breach, rent or switch off. A forged or replayed peer never joins.
 
+### The guarantee (teacher distillation, signed) — T11
+- **What:** mint-a-department's promise — "beats your signed baseline or you don't pay" — run for real on public data,
+  three times, with the two losses kept beside the win.
+- **How:** a local AI (qwen2.5:7b, no cloud) reads 40 labelled examples once and writes rules; its reply is recorded.
+  Plain code keeps a rule only if, on a check split, it applies often enough and is right at least 80% of the time. The
+  kept rules — no AI at answer time — sit a final exam split that never chose anything. The baseline agreement, fixed
+  before the work, says **due** only for a gain of at least 8 percentage points that a two-proportion z-test calls clear
+  (z ≥ 1.96); otherwise **waived**. The receipt is a SHA-256 of that sealed test and both scores.
+- **Test it:** press re-run — your browser re-derives all three committed runs from the recorded replies and must land
+  on the same signed receipts; then change one exam answer (the receipt changes) or every one (the kept rules don't).
+- **Why it matters:** the guarantee is only worth something if it can say no. Here it said no twice, on the record,
+  and yes once — and the AI didn't need to be brilliant: it missed the dataset's strongest clue entirely, and the gate
+  still only charged for what the rules it did write earned.
+- **Doesn't claim:** that the AI step re-runs (it can't, word for word), or that it will beat any other dataset or a
+  client's process. The mushroom rules are classroom data, not advice on what is safe to eat.
+
 ### The browser platform
 - **Web Crypto** — Ed25519 signatures and SHA-256 seals on seeds, packets and receipts.
 - **WASM / pure JS** — the LIGHT codec, the packet door, the pattern evaluator, the CRDT merge.

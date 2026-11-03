@@ -106,7 +106,7 @@ section > .claim { color: var(--soft); max-width: 64ch; margin: 0 0 22px; font-s
 .race .row { display: grid; grid-template-columns: 78px 1fr 92px; align-items: center; gap: 12px; }
 .race .name { font-family: var(--mono); font-size: 13px; color: var(--soft); }
 .race .track { height: 22px; background: rgba(255,255,255,0.04); border-radius: 6px; overflow: hidden; position: relative; }
-.race .fill { height: 100%; border-radius: 6px; width: 100%; transition: width 1.1s cubic-bezier(.22,1,.36,1); }
+.race .fill { display: block; height: 100%; border-radius: 6px; width: 100%; transition: width 1.1s cubic-bezier(.22,1,.36,1); }
 .race .fill.light { background: linear-gradient(90deg, var(--spore), var(--hypha)); }
 .race .fill.gzip { background: #44525c; } .race .fill.zstd { background: #5b6b76; } .race .fill.brotli { background: #6f818c; }
 .race .val { font-family: var(--mono); font-size: 13px; text-align: right; color: var(--ink); }
@@ -222,3 +222,42 @@ h3 .tag, h4 .tag { font-family: var(--mono); font-size: 11px; border-radius: 999
 .faq details p { color: var(--soft); margin: 0 0 14px; font-size: 14.5px; }
 .biz { text-align: center; }
 .biz .steps { max-width: 560px; margin: 0 auto 20px; text-align: left; }
+
+/* T11 · the guarantee, run for real */
+.t11bar { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 14px; }
+.runs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 900px) { .runs { grid-template-columns: 1fr; } }
+.run { border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; background: rgba(255, 255, 255, 0.02); min-width: 0; }
+.run.due { border-color: var(--spore-dim); box-shadow: var(--glow); }
+.runtop { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.charge { font-family: var(--mono); font-size: 11px; letter-spacing: .04em; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--soft); white-space: nowrap; }
+.charge.due { color: var(--spore); border-color: var(--spore-dim); }
+.charge.waived { color: var(--amber); border-color: var(--amber); }
+.run .meta { font-size: 13px; color: var(--soft); margin: 6px 0; }
+.run .nums { font-family: var(--mono); font-size: 14px; margin: 10px 0 6px; color: var(--soft); }
+.run .nums b { color: var(--ink); }
+.run .stats { display: flex; align-items: flex-end; gap: 10px; flex-wrap: wrap; margin: 12px 0 8px; }
+.run .stat { display: grid; gap: 1px; }
+.run .stat small { font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); }
+.run .stat b { font-family: var(--mono); font-size: 21px; color: var(--ink); line-height: 1.1; }
+.run .arrow { color: var(--faint); padding-bottom: 2px; }
+.run .imp { font-family: var(--mono); font-size: 13px; color: var(--soft); padding-bottom: 3px; }
+.run.due .imp { color: var(--spore); font-weight: 700; }
+.run.due .stat.grown b { color: var(--spore); }
+.run .why { font-size: 13.5px; color: var(--ink); margin: 8px 0 10px; }
+.run .rhash { margin: 4px 0 0; }
+.run .rhash a.link, .bizproof a.link { color: var(--hypha); }
+#t11race .row { grid-template-columns: 96px 1fr 70px; }
+.race .fill.base { background: #5b6b76; }
+.race .fill.grown { background: linear-gradient(90deg, var(--spore), var(--hypha)); }
+td.mono { font-family: var(--mono); font-size: 12.5px; color: var(--soft); }
+details.reply { margin-top: 14px; }
+details.reply summary { cursor: pointer; color: var(--hypha); font-size: 14px; }
+details.reply pre { max-height: 280px; overflow: auto; margin: 10px 0 0; white-space: pre-wrap; }
+.warnline { font-size: 13px; color: var(--amber); margin: 14px 0 0; border-left: 2px solid var(--amber); padding-left: 12px; }
+.t11out { margin-top: 14px; display: grid; gap: 6px; font-size: 14px; color: var(--soft); }
+.t11out p { margin: 0; } .t11out b { color: var(--ink); }
+.t11out .bad { color: var(--bad); } .t11out .good { color: var(--ok); }
+.t11out .out { font-size: 13px; }
+.hiwsteps { margin-top: 18px; }
+.bizproof { font-size: 14px; color: var(--soft); max-width: 560px; margin: 0 auto 18px; }
