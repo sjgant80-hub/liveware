@@ -8,6 +8,7 @@ import { makePeer } from '../src/mesh.mjs';
 import { shaHex, canonical } from '../src/receipt.mjs';
 import { t11, T11_IDS, T11_FILES, SEALED } from '../src/t11.mjs';
 import { RUNS as MINT_RUNS, rowsOf, splitOf, majorityOf, distil, score, flipped } from '../vendor/ai-first-company/src/distill.mjs';
+import { mintCase, sourcesOf } from '../src/mintcase.mjs';
 
 const $ = (id) => document.getElementById(id);
 const el = (tag, attrs, ...kids) => { const e = document.createElement(tag); for (const [k, v] of Object.entries(attrs || {})) { if (v == null || v === false) continue; if (k === 'class') e.className = v; else if (k === 'html') e.innerHTML = v; else e.setAttribute(k, v === true ? '' : v); } for (const c of kids.flat()) if (c != null) e.append(c instanceof Node ? c : String(c)); return e; };
@@ -471,6 +472,35 @@ $('t11reply').closest('details').addEventListener('toggle', async (e) => {
   if (!e.target.open || $('t11reply').dataset.done) return;
   try { const inputs = await loadT11(); $('t11reply').textContent = inputs.runs.v3.teacherReply; $('t11reply').dataset.done = '1'; } catch (err) { $('t11reply').textContent = 'could not load the recorded run (' + err.message + ')'; }
 });
+
+// ══ For business · the cost case, computed by src/mintcase.mjs from the sourced basis ══════════
+const BASIS_PATH = 'vendor/ai-first-company/vendor/sovereign-enterprise/data/basis.json';
+const gbp = (n) => '£' + Math.round(n).toLocaleString('en-GB');
+const basis = await getJSON(BASIS_PATH);
+function renderCost() {
+  if (!basis) { $('c-head').textContent = 'the sourced basis could not be loaded — reconnect and reload'; return; }
+  const v = (id) => Number($(id).value);
+  const r = mintCase(basis, { hoursPerWeek: v('c-hours'), share: v('c-share') / 100, seats: v('c-seats'), casesPerWeek: v('c-cases'), years: v('c-years') });
+  if (!r.ok) { $('c-head').textContent = 'Check the inputs: ' + r.why + '.'; return; }
+  const n = r.inputs.years, yrs = n + (n === 1 ? ' year' : ' years');
+  $('c-overh').textContent = 'Over ' + yrs;
+  $('c-head').innerHTML = 'This process costs you <b>' + gbp(r.perYear.today) + '</b> a year in staff time today. Owning it: <b>' + gbp(r.perYear.own) + '</b> a year — <b class="win">' + gbp(r.savingPerYear) + ' a year back</b>, ' + gbp(r.savingOver) + ' over ' + yrs + '.';
+  const rows = [
+    ['Today', 'Your team does all of it.', 'today'],
+    ['Rent AI assistant seats', 'Microsoft 365 Copilot for ' + r.inputs.seats + ' people (' + gbp(r.lines.seats) + ' a year). It helps each person; the work, and the staff time, stay.', 'rentSeats'],
+    ['Call a cloud AI on every case', 'Takes the same share off, billed per case at Claude Sonnet 5 API rates (' + gbp(r.lines.api) + ' a year at your volume) — and every case leaves your building.', 'cloudApi'],
+    ['Own it — mint-a-department', 'Takes the same share off on a machine you already have, for about ' + gbp(r.lines.power) + ' a year of electricity, always on. No seats, no meter, nothing leaves.', 'own'],
+  ];
+  const tb = $('c-table').querySelector('tbody'); tb.innerHTML = '';
+  for (const [route, what, k] of rows) tb.append(el('tr', { class: k === 'own' ? 'ownrow' : '' }, el('td', {}, el('b', {}, route)), el('td', { class: 'wrap' }, what), el('td', { class: 'num', 'data-label': 'a year' }, gbp(r.perYear[k])), el('td', { class: 'num', 'data-label': 'over ' + yrs }, gbp(r.over[k]))));
+  $('c-note').innerHTML = 'Owning beats the cloud route by <b>' + gbp(r.versusCloudOver) + '</b> over ' + yrs + ' at this volume — at low volumes the per-case bill is small, and the real difference is that nothing leaves your building. The cloud route assumes ' + r.inputs.tokensIn.toLocaleString('en-GB') + ' tokens in and ' + r.inputs.tokensOut.toLocaleString('en-GB') + ' out per case (a short document and a short answer). Staff time is priced at the median wage with no employer on-costs, so every saving here is a floor.';
+  $('c-board').innerHTML = 'Pick one process. Today it costs <b>' + gbp(r.perYear.today) + '</b> a year in staff time — a floor, at the UK median wage. If an owned system takes off the share you estimate, that is <b>' + gbp(r.savingPerYear) + '</b> a year back, ' + gbp(r.savingOver) + ' over ' + yrs + ' with inflation, for about ' + gbp(r.lines.power) + ' a year of electricity. Renting AI seats instead would add ' + gbp(r.lines.seats) + ' a year and leave the work where it is. The downside is capped: if the signed receipt says it doesn’t beat today, the charge is waived. The board isn’t being asked to believe a vendor — only to sign a test.';
+}
+if (basis) {
+  $('c-src').append(...sourcesOf(basis).map((s) => el('li', {}, s.what + (s.source ? ' — ' : ''), s.source ? el('a', { class: 'link', href: s.source, target: '_blank', rel: 'noopener' }, new URL(s.source).hostname) : '')));
+}
+for (const id of ['c-hours', 'c-share', 'c-seats', 'c-cases', 'c-years']) $(id).addEventListener('input', renderCost);
+renderCost();
 
 // ── run all ──────────────────────────────────────────────────────────────────────────────────
 $('runall').addEventListener('click', async () => {

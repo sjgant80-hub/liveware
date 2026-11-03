@@ -54,6 +54,10 @@ kernel it vendors (`distill.mjs`, gated in ai-first-company) are both clean with
   the distillation kernel, the baseline-agreement engine, the two pinned UCI datasets, and the three recorded runs with
   their seals, copied byte-for-byte from `ai-first-company` (see `vendor/SOURCES-ai-first-company.json`).
 - `src/t11.mjs` — T11, run by both `tools/measure-t11.mjs` and the page (in a worker: `page/t11-worker.mjs`).
+- `src/mintcase.mjs` — the "For business" cost case for one process: staff time at the ONS median wage (a floor),
+  CPI on later years, the rented-seat and per-call cloud routes against owning it — every figure read from the vendored,
+  sourced basis (`vendor/ai-first-company/vendor/sovereign-enterprise/data/basis.json`), the inputs the reader's own.
+  Mutation-gated, nothing baselined. No price of ours appears anywhere on the page.
 - `samples/` — the pinned files T5 compresses, each by SHA-256. `receipts/` — what was measured.
 - `CLAIMS.md` — the sealed pass criteria. `EXPLAINER.md` — every piece in plain English.
 

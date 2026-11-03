@@ -82,6 +82,12 @@
    "src": "data/mint-demo-v3-prereg.json",
    "sha256": "d2a310c68347c671e4ecbc289dbb807a33f6a128a141ed2261aa6529a16c6a63",
    "what": "run v3 seal, committed 9ec04b0 before it ran"
+  },
+  {
+   "path": "vendor/ai-first-company/vendor/sovereign-enterprise/data/basis.json",
+   "src": "vendor/sovereign-enterprise/data/basis.json",
+   "sha256": "83e9c2effa2f81596dcfa7110f030940032c1910cdf928d27d628ae59d73bb42",
+   "what": "the sourced cost basis (ONS wage, CPI, DESNZ electricity, vendor prices) the For business cost case reads"
   }
  ]
 }

@@ -13,7 +13,7 @@ jobs:
       - name: the mutation gate — every mutant of every kernel caught by its tests (seed carries a reviewed baseline)
         run: |
           git clone --depth 1 --branch v0.6 https://github.com/sjgant80-hub/witness.git /tmp/witness6
-          for k in receipt rng compress seed door mesh t11; do
+          for k in receipt rng compress seed door mesh t11 mintcase; do
             node /tmp/witness6/witness.mjs mutate src/$k.mjs --timeout 180000 --cap 800 --test node --test test/$k.test.mjs | tee /tmp/w-$k.txt
             grep -q '"clean": true' /tmp/w-$k.txt || { echo "::error::mutants survived in src/$k.mjs"; exit 1; }
           done

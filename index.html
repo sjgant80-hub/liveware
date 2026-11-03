@@ -305,8 +305,8 @@ node tools/measure-t11.mjs --check # the guarantee: three runs re-derived, every
 </section>
 
 <section id="business">
-  <h3>Want this running on your business?</h3>
-  <p class="sectlabel">Liveware grows into a company one process at a time.</p>
+  <h3>Put the guarantee to work on one of your processes</h3>
+  <p class="claim"><b>mint-a-department</b> turns one painful, repetitive process into a small system you own — on your hardware, with no per-seat or per-call rent — and you pay only if a signed receipt shows it beats what you use now, on the measure you agreed before any work began. The engine is the one you just watched run in <a class="link" href="#t11">the guarantee</a>. Liveware grows into a company one process at a time; this is the first one.</p>
   <div class="panel biz">
     <ol class="steps">
       <li>Pick <b>one</b> painful process.</li>
@@ -319,6 +319,82 @@ node tools/measure-t11.mjs --check # the guarantee: three runs re-derived, every
     <div class="cta bizcta" style="justify-content:center">
       <a class="btn go" href="https://github.com/sjgant80-hub/ai-first-company/blob/main/mint/intake-form.md" target="_blank" rel="noopener">Start a baseline</a>
       <a class="btn ghost" href="https://github.com/sjgant80-hub/ai-first-company/blob/main/mint/README.md" target="_blank" rel="noopener">Read the blueprint</a>
+    </div>
+  </div>
+
+  <div class="panel" id="cost">
+    <b>What one process costs you now — and what owning it would</b>
+    <p class="out" style="margin:6px 0 14px">Your numbers, our method. Staff time at the UK median wage with no on-costs added — a floor, not a top end. Inflation on every later year. Every price from its published source, listed below. Change any input.</p>
+    <div class="costin">
+      <label>Staff hours a week spent on this process <input id="c-hours" type="number" min="0" max="168" step="1" value="20"></label>
+      <label>Share of that work an owned system takes off, % <input id="c-share" type="number" min="0" max="100" step="5" value="50"><small>your estimate — the signed receipt measures the real figure</small></label>
+      <label>People who would get a rented AI assistant seat instead <input id="c-seats" type="number" min="0" max="10000" step="1" value="5"></label>
+      <label>Cases the process handles a week <input id="c-cases" type="number" min="0" max="10000000" step="50" value="500"></label>
+      <label>Years to compare <input id="c-years" type="number" min="1" max="10" step="1" value="3"></label>
+    </div>
+    <p class="costhead" id="c-head"></p>
+    <div class="scroll"><table id="c-table"><thead><tr><th>Route</th><th>What happens</th><th class="num">A year</th><th class="num" id="c-overh">Over the period</th></tr></thead><tbody></tbody></table></div>
+    <p class="scope" id="c-note"></p>
+    <details class="reply"><summary>Where every figure comes from</summary><ul class="srcs" id="c-src"></ul></details>
+  </div>
+
+  <div class="roles">
+    <div class="panel role"><b>CEO</b><p>Find out whether AI pays in your business on one process you choose, with one number and one signed answer. The downside is capped: if it doesn't beat today, the charge is waived.</p></div>
+    <div class="panel role"><b>CFO</b><p>A cost that only appears on proof. No seats and no per-call meter; once it's yours, the running cost is the electricity of a machine you already own. The receipt behind the invoice is re-runnable, not a slide.</p></div>
+    <div class="panel role"><b>COO</b><p>Measured against how your team works today, on your own data, with your current tool as the baseline — not against a strawman. It takes the repeated, structured part of one process; nothing else changes shape.</p></div>
+    <div class="panel role"><b>CTO / CISO</b><p>It runs on your hardware and calls no outside AI service to decide a case. What ships is a small set of fixed, readable rules — no model in the loop at answer time, so nothing drifts and nothing leaks. Every result has a SHA-256 receipt anyone can re-check.</p></div>
+    <div class="panel role"><b>Department heads</b><p>You pick the process and the measure that matters to you. The test is written down and signed before any work, so the result can't be argued afterwards — by either side.</p></div>
+    <div class="panel role"><b>Your team</b><p>It takes the part of the job that is the same every time. Open-ended judgement isn't what it's built for, and it stays with your people.</p></div>
+  </div>
+
+  <div class="grid2" style="margin-top:16px">
+    <div class="panel"><b>Security and data protection</b>
+      <ul class="facts">
+        <li><b>Nothing leaves at run time.</b> The finished system decides each case on your machine and calls no AI service, so there is no outside processor to vet — data protection by design (UK GDPR Article 25).</li>
+        <li><b>The build runs on your hardware too.</b> The teaching step reads your job's data where it already is, as the local model did in the demo above. If a job ever calls for a teacher that can't run on your machines, that is agreed in writing before any data moves — and so is who touches your data during the build, and how.</li>
+        <li><b>Auditable by anyone.</b> Every kept rule can be printed and read, like the ones in the demo above. Every verdict is a receipt over the signed test and both scores.</li>
+      </ul>
+    </div>
+    <div class="panel"><b>Ownership, support and exit</b>
+      <ul class="facts">
+        <li><b>You own what's delivered.</b> It runs on your hardware; the code is MIT — no licence fee, no lock-in — and it keeps running without us.</li>
+        <li><b>Support, service levels, warranty and liability</b> are agreed per deployment, in that deployment's agreement.</li>
+        <li><b>No meter to switch off.</b> There are no seats and no per-call billing in the system you own.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-top:16px"><b>Roll-out — what happens, and what we need from you</b>
+    <ol class="steps hiwsteps">
+      <li><b>Intake.</b> You name the process, the data it uses, the tool or method you use now, and the number it hits today. That's the <a class="link" href="https://github.com/sjgant80-hub/ai-first-company/blob/main/mint/intake-form.md" target="_blank" rel="noopener">intake form</a>.</li>
+      <li><b>The baseline agreement.</b> Before any work: the measure, your current level, the smallest gain that counts, how much test data it needs, the confidence bar — and the fee. Both sides sign. The goalpost can't move after.</li>
+      <li><b>The build.</b> The teacher reads your job's data once and proposes rules; the gate keeps only the ones that hold up on data held back from it — exactly as in the demo. Hardware: nothing special. The finished rules run on any computer, and the demo's seven-billion-parameter teacher ran on an ordinary laptop processor (an Intel Core i7-1255U — no graphics card used).</li>
+      <li><b>The verdict.</b> The system sits the agreed test on data it never saw, and the signed agreement decides: a re-runnable receipt, <b>due</b> or <b>waived</b>.</li>
+      <li><b>Live.</b> On “due”, the owned system takes the routine share of the process on your hardware; your team keeps the rest.</li>
+    </ol>
+  </div>
+
+  <div class="panel" style="margin-top:16px"><b>Risks, answered straight</b>
+    <dl class="risks">
+      <dt>What if it doesn't beat what we use now?</dt><dd>Then the charge is waived. The same engine said exactly that twice in the demo above, on the record.</dd>
+      <dt>What if the AI makes things up?</dt><dd>There is no AI at answer time. The AI proposes rules once; a rule survives only if it holds up on data it never saw, and you can read every one that survives.</dd>
+      <dt>Couldn't the numbers be massaged afterwards?</dt><dd>The test is signed before the work, and the receipt fingerprints that test and both scores. Change either and the receipt stops matching — try it in the demo above.</dd>
+      <dt>Is a mushroom demo relevant to us?</dt><dd>The data is a public classroom set so that anyone can check it. The mechanism — signed baseline, gate, held-back exam, receipt — is exactly what runs on your process.</dd>
+      <dt>What if our process changes?</dt><dd>The rules are fixed and readable, so nothing changes behind your back. A changed process gets a fresh baseline and a new agreement.</dd>
+      <dt>Is the charge one-off or ongoing?</dt><dd>The system you own has no seats and no per-call meter, so nothing in it bills you as you use it. The fee — and any support you choose to add — is set out in the agreement before any work, beside the number it has to beat. Nothing is charged that isn't written there.</dd>
+      <dt>Which process should we start with?</dt><dd>One that is repeated, structured and decided the same way every time — sorting, routing, triage, checking forms against rules — with a number you already track. Work that needs open-ended judgement is the wrong first choice, and we'll say so at intake.</dd>
+      <dt>Can we check the receipt ourselves?</dt><dd>Yes. It is a SHA-256 fingerprint of the signed test and the two scores; anyone holding those recomputes it exactly, as your browser did in the demo above and as GitHub's runner does on every change to this page.</dd>
+      <dt>Is the exam a fair sample of our real work?</dt><dd>It is agreed test data from your own records, set aside before the build starts, and the build never sees it — the same separation the demo shows, where changing every exam answer leaves the kept rules untouched.</dd>
+    </dl>
+  </div>
+
+  <div class="panel boardcase" style="margin-top:16px"><b>The case for your board</b><p id="c-board"></p></div>
+
+  <div class="panel biz" style="margin-top:16px">
+    <p style="margin:0 0 14px"><b>Supplied by AI Native Solutions.</b> Start at <a class="link" href="https://www.ai-nativesolutions.com" target="_blank" rel="noopener">ai-nativesolutions.com</a>, or write your process and its baseline down on the intake form.</p>
+    <div class="cta bizcta" style="justify-content:center">
+      <a class="btn go" href="https://www.ai-nativesolutions.com" target="_blank" rel="noopener">Talk to AI Native Solutions</a>
+      <a class="btn ghost" href="https://github.com/sjgant80-hub/ai-first-company/blob/main/mint/intake-form.md" target="_blank" rel="noopener">Open the intake form</a>
     </div>
   </div>
 </section>
@@ -342,7 +418,7 @@ node tools/measure-t11.mjs --check # the guarantee: three runs re-derived, every
 
 <footer><div class="wrap">
   <p><b>LIVEWARE</b> — software that grows, defends itself, and proves everything it does.</p>
-  <p>Konomi architecture and the LIGHT language: Thomas Frumkin. GEP and Behavioural Entropy Signatures: Gary W. Floyd (CC BY 4.0), where used. Built by Simon Gant, AI-Native Solutions. Code MIT. The guarantee's datasets: Car Evaluation and Mushroom, from the UCI Machine Learning Repository.</p>
+  <p>Powered by the Konomi architecture, created by Thomas Frumkin; the LIGHT language: Thomas Frumkin. GEP and Behavioural Entropy Signatures: Gary W. Floyd (CC BY 4.0), where used. Built by Simon Gant, AI-Native Solutions. Code MIT. The guarantee's datasets: Car Evaluation and Mushroom, from the UCI Machine Learning Repository.</p>
   <p id="offline" class="out"></p>
 </div></footer>
 

@@ -35,7 +35,7 @@ test('T11 · the sealed values equal the seal\'s own JSON (CLAIMS-T11.md), and e
 test('T11 · every vendored file is byte for byte the one its sources manifest names', () => {
   const src = JSON.parse(read('vendor/SOURCES-ai-first-company.json'));
   assert.equal(src.repo, 'sjgant80-hub/ai-first-company');
-  assert.equal(src.files.length, 13);
+  assert.equal(src.files.length, 14);
   for (const f of src.files) assert.equal(createHash('sha256').update(readFileSync(new URL(f.path, root))).digest('hex'), f.sha256, f.path);
 });
 

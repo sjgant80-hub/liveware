@@ -1,9 +1,9 @@
 // sw.js — offline shell for Liveware. Precache the page, its kernels and the sealed receipts; serve network-first for
 // same-origin, falling back to cache so the whole organism keeps working with the network off after first load.
-const V = 'liveware-2';
+const V = 'liveware-3';
 const ASSETS = [
   './', './index.html', './page/app.css', './page/app.mjs', './page/t11-worker.mjs', './manifest.webmanifest',
-  './src/wave1.mjs', './src/seed.mjs', './src/door.mjs', './src/mesh.mjs', './src/compress.mjs', './src/receipt.mjs', './src/rng.mjs', './src/t11.mjs',
+  './src/wave1.mjs', './src/seed.mjs', './src/door.mjs', './src/mesh.mjs', './src/compress.mjs', './src/receipt.mjs', './src/rng.mjs', './src/t11.mjs', './src/mintcase.mjs', './vendor/ai-first-company/vendor/sovereign-enterprise/data/basis.json',
   './vendor/fall-kit/core/identity.mjs', './vendor/fall-kit/core/antibody.mjs',
   './vendor/fall-kit/core/vendor/light/codec.mjs', './vendor/fall-kit/core/vendor/light/packet.mjs',
   './vendor/fall-kit/core/vendor/light/sha256.mjs', './vendor/fall-kit/core/vendor/sync/crdt.mjs',
