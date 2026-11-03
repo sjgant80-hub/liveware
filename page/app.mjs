@@ -121,7 +121,11 @@ async function loadSamples() {
   const pick = $('t5pick'); pick.innerHTML = '';
   for (const s of manifest.samples) pick.append(el('option', { value: s.file }, s.type + ' · ' + fmt(s.bytes) + ' B'));
 }
-function detailRow(file) { return detail && detail.T5 && detail.T5.rows.find((r) => r.file === file); }
+// CI's detail rows are keyed by sample type, so resolve the file to its type through the manifest first
+function detailRow(file) {
+  const s = manifest && manifest.samples.find((x) => x.file === file);
+  return s && detail && detail.T5 && detail.T5.rows.find((r) => r.type === s.type);
+}
 async function runRace(file) {
   const bytes = sampleBytes[file]; if (!bytes) return;
   const row = detailRow(file);
