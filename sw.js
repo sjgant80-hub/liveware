@@ -1,6 +1,6 @@
 // sw.js — offline shell for Liveware. Precache the page, its kernels and the sealed receipts; serve network-first for
 // same-origin, falling back to cache so the whole organism keeps working with the network off after first load.
-const V = 'liveware-3';
+const V = 'liveware-4';
 const ASSETS = [
   './', './index.html', './page/app.css', './page/app.mjs', './page/t11-worker.mjs', './manifest.webmanifest',
   './src/wave1.mjs', './src/seed.mjs', './src/door.mjs', './src/mesh.mjs', './src/compress.mjs', './src/receipt.mjs', './src/rng.mjs', './src/t11.mjs', './src/mintcase.mjs', './vendor/ai-first-company/vendor/sovereign-enterprise/data/basis.json',
@@ -11,7 +11,8 @@ const ASSETS = [
   './vendor/ai-first-company/src/journal.mjs', './vendor/ai-first-company/vendor/fall-kit/light/sha256.mjs',
   './vendor/ai-first-company/data/mint-demo-car.data', './vendor/ai-first-company/data/mint-demo-mushroom.data',
   './vendor/ai-first-company/data/mint-demo-run.json', './vendor/ai-first-company/data/mint-demo-v2-run.json', './vendor/ai-first-company/data/mint-demo-v3-run.json',
-  './receipts/wave1.json', './receipts/wave1-detail.json', './receipts/t11.json', './receipts/t11-detail.json', './samples/MANIFEST.json',
+  './receipts/wave1.json', './receipts/wave1-detail.json', './receipts/t11.json', './receipts/t11-detail.json', './receipts/gate.json', './samples/MANIFEST.json',
+  './vendor/SOURCES.json', './vendor/SOURCES-ai-first-company.json', './src/witness.baseline.json',
 ];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(V).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', (e) => { e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k !== V).map((k) => caches.delete(k)))).then(() => self.clients.claim())); });

@@ -27,7 +27,7 @@
 </div></header>
 
 <nav class="tabs"><div class="in wrap" id="tabs">
-  <a href="#hero">Top</a><a href="#t5">Compression</a><a href="#t1">The seed</a><a href="#t4">Attack it</a><a href="#t6">The mesh</a><a href="#t11">The guarantee</a><a href="#wave2">Wave 2</a><a href="#how-it-works">How it works</a><a href="#how">The proof</a><a href="#business">For business</a><a href="#faq">FAQ</a>
+  <a href="#hero">Top</a><a href="#start">Start here</a><a href="#t5">Compression</a><a href="#t1">The seed</a><a href="#t4">Attack it</a><a href="#t6">The mesh</a><a href="#t11">The guarantee</a><a href="#wave2">Wave 2</a><a href="#how-it-works">How it works</a><a href="#blueprint">Blueprint</a><a href="#how">The proof</a><a href="#paper">White paper</a><a href="#adoption">Adoption</a><a href="#business">For business</a><a href="#faq">FAQ</a>
 </div></nav>
 
 <main class="wrap">
@@ -35,12 +35,31 @@
 <section id="hero" class="hero">
   <p class="eyebrow">LIVEWARE</p>
   <h2>Software that's <span class="live">alive</span>.<br>Prove it yourself.</h2>
-  <p class="lede">One page. One living system. It grows from a seed, remembers, defends itself, improves only when it can prove it, and shows its work in receipts you can re-run — all in your browser. Nothing sent anywhere.</p>
+  <p class="lede">One page, one small living system, and a button for every claim. It grows from a signed seed, defends itself, packs data without losing a byte, links two tabs with no server, and re-runs our money-back guarantee — and each result is a receipt that GitHub's own computers reproduce. Nothing you run is sent anywhere.</p>
+  <p class="sub"><b>What it is, in plain words:</b> a public test bench for software that makes big claims. Instead of asking you to trust us, every claim on this page runs the real code in your browser and hands you a fingerprint of the result — a receipt — that you can check against an independent run on GitHub. Memory and self-improvement are still being built; they are marked <b>IN BUILD</b> below, with no green light, until they have buttons too.</p>
   <div class="cta">
     <button class="btn go" id="runall">Run every test</button>
+    <a class="btn ghost" href="#start">Start here</a>
     <a class="btn ghost" href="#t4">Try to break it</a>
   </div>
   <p class="runline">Every claim on this page is a button. Every button gives you a receipt. GitHub's servers run the same tests and get the same answers.</p>
+</section>
+
+<section id="start">
+  <h3>Start here</h3>
+  <p class="sectlabel">No install, nothing to sign up for. You need only this browser tab — and, for the mesh test, a second one.</p>
+  <div class="panel">
+    <ol class="steps">
+      <li><b>Press “Run every test”</b> at the top, or scroll to any test and press its own button. Every test runs here, on your computer, on plain CPU. Nothing is uploaded — you can switch your network off after the page has loaded and it still works.</li>
+      <li><b>Watch the scoreboard</b> (“Your run, live”, just below). Each card turns green when its test passes on your machine and red if it fails — a failure is shown, never hidden. Before you press anything, the cards show the verdict GitHub's run published; pressing a test's button runs it again here.</li>
+      <li><b>Read the receipt under each test.</b> A receipt id is a SHA-256 fingerprint of everything the test fed in, everything that came out, and the verdict. Change any of it — one byte — and the fingerprint changes completely. “Your receipt” is the one your browser just worked out; “expected” is the one committed to the public repository. They must match. Compression is the one exception, and it says so: zstd and brotli can't run inside a browser, so its receipt is GitHub's, and your browser re-measures LIGHT and gzip live and checks LIGHT's size against GitHub's row.</li>
+      <li><b>Check it against GitHub's own run.</b> Open <a class="link" href="https://github.com/sjgant80-hub/liveware/actions/workflows/gate.yml" target="_blank" rel="noopener">the latest gate run</a>, open the step that starts “the four receipts re-derive”, and find each test's verdict and the first twelve characters of its receipt. <span id="st-ids">For the seed test the expected receipt starts …</span> GitHub's computer worked that out on its own, from the same code — not from our machine.</li>
+      <li><b>Try to break it.</b> Tamper one byte of the seed, throw the attacks and the swarm at the door, send a fake peer to the second tab, change an exam answer under the guarantee. Every attack should be refused at a named check, and every tamper should change the receipt. If one gets through, it shows — and that is the result.</li>
+      <li><b>Look under the hood.</b> <a class="link" href="#how-it-works">How it works</a> walks the loop step by step, <a class="link" href="#blueprint">the blueprint</a> lists every piece of code with its own test and mutation-gate result, and <a class="link" href="#paper">the white paper</a> sets out the method and its limits.</li>
+      <li><b>Re-run it all yourself, off this page.</b> Clone the repository and run the three commands under <a class="link" href="#how">How the proof works</a>. You should get the same receipts again, on your own machine.</li>
+      <li><b>Thinking of it for your business?</b> <a class="link" href="#adoption">Adoption</a> says what it does for a team, and <a class="link" href="#business">For business</a> works out what one of your processes costs today, from your own numbers.</li>
+    </ol>
+  </div>
 </section>
 
 <p class="oneliner">The AI industry runs on <b>“trust us.”</b> Liveware runs on <span class="brk">“don't trust us. Break it.”</span></p>
@@ -248,7 +267,7 @@
 
 <section id="how-it-works">
   <h3>How it works</h3>
-  <p class="sectlabel">Five moves, one loop. A signed <b>seed</b> grows the system; a <b>door</b> on the raw bytes defends a deliberately naive core; <b>LIGHT</b> keeps everything small and lossless; a <b>mesh</b> lets two copies find each other with no server; and every step writes a <b>receipt</b> anyone can re-run. The organism grows, defends, remembers, improves, and proves — then reproduces a verified copy of itself.</p>
+  <p class="sectlabel">Five moves, one loop. A signed <b>seed</b> grows the system; a <b>door</b> on the raw bytes defends a deliberately naive core; <b>LIGHT</b> keeps everything small and lossless; a <b>mesh</b> lets two copies find each other with no server; and every step writes a <b>receipt</b> anyone can re-run. The organism grows, defends, compresses, meshes and proves — then reproduces a verified copy of itself. Each panel below ends with a line from GitHub's published run of that step.</p>
   <div class="panel">
     <svg class="dg" viewBox="0 0 720 150" role="img" aria-label="The living loop: seed grows the system, which defends, compresses, meshes and proves, then reproduces the seed.">
       <g text-anchor="middle">
@@ -269,11 +288,56 @@
     </svg>
   </div>
   <div class="grid2" style="margin-top:16px">
-    <div class="panel"><b>The seed</b><p class="out">Magic, length, a LIGHT-encoded genome (every block pinned by SHA-256), a seal, and an Ed25519 signature over everything but itself. It checks magic, length, decode, shape, seal, signature, then each block's hash — only then does a block load.</p></div>
-    <div class="panel"><b>The door &amp; immune system</b><p class="out">A signed-packet door checks size, magic, version, length, dictionary, sender, signature and replay counter on the raw bytes before the body is decoded. Every refusal mints two antibodies: the exact bytes, and their shape.</p></div>
-    <div class="panel"><b>LIGHT compression</b><p class="out">A context-mixing arithmetic coder — seven models blended by weights that learn as they go, integer-only so encoder and decoder agree bit for bit on every engine, and lossless back to the original.</p></div>
-    <div class="panel"><b>The mesh</b><p class="out">Each tab has its own key; they meet over the browser's channel (trust-on-first-use pins the key), then every message is a signed LIGHT packet checked against that key and a replay counter, with one shared document merged by a conflict-free law.</p></div>
+    <div class="panel"><b>The seed</b><p class="out">Magic, length, a LIGHT-encoded genome (every block pinned by SHA-256), a seal, and an Ed25519 signature over everything but itself. It checks magic, length, decode, shape, seal, signature, then each block's hash — only then does a block load.</p><p class="trace" id="tr-t1">—</p></div>
+    <div class="panel"><b>The door &amp; immune system</b><p class="out">A signed-packet door checks size, magic, version, length, dictionary, sender, signature and replay counter on the raw bytes before the body is decoded. Every refusal mints two antibodies: the exact bytes, and their shape.</p><p class="trace" id="tr-t4">—</p></div>
+    <div class="panel"><b>LIGHT compression</b><p class="out">A context-mixing arithmetic coder — seven models blended by weights that learn as they go, integer-only so encoder and decoder agree bit for bit on every engine, and lossless back to the original.</p><p class="trace" id="tr-t5">—</p></div>
+    <div class="panel"><b>The mesh</b><p class="out">Each tab has its own key; they meet over the browser's channel (trust-on-first-use pins the key), then every message is a signed LIGHT packet checked against that key and a replay counter, with one shared document merged by a conflict-free law.</p><p class="trace" id="tr-t6">—</p></div>
   </div>
+</section>
+
+<section id="blueprint">
+  <h3>The blueprint — how it's built, piece by piece</h3>
+  <p class="sectlabel">Every box below is a file in the <a class="link" href="https://github.com/sjgant80-hub/liveware" target="_blank" rel="noopener">public repository</a>. The page and GitHub's harness import the very same test bodies; the test bodies are built from small kernels; the kernels stand on code copied byte for byte from two other repositories and pinned by SHA-256. Each piece's test and mutation-gate figures below are read live from the gate receipt GitHub's run re-derives on every change — none is typed in.</p>
+  <div class="panel">
+    <div class="scroll bpwrap">
+    <svg class="dg bp" viewBox="0 0 560 486" role="img" aria-label="Blueprint. Top: the page in your browser and the harness on GitHub's runner import the same test bodies. Test bodies: wave1.mjs runs T1, T4, T5 and T6 on the kernels seed, door, mesh, compress, receipt and rng; t11.mjs runs the guarantee and mintcase.mjs works out the cost case, both on code from ai-first-company. The kernels stand on fall-kit: the LIGHT codec, packet door, SHA-256, CRDT merge, antibodies and Ed25519 keys. Both vendored sets are copied byte for byte and pinned by SHA-256. All of it is checked by receipts, the witness mutation gate and GitHub CI.">
+      <g text-anchor="middle">
+        <rect class="box lit" x="10" y="10" width="262" height="52" rx="9"/><text x="141" y="32" class="t-ink">THE PAGE</text><text x="141" y="50" class="t-sm">index.html · page/ · your browser</text>
+        <rect class="box lit" x="288" y="10" width="262" height="52" rx="9"/><text x="419" y="32" class="t-ink">THE HARNESS</text><text x="419" y="50" class="t-sm">tools/ · on GitHub's runner</text>
+        <text x="280" y="84" class="t-sm">import the same test bodies</text>
+        <rect class="seg s" x="10" y="98" width="280" height="52" rx="9"/><text x="150" y="120" class="t-on">wave1.mjs</text><text x="150" y="138" class="t-sm">T1 · T4 · T5 · T6</text>
+        <rect class="seg s" x="302" y="98" width="120" height="52" rx="9"/><text x="362" y="120" class="t-on">t11.mjs</text><text x="362" y="138" class="t-sm">T11 · guarantee</text>
+        <rect class="seg s" x="430" y="98" width="120" height="52" rx="9"/><text x="490" y="120" class="t-on">mintcase.mjs</text><text x="490" y="138" class="t-sm">the cost case</text>
+        <rect x="4" y="170" width="292" height="104" rx="11" fill="none" stroke="var(--line)" stroke-width="1.2" stroke-dasharray="4 4"/>
+        <rect class="box" x="10" y="182" width="88" height="38" rx="8"/><text x="54" y="199" class="t-ink">seed</text><text x="54" y="213" class="t-sm">T1</text>
+        <rect class="box" x="106" y="182" width="88" height="38" rx="8"/><text x="150" y="199" class="t-ink">door</text><text x="150" y="213" class="t-sm">T4</text>
+        <rect class="box" x="202" y="182" width="88" height="38" rx="8"/><text x="246" y="199" class="t-ink">mesh</text><text x="246" y="213" class="t-sm">T6</text>
+        <rect class="box" x="10" y="228" width="88" height="38" rx="8"/><text x="54" y="245" class="t-ink">compress</text><text x="54" y="259" class="t-sm">T5</text>
+        <rect class="box" x="106" y="228" width="88" height="38" rx="8"/><text x="150" y="245" class="t-ink">receipt</text><text x="150" y="259" class="t-sm">every test</text>
+        <rect class="box" x="202" y="228" width="88" height="38" rx="8"/><text x="246" y="245" class="t-ink">rng</text><text x="246" y="259" class="t-sm">seeded</text>
+        <rect class="seg k" x="10" y="290" width="280" height="64" rx="9"/><text x="150" y="310" class="t-ink">fall-kit</text><text x="150" y="327" class="t-sm">LIGHT codec · packet door · SHA-256</text><text x="150" y="342" class="t-sm">CRDT merge · antibodies · Ed25519</text>
+        <rect class="seg k" x="302" y="290" width="248" height="64" rx="9"/><text x="426" y="310" class="t-ink">ai-first-company</text><text x="426" y="327" class="t-sm">distill · baseline · journal</text><text x="426" y="342" class="t-sm">UCI data · runs · cost basis</text>
+        <text x="280" y="376" class="t-sm">copied byte for byte, pinned by SHA-256 — and all of it checked by</text>
+        <rect class="box lit" x="10" y="390" width="172" height="62" rx="9"/><text x="96" y="410" class="t-ink">RECEIPTS</text><text x="96" y="427" class="t-sm">receipts/*.json</text><text x="96" y="442" class="t-sm">SHA-256 of each record</text>
+        <rect class="box lit" x="194" y="390" width="172" height="62" rx="9"/><text x="280" y="410" class="t-ink">WITNESS</text><text x="280" y="427" class="t-sm">plants a bug in</text><text x="280" y="442" class="t-sm">every kernel</text>
+        <rect class="box lit" x="378" y="390" width="172" height="62" rx="9"/><text x="464" y="410" class="t-ink">GITHUB CI</text><text x="464" y="427" class="t-sm">every push re-derives</text><text x="464" y="442" class="t-sm">every receipt</text>
+        <text x="280" y="476" class="t-sm">each arrow points from what runs to what it is built on</text>
+      </g>
+      <path class="edge good" d="M141 62 V94"/><path class="edge good" d="M419 62 V94"/>
+      <path class="edge" d="M150 150 V166"/>
+      <path class="edge" d="M362 150 V286"/><path class="edge" d="M490 150 V286"/>
+      <path class="edge" d="M150 274 V286"/>
+    </svg>
+    </div>
+  </div>
+  <p class="sectlabel" id="bp-total" style="margin-top:18px">reading the gate receipt…</p>
+  <div class="roles organs" id="bp-organs"></div>
+  <div class="panel" style="margin-top:16px">
+    <b>Copied in, never edited — the vendored pieces and their pins</b>
+    <p class="out" style="margin:6px 0 12px">Each file is copied byte for byte from the commit named, and a test in the suite fails the build if any byte differs from its pin or if anything sits in <span class="pill">vendor/</span> unpinned.</p>
+    <div class="scroll"><table id="bp-vendor"><thead><tr><th>File</th><th>What it is</th><th>From</th><th class="num">SHA-256</th></tr></thead><tbody></tbody></table></div>
+  </div>
+  <details class="reply"><summary>The mutants the gate lets through, and the written reason for each</summary><div id="bp-baseline" class="t11out"></div></details>
 </section>
 
 <section id="how">
@@ -304,6 +368,54 @@ node tools/measure-t11.mjs --check # the guarantee: three runs re-derived, every
   </div>
 </section>
 
+<section id="paper">
+  <h3>The white paper — the method on one page</h3>
+  <div class="panel paper">
+    <h4>1 · The problem</h4>
+    <p>AI software is sold on claims a buyer can't check: benchmark scores nobody else can re-run, demos nobody is allowed to break, and “trust us” on where the data goes. A claim that only its maker can reproduce is marketing, however true it happens to be.</p>
+    <h4>2 · The method</h4>
+    <ol class="steps hiwsteps">
+      <li><b>Seal the test first.</b> The pass criteria are written and committed before any code that measures them exists (<a class="link" href="https://github.com/sjgant80-hub/liveware/blob/main/CLAIMS.md" target="_blank" rel="noopener">CLAIMS.md</a>, and <a class="link" href="https://github.com/sjgant80-hub/liveware/blob/main/CLAIMS-T11.md" target="_blank" rel="noopener">CLAIMS-T11.md</a> for the guarantee). The harness refuses to run if a sealed file has changed since the commit that sealed it, so the goalposts can't move after the result is known.</li>
+      <li><b>One test body, run in two places.</b> Each test is written once and imported both by this page and by the harness on GitHub's runner. What your browser runs is the code that was gated, not a demo of it.</li>
+      <li><b>Receipts, not screenshots.</b> Each run writes a record of its inputs, its outputs and its verdict; the receipt id is the SHA-256 of that record as canonical JSON. Two runs agree exactly when one short string agrees.</li>
+      <li><b>Tests that can fail.</b> The witness mutation gate plants a bug in every kernel and fails the build unless a test catches it. A mutant may be let through only with a written, checked reason — and the gate's own figures are a receipt GitHub re-derives.</li>
+      <li><b>Losses stay on the record.</b> Weak compression rows, the two guarantee runs that lost, and every “doesn't claim” stay on the page beside the wins.</li>
+    </ol>
+    <h4>3 · The results, as GitHub's run published them</h4>
+    <ul class="facts" id="wp-results"><li>reading the receipts…</li></ul>
+    <h4>4 · The limits</h4>
+    <ul class="facts">
+      <li>The guarantee's AI step is not re-run here: a model's reply is not reproducible word for word, so it was recorded the one time it answered. Everything after it re-runs.</li>
+      <li>The mesh joins tabs in one browser. A second <em>device</em> needs a relay and is not claimed. First contact is trust-on-first-use.</li>
+      <li>The door does not protect stolen keys or a stolen device — that is a different layer.</li>
+      <li>LIGHT is smaller, not faster: it is slower than gzip and zstd, and the time is shown.</li>
+      <li>Wave 2 — memory, self-improvement, the thinking organism, structural alignment, cache reuse — is not proven on this page. It is marked IN BUILD, with no green light, until each piece has its own sealed test and button.</li>
+      <li>The guarantee's data is public classroom data. Beating a baseline there says nothing about your process until your own baseline is signed and your own exam is sat.</li>
+    </ul>
+    <h4>5 · Why it matters to a buyer</h4>
+    <p>When the test is sealed before the work and the result is a receipt anyone can re-run, the buyer stops having to judge the supplier and only has to judge the test. That moves the risk to where it belongs: on the work, not on the trust.</p>
+    <p class="scope">The long version, every piece in plain English: <a class="link" href="https://github.com/sjgant80-hub/liveware/blob/main/EXPLAINER.md" target="_blank" rel="noopener">EXPLAINER.md</a>. The code, the sealed claims and the receipts: <a class="link" href="https://github.com/sjgant80-hub/liveware" target="_blank" rel="noopener">github.com/sjgant80-hub/liveware</a> (MIT).</p>
+  </div>
+</section>
+
+<section id="adoption">
+  <h3>Adoption — what it does for your team, and how you roll it out</h3>
+  <p class="sectlabel">Liveware is the proof that the method works. What a business takes from it is the method itself: on one of its own processes, in its own engineering, or in how it buys software.</p>
+  <div class="roles">
+    <div class="panel role"><b>Leaders and finance — one process, paid on proof</b><p>Pick one repeated, structured process you already measure. The test and the fee are signed before any work; the system is built on your hardware; a re-runnable receipt says <b>due</b> or <b>waived</b>. Nothing is paid on a promise. The cost case and the full roll-out are in <a class="link" href="#business">For business</a>.</p></div>
+    <div class="panel role"><b>Engineering and assurance — the proof pattern in your own CI</b><p>Everything here is MIT and can be copied: commit the pass criteria before the code, have each test write a record whose SHA-256 is its receipt, run the same test bodies in the browser and in CI, and put a mutation gate in front of every kernel — <a class="link" href="https://github.com/sjgant80-hub/witness" target="_blank" rel="noopener">the witness</a> is the one used here.</p></div>
+    <div class="panel role"><b>Procurement and security review — due diligence you can re-run</b><p>Use this page as the checklist you ask every supplier to pass: re-run the receipts, read the sealed claims and their commit dates, check the vendored pins, and read each “doesn't claim” line before signing anything.</p></div>
+  </div>
+  <div class="panel" style="margin-top:16px"><b>What changes for your people</b>
+    <ul class="facts">
+      <li><b>The repeated part moves; the judgement stays.</b> The owned system takes the share of one process that is decided the same way every time. Open-ended judgement stays with your team.</li>
+      <li><b>No new AI tool to learn.</b> What ships is a small set of readable rules running on your machines — no chat window, no prompts, no seats.</li>
+      <li><b>Every result can be checked.</b> Your team, your auditors or GitHub's runner can re-run any receipt and get the same answer.</li>
+      <li><b>One process at a time.</b> Each new process gets its own signed baseline and its own receipt — the same way this page adds each Wave 2 organ only when its own sealed test passes.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="business">
   <h3>Put the guarantee to work on one of your processes</h3>
   <p class="claim"><b>mint-a-department</b> turns one painful, repetitive process into a small system you own — on your hardware, with no per-seat or per-call rent — and you pay only if a signed receipt shows it beats what you use now, on the measure you agreed before any work began. The engine is the one you just watched run in <a class="link" href="#t11">the guarantee</a>. Liveware grows into a company one process at a time; this is the first one.</p>
@@ -318,8 +430,9 @@ node tools/measure-t11.mjs --check # the guarantee: three runs re-derived, every
     <p class="bizproof">That promise is the engine in <a class="link" href="#t11">the guarantee</a> above — the same signed baseline agreement, run three times on public data, losses included. Your process gets the same treatment: your data, your current tool as the baseline, the agreement signed before any work. The fee is written into that agreement before anything is built, beside the number it has to beat — and your data stays on your own machines.</p>
     <div class="cta bizcta" style="justify-content:center">
       <a class="btn go" href="https://github.com/sjgant80-hub/ai-first-company/blob/main/mint/intake-form.md" target="_blank" rel="noopener">Start a baseline</a>
-      <a class="btn ghost" href="https://github.com/sjgant80-hub/ai-first-company/blob/main/mint/README.md" target="_blank" rel="noopener">Read the blueprint</a>
+      <a class="btn ghost" href="#blueprint">See the blueprint</a>
     </div>
+    <p class="out" style="margin:14px 0 0">mint-a-department's own design notes, in its home repository: <a class="link" href="https://github.com/sjgant80-hub/ai-first-company/blob/main/mint/README.md" target="_blank" rel="noopener">mint/README.md</a>.</p>
   </div>
 
   <div class="panel" id="cost">
@@ -353,6 +466,8 @@ node tools/measure-t11.mjs --check # the guarantee: three runs re-derived, every
         <li><b>Nothing leaves at run time.</b> The finished system decides each case on your machine and calls no AI service, so there is no outside processor to vet — data protection by design (UK GDPR Article 25).</li>
         <li><b>The build runs on your hardware too.</b> The teaching step reads your job's data where it already is, as the local model did in the demo above. If a job ever calls for a teacher that can't run on your machines, that is agreed in writing before any data moves — and so is who touches your data during the build, and how.</li>
         <li><b>Auditable by anyone.</b> Every kept rule can be printed and read, like the ones in the demo above. Every verdict is a receipt over the signed test and both scores.</li>
+        <li><b>This page practises it too.</b> Its Content-Security-Policy lets it load and contact only its own files — no third-party scripts, no analytics, no outside connections — so a file you drop in here, or a figure you type into the cost case, has nowhere to go.</li>
+        <li><b>The code it stands on is pinned.</b> Every piece copied in from elsewhere is held to its SHA-256, and the build fails if one byte differs — <a class="link" href="#blueprint">the blueprint</a> lists each pin.</li>
       </ul>
     </div>
     <div class="panel"><b>Ownership, support and exit</b>
@@ -384,6 +499,8 @@ node tools/measure-t11.mjs --check # the guarantee: three runs re-derived, every
       <dt>Is the charge one-off or ongoing?</dt><dd>The system you own has no seats and no per-call meter, so nothing in it bills you as you use it. The fee — and any support you choose to add — is set out in the agreement before any work, beside the number it has to beat. Nothing is charged that isn't written there.</dd>
       <dt>Which process should we start with?</dt><dd>One that is repeated, structured and decided the same way every time — sorting, routing, triage, checking forms against rules — with a number you already track. Work that needs open-ended judgement is the wrong first choice, and we'll say so at intake.</dd>
       <dt>Can we check the receipt ourselves?</dt><dd>Yes. It is a SHA-256 fingerprint of the signed test and the two scores; anyone holding those recomputes it exactly, as your browser did in the demo above and as GitHub's runner does on every change to this page.</dd>
+      <dt>Are you certified — ISO 27001, SOC 2, Cyber Essentials?</dt><dd>No certification is claimed on this page. What you can check instead is the evidence itself: the sealed tests and their commit dates, the receipts your own browser re-derives, the mutation gate's figures and the pinned code — and the finished system runs on your hardware, inside your own security controls.</dd>
+      <dt>Who has used it?</dt><dd>The three runs on this page are the public record — two lost, one won, every one re-runnable. No customer case studies are published here, and none is implied.</dd>
       <dt>Is the exam a fair sample of our real work?</dt><dd>It is agreed test data from your own records, set aside before the build starts, and the build never sees it — the same separation the demo shows, where changing every exam answer leaves the kept rules untouched.</dd>
     </dl>
   </div>
@@ -410,7 +527,9 @@ node tools/measure-t11.mjs --check # the guarantee: three runs re-derived, every
     <details><summary>When I press re-run, does the AI run again?</summary><p>No, and we say so plainly. A model's reply isn't reproducible word for word, so the teacher's reply was recorded the one time it answered, and committed with the result. Your browser re-runs everything after that — reading the rules, the check, the exam, the signed verdict — and must land on the committed receipts. You can read the recorded reply on the page.</p></details>
     <details><summary>Why show two runs that lost?</summary><p>Because a guarantee that can't say no is worthless. On the car data the AI's rules didn't beat the simple baseline, so the charge was waived — twice. Those runs stay on the page beside the one that won, with their own sealed commits.</p></details>
     <details><summary>Can I use this for my company?</summary><p>Yes. Start with one process and a signed baseline — see “For business” above.</p></details>
-    <details><summary>Is it open source?</summary><p>The core is open; see the repository for licences and credits. Code is MIT.</p></details>
+    <details><summary>Is it open source?</summary><p>Yes. The code is MIT — the licence is in the repository — and so is fall-kit, where the vendored kernels come from. The public datasets and the sample files keep their own terms; the UCI datasets are credited below.</p></details>
+    <details><summary>What is a receipt, exactly?</summary><p>A record of what a test fed in, what came out and its verdict, written as canonical JSON (keys sorted, so the same record is always the same bytes). The receipt id is that record's SHA-256 fingerprint. Change one byte of the inputs, the outputs or the verdict and the id changes completely — which is why matching ids mean matching runs.</p></details>
+    <details><summary>Who checks the checker?</summary><p>The witness mutation gate. It plants deliberate bugs in each kernel, one at a time — turns a <code>&gt;</code> into <code>&gt;=</code>, an <code>&amp;&amp;</code> into <code>||</code>, a <code>return true</code> into <code>return false</code> — and fails the build unless a test catches every one. The blueprint shows each kernel's figures, read from a gate receipt that GitHub's run re-derives on every change.</p></details>
   </div>
 </section>
 
@@ -418,7 +537,7 @@ node tools/measure-t11.mjs --check # the guarantee: three runs re-derived, every
 
 <footer><div class="wrap">
   <p><b>LIVEWARE</b> — software that grows, defends itself, and proves everything it does.</p>
-  <p>Powered by the Konomi architecture, created by Thomas Frumkin; the LIGHT language: Thomas Frumkin. GEP and Behavioural Entropy Signatures: Gary W. Floyd (CC BY 4.0), where used. Built by Simon Gant, AI-Native Solutions. Code MIT. The guarantee's datasets: Car Evaluation and Mushroom, from the UCI Machine Learning Repository.</p>
+  <p>Powered by the Konomi architecture, created by Thomas Frumkin; the LIGHT language: Thomas Frumkin. The Guided Entropy Principle and Behavioral Entropy Signatures, where used: Gary W. Floyd, Lumiea Systems Research Division — ThunderStruck Service LLC — “The Laws of Entropy-Time: Rewriting Thermodynamics with the Guided Entropy Principle,” February 2026, and “GEP-Based Security: Behavioral Entropy Signatures for Cybersecurity and DevOps,” 2025 (CC BY 4.0). Built by Simon Gant, AI Native Solutions. Code MIT. The guarantee's datasets: Car Evaluation and Mushroom, from the UCI Machine Learning Repository.</p>
   <p id="offline" class="out"></p>
 </div></footer>
 

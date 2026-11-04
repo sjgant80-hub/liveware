@@ -1,6 +1,7 @@
 # Liveware
 
-**Live page: https://sjgant80-hub.github.io/liveware/**
+**Live page: https://sjgant80-hub.github.io/liveware/** — start at its **Start here** section; it also carries How it works,
+the Blueprint (every file with its own test and mutation-gate figures), the white paper, Adoption and the For business brochure.
 
 A living software system you verify in your own browser in about ten minutes. Every claim on the page is a button;
 every number has a baseline; GitHub's own runner reproduces the same receipts. Don't trust it — run it.
@@ -43,6 +44,10 @@ The claims were sealed in [`CLAIMS.md`](CLAIMS.md) before the code that measures
 that file changed since the commit that sealed it. Each kernel is mutation-gated by the witness (`.github/workflows/gate.yml`);
 the two reviewed-equivalent mutants are documented in `src/witness.baseline.json`. T11's body (`src/t11.mjs`) and the
 kernel it vendors (`distill.mjs`, gated in ai-first-company) are both clean with nothing baselined.
+The gate's own figures — per kernel: tests, mutants planted, caught, baselined, survived — are a receipt too,
+`receipts/gate.json`, written from the witness's output by `tools/gate-receipt.mjs`; CI re-derives it on every push
+(`--from /tmp --check`) and fails if it differs, and the page's blueprint reads it. `test/vendor.test.mjs` holds every
+file under `vendor/` to the SHA-256 its sources manifest pins, and fails if anything there is unpinned.
 
 ## Layout
 
@@ -59,10 +64,14 @@ kernel it vendors (`distill.mjs`, gated in ai-first-company) are both clean with
   sourced basis (`vendor/ai-first-company/vendor/sovereign-enterprise/data/basis.json`), the inputs the reader's own.
   Mutation-gated, nothing baselined. No price of ours appears anywhere on the page.
 - `samples/` — the pinned files T5 compresses, each by SHA-256. `receipts/` — what was measured.
-- `CLAIMS.md` — the sealed pass criteria. `EXPLAINER.md` — every piece in plain English.
+- `CLAIMS.md`, `CLAIMS-T11.md` — the sealed pass criteria. `EXPLAINER.md` — every piece in plain English.
+- `tools/gate-receipt.mjs` → `receipts/gate.json` — the mutation gate's figures as a re-derived receipt. `test/vendor.test.mjs` — the vendored pins.
 
 Wave 2 (gated self-improvement, persistent memory, KV-cache recycling, structural alignment, the organism thinking) is
 added one test at a time, each only when its own sealed claim passes.
 
-LIGHT language and the Konomi architecture: Thomas Frumkin. GEP / behavioural ideas: Gary W. Floyd (CC BY 4.0), where used.
-Built by Simon Gant, AI-Native Solutions. Code MIT. T11's datasets: Car Evaluation and Mushroom, UCI Machine Learning Repository.
+Powered by the Konomi architecture, created by Thomas Frumkin; the LIGHT language: Thomas Frumkin. The Guided Entropy
+Principle and Behavioral Entropy Signatures, where used: Gary W. Floyd, Lumiea Systems Research Division — ThunderStruck
+Service LLC — "The Laws of Entropy-Time: Rewriting Thermodynamics with the Guided Entropy Principle," February 2026, and
+"GEP-Based Security: Behavioral Entropy Signatures for Cybersecurity and DevOps," 2025 (CC BY 4.0).
+Built by Simon Gant, AI Native Solutions. Code MIT (`LICENSE`). T11's datasets: Car Evaluation and Mushroom, UCI Machine Learning Repository.

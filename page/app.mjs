@@ -99,12 +99,12 @@ $('board').append(...TESTS.map(([id, name]) => {
 }));
 function setState(id, s, label) { const c = chips[id]; if (!c) return; c.state.className = 'state ' + s; c.state.lastChild.textContent = label; c.bar.style.width = s === 'pass' ? '100%' : s === 'fail' ? '100%' : s === 'run' ? '60%' : '0'; c.bar.style.background = s === 'fail' ? 'var(--bad)' : ''; }
 
-function receiptLine(host, ran, expId) {
+function receiptLine(host, ran, expId, whose) {
   const match = expId && ran.id === expId;
   host.innerHTML = '';
   host.append(
     el('div', {}, el('span', { class: 'verdict ' + (ran.record.verdict === 'pass' ? 'pass' : 'fail') }, ran.record.verdict.toUpperCase()), ' ', el('span', { class: 'pill' }, ran.record.verdict === 'pass' ? 'every criterion met' : 'a criterion failed — kept on the record')),
-    el('p', { class: 'rhash' }, 'your receipt  ', el('b', {}, ran.id.slice(0, 24)), '…'),
+    el('p', { class: 'rhash' }, (whose || 'your receipt') + '  ', el('b', {}, ran.id.slice(0, 24)), '…'),
     expId ? el('p', { class: 'rhash' }, 'expected      ', el('b', {}, expId.slice(0, 24)), '… ', match ? '✓ matches' : '✗ differs') : null,
   );
 }
@@ -149,7 +149,8 @@ async function runRace(file) {
     requestAnimationFrame(() => { fill.style.width = (size != null ? Math.max(4, (size / max) * 100) : 0) + '%'; });
   }
   $('t5rt').textContent = 'round-trip ' + (l.roundTrip ? '✓ byte-identical' : '✗');
-  $('t5round').innerHTML = 'SHA-256 original <b>' + l.origSha.slice(0, 16) + '…</b> → restored <b>' + l.backSha.slice(0, 16) + '…</b> ' + (l.roundTrip ? '· identical' : '· DIFFERS');
+  const same = row && row.light ? (l.size === row.light.size ? ' · LIGHT ' + fmt(l.size) + ' B here = ' + fmt(row.light.size) + ' B on GitHub’s run ✓' : ' · LIGHT ' + fmt(l.size) + ' B here ≠ ' + fmt(row.light.size) + ' B on GitHub’s run ✗') : '';
+  $('t5round').innerHTML = 'SHA-256 original <b>' + l.origSha.slice(0, 16) + '…</b> → restored <b>' + l.backSha.slice(0, 16) + '…</b> ' + (l.roundTrip ? '· identical' : '· DIFFERS') + same;
 }
 function renderT5Table() {
   const tb = $('t5table').querySelector('tbody'); tb.innerHTML = '';
@@ -185,7 +186,7 @@ drop.addEventListener('drop', async (e) => { e.preventDefault(); drop.classList.
 file.addEventListener('change', async () => { const f = file.files[0]; if (f) addDropped(f.name, new Uint8Array(await f.arrayBuffer())); });
 async function scoreT5() {
   setState('T5', 'run', 'running');
-  if (detail && detail.T5) { const v = detail.T5.verdict; setState('T5', v === 'pass' ? 'pass' : 'fail', v === 'pass' ? 'pass' : 'fail'); receiptLine($('t5receipt'), { id: detail.T5.id, record: { verdict: v } }, expId('T5')); }
+  if (detail && detail.T5) { const v = detail.T5.verdict; setState('T5', v === 'pass' ? 'pass' : 'fail', v === 'pass' ? 'pass' : 'fail'); receiptLine($('t5receipt'), { id: detail.T5.id, record: { verdict: v } }, expId('T5'), "GitHub's receipt"); $('t5receipt').append(el('p', { class: 'scope' }, 'zstd and brotli can’t run inside a browser, so this receipt is the one GitHub’s run computed. Your browser re-measures LIGHT and gzip live in the race above, checks the round-trip, and checks LIGHT’s size against GitHub’s row — the codec is integer-only, so the two must agree to the byte.')); }
   await runRace($('t5pick').value);
 }
 
@@ -493,7 +494,7 @@ function renderCost() {
   ];
   const tb = $('c-table').querySelector('tbody'); tb.innerHTML = '';
   for (const [route, what, k] of rows) tb.append(el('tr', { class: k === 'own' ? 'ownrow' : '' }, el('td', {}, el('b', {}, route)), el('td', { class: 'wrap' }, what), el('td', { class: 'num', 'data-label': 'a year' }, gbp(r.perYear[k])), el('td', { class: 'num', 'data-label': 'over ' + yrs }, gbp(r.over[k]))));
-  $('c-note').innerHTML = 'Owning beats the cloud route by <b>' + gbp(r.versusCloudOver) + '</b> over ' + yrs + ' at this volume — at low volumes the per-case bill is small, and the real difference is that nothing leaves your building. The cloud route assumes ' + r.inputs.tokensIn.toLocaleString('en-GB') + ' tokens in and ' + r.inputs.tokensOut.toLocaleString('en-GB') + ' out per case (a short document and a short answer). Staff time is priced at the median wage with no employer on-costs, so every saving here is a floor.';
+  $('c-note').innerHTML = 'Owning beats the cloud route by <b>' + gbp(r.versusCloudOver) + '</b> over ' + yrs + ' at this volume — at low volumes the per-case bill is small, and the real difference is that nothing leaves your building. The cloud route assumes ' + r.inputs.tokensIn.toLocaleString('en-GB') + ' tokens in and ' + r.inputs.tokensOut.toLocaleString('en-GB') + ' out per case (a short document and a short answer). Staff time is priced at the median wage with no employer on-costs, so every saving here is a floor. <b>Our fee is not in this table:</b> it is written into your baseline agreement before any work, beside the number it has to beat, and it is due only if the receipt says due. Weigh it against the saving above — ' + gbp(r.savingOver) + ' over ' + yrs + ' on your inputs.';
   $('c-board').innerHTML = 'Pick one process. Today it costs <b>' + gbp(r.perYear.today) + '</b> a year in staff time — a floor, at the UK median wage. If an owned system takes off the share you estimate, that is <b>' + gbp(r.savingPerYear) + '</b> a year back, ' + gbp(r.savingOver) + ' over ' + yrs + ' with inflation, for about ' + gbp(r.lines.power) + ' a year of electricity. Renting AI seats instead would add ' + gbp(r.lines.seats) + ' a year and leave the work where it is. The downside is capped: if the signed receipt says it doesn’t beat today, the charge is waived. The board isn’t being asked to believe a vendor — only to sign a test.';
 }
 if (basis) {
@@ -501,6 +502,85 @@ if (basis) {
 }
 for (const id of ['c-hours', 'c-share', 'c-seats', 'c-cases', 'c-years']) $(id).addEventListener('input', renderCost);
 renderCost();
+
+// ══ the page explains itself: START HERE ids, How-it-works traces, the blueprint, the white paper's results ══════════
+// Every figure here is read from a committed receipt or manifest that GitHub's run re-derives; none is typed in.
+const [gate, srcFall, srcAfc, wbase] = await Promise.all([getJSON('receipts/gate.json'), getJSON('vendor/SOURCES.json'), getJSON('vendor/SOURCES-ai-first-company.json'), getJSON('src/witness.baseline.json')]);
+const id12 = (h) => String(h || '').slice(0, 12);
+const REPO = 'https://github.com/sjgant80-hub/liveware/blob/main/';
+const sum = (xs) => xs.reduce((a, b) => a + b, 0);
+
+(() => {
+  const s1 = expId('T1');
+  if ($('st-ids') && s1) $('st-ids').innerHTML = 'For the seed test, the expected receipt on this page starts <b>' + id12(s1) + '</b> — look for those same characters after “T1 pass”.' + (exp11 && exp11.id ? ' The guarantee has its own step, starting “T11”, which prints <b>' + id12(exp11.id) + '</b>.' : '');
+})();
+
+(() => {
+  if (!detail) return;
+  const t1 = detail.T1, t4 = detail.T4, t5 = detail.T5, t6 = detail.T6;
+  if (t1 && t1.tamperRefusals) $('tr-t1').innerHTML = 'a <b>' + fmt(t1.seedBytes) + '</b>-byte seed, <b>' + t1.blocks + '</b> blocks · tampers refused, by the check that caught them: ' + Object.entries(t1.tamperRefusals).map(([k, n]) => k + ' <b>' + fmt(n) + '</b>').join(' · ');
+  if (t4 && t4.refusals) $('tr-t4').innerHTML = '<b>' + t4.breaches + '</b> breaches · <b>' + t4.crashes + '</b> crashes · <b>' + t4.delivered + '</b> genuine delivered · <b>' + fmt(t4.swarmRecognised) + '</b> swarm mutants recognised · ' + ['forged signature', 'replay', 'unpinned key', 'foreign:sql'].filter((k) => t4.refusals[k]).map((k) => k + ' → «' + t4.refusals[k] + '»').join(' · ');
+  if (t5 && t5.headline) { const h = t5.headline; $('tr-t5').innerHTML = 'LIGHT <b>' + ratioStr(h.lowLight) + '</b> on the ' + h.lowType + ' (gzip ' + ratioStr(h.lowGzip) + ') up to <b>' + ratioStr(h.highLight) + '</b> on the ' + h.highType + ' (gzip ' + ratioStr(h.highGzip) + ') · every round-trip byte-identical: ' + (t5.rows.every((r) => r.roundTrip) ? '<b>yes</b>' : '<b>no</b>'); }
+  if (t6 && t6.state) $('tr-t6').innerHTML = 'shared document after both tabs edited it: ' + Object.entries(t6.state).map(([k, v]) => k + ' = “' + v + '”').join(', ') + ' · task handed across and re-computed: ' + Object.entries(t6.taskResult || {}).map(([k, v]) => k + ' <b>' + v + '</b>').join(', ') + ' · verdict <b>' + t6.verdict + '</b>';
+})();
+
+const KERNEL_TEXT = {
+  receipt: ['The receipt', 'Writes the record every test leaves — inputs, outputs, verdict — and fingerprints it with SHA-256 over canonical JSON, so the same run gives the same id in Node, in CI and in your browser.'],
+  rng: ['The seeded random stream', 'One seed gives the same numbers on every engine, so the fuzz and the swarm in the attack test are identical here and on GitHub.'],
+  compress: ['LIGHT against the standard tools', 'Runs the compression race on the pinned samples, checks every round-trip byte for byte, and writes the compression test’s record.'],
+  seed: ['The seed', 'Builds, signs, reads and grows the seed — magic, length, decode, shape, seal, signature, then every block’s hash, before anything loads — and re-emits a byte-identical copy.'],
+  door: ['The door and the referee', 'Stands the signed-packet door and the immune system in front of a deliberately naive core, and keeps the independent referee’s ledger of what the genuine sender really signed.'],
+  mesh: ['The mesh', 'Makes two copies peers: pins each other’s key, merges one shared document by a conflict-free law, hands a task across, refuses a forged or replayed peer.'],
+  t11: ['The guarantee, re-run', 'Re-derives the three committed distillation runs from their recorded replies, must land on their signed receipts, then attacks every receipt with every single-answer exam tamper.'],
+  mintcase: ['The cost case', 'Works out what one process costs today and on each route, from the sourced basis and your own inputs. Bad input gets a reason back, never a crash.'],
+};
+const PLAIN = [
+  ['The four Wave 1 tests', 'src/wave1.mjs', 'Composes the kernels into the seed, attack, compression and mesh tests — the one body both this page and the harness run.', 'not mutation-gated itself: its four receipts must re-derive byte for byte on every push'],
+  ['The harness', 'tools/', 'measure.mjs and measure-t11.mjs re-derive every receipt and refuse to run if a sealed claim has changed; measure-t11 also fails the build if a re-derived result is typed into the page; gate-receipt.mjs re-derives this blueprint’s figures.', 'run by GitHub on every push'],
+  ['The page', 'page/app.mjs', 'Buttons, drawing and the scoreboard. Test results come from the test bodies above; the guarantee runs in a worker (page/t11-worker.mjs) so the page never freezes.', 'page glue, not mutation-gated'],
+];
+(() => {
+  const host = $('bp-organs'); if (!host) return;
+  const ks = gate && gate.record && gate.record.kernels;
+  if (!ks) { $('bp-total').textContent = 'The gate receipt could not be loaded — reconnect and reload.'; return; }
+  const n = (f) => sum(ks.map(f));
+  $('bp-total').innerHTML = 'From the gate receipt <b>' + id12(gate.id) + '</b>, re-derived by <a class="link" href="https://github.com/sjgant80-hub/liveware/actions/workflows/gate.yml" target="_blank" rel="noopener">GitHub’s run</a> on every push (witness ' + gate.record.witness + '): <b>' + ks.length + '</b> gated kernels, <b>' + fmt(n((k) => k.tests)) + '</b> tests, <b>' + fmt(n((k) => k.killed)) + '</b> of <b>' + fmt(n((k) => k.mutants)) + '</b> planted bugs caught, <b>' + n((k) => k.baselined.length) + '</b> let through with a written reason, <b>' + n((k) => k.survived) + '</b> survived.';
+  for (const k of ks) {
+    const [name, what] = KERNEL_TEXT[k.kernel] || [k.kernel, ''];
+    const b = k.baselined.length;
+    host.append(el('div', { class: 'panel role' }, el('b', {}, name), el('a', { class: 'file', href: REPO + k.src, target: '_blank', rel: 'noopener' }, k.src), el('p', {}, what),
+      el('p', { class: 'gate', html: '<b>' + k.tests + '</b> tests · <b>' + k.killed + '</b> of ' + k.mutants + ' planted bugs caught' + (b ? ' · ' + b + ' reviewed-equivalent, let through with a written reason' : '') + ' · <b>' + k.survived + '</b> survived' })));
+  }
+  for (const [name, path, what, status] of PLAIN) host.append(el('div', { class: 'panel role' }, el('b', {}, name), el('a', { class: 'file', href: (path.endsWith('/') ? REPO.replace('/blob/', '/tree/') : REPO) + path, target: '_blank', rel: 'noopener' }, path), el('p', {}, what), el('p', { class: 'gate plain' }, status)));
+  const bl = $('bp-baseline');
+  const why = (k, e) => ((wbase || []).find((w) => w.line === e.line && w.mutation === e.mutation) || {}).reason || 'reason in src/witness.baseline.json';
+  const lines = ks.flatMap((k) => k.baselined.map((e) => el('p', { html: '<b>' + k.src + ', line ' + e.line + ', <code>' + e.mutation.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</code></b>' }, el('br'), why(k, e))));
+  bl.append(...(lines.length ? lines : [el('p', {}, 'None — every planted bug was caught.')]));
+})();
+(() => {
+  const tb = $('bp-vendor') && $('bp-vendor').querySelector('tbody'); if (!tb) return;
+  for (const m of [srcFall, srcAfc]) {
+    if (!m) continue;
+    const name = m.repo.split('/')[1];
+    for (const f of m.files) tb.append(el('tr', {}, el('td', { class: 'mono' }, f.path.replace('vendor/', '')), el('td', { class: 'wrap' }, f.what), el('td', {}, el('a', { class: 'link', href: 'https://github.com/' + m.repo + '/blob/' + m.commit + '/' + f.src, target: '_blank', rel: 'noopener' }, name + ' @ ' + m.commit.slice(0, 7))), el('td', { class: 'num mono' }, id12(f.sha256))));
+  }
+})();
+
+(() => {
+  const host = $('wp-results'); if (!host) return;
+  const items = [];
+  if (detail && detail.T1) { const t = detail.T1, n = sum(Object.values(t.tamperRefusals || {})); items.push('<b>The seed</b> — a ' + fmt(t.seedBytes) + '-byte signed seed grows ' + t.blocks + ' blocks and copies itself byte for byte; ' + fmt(n) + ' of its ' + fmt(t.seedBytes) + ' bytes, each flipped in turn, refused before a block loads. Verdict: ' + t.verdict + '.'); }
+  if (detail && detail.T4) { const t = detail.T4; items.push('<b>Attack it</b> — ' + t.breaches + ' breaches and ' + t.crashes + ' crashes under the classic attacks, the seeded fuzz and the swarm; ' + t.delivered + ' genuine packets still delivered; ' + fmt(t.swarmRecognised) + ' swarm mutants recognised as a known attack’s variant. Verdict: ' + t.verdict + '.'); }
+  if (detail && detail.T5 && detail.T5.headline) { const h = detail.T5.headline; items.push('<b>Compression</b> — LIGHT from ' + ratioStr(h.lowLight) + ' on the ' + h.lowType + ' to ' + ratioStr(h.highLight) + ' on the ' + h.highType + ', against gzip’s ' + ratioStr(h.lowGzip) + ' and ' + ratioStr(h.highGzip) + '; every sample restored byte for byte. Verdict: ' + detail.T5.verdict + '.'); }
+  if (detail && detail.T6) items.push('<b>The mesh</b> — two copies pin each other’s key, converge one shared document, hand a task across and get it back re-computed; a forged or replayed peer is refused. Verdict: ' + detail.T6.verdict + '.');
+  if (det11 && det11.runs) {
+    const runs = det11.runs, won = runs.filter((r) => r.charge === 'due'), w = won[0];
+    items.push('<b>The guarantee</b> — ' + runs.length + ' committed runs re-derived and landed on their signed receipts: ' + runs.map((r) => r.id + ' (' + ((String(r.dataset).match(/mint-demo-([a-z]+).data/) || [])[1] || r.dataset) + ') ' + r.charge).join(', ') + '.' + (w ? ' The win: ' + pct(w.baselineAccuracy) + ' → ' + pct(w.grownAccuracy) + ' on ' + fmt(w.exam) + ' exam rows nobody used to choose a rule.' : '') + ' Of the ' + fmt(sum(runs.map((r) => r.exam))) + ' single-answer exam tampers, ' + fmt(sum(runs.map((r) => r.changed))) + ' changed the receipt. Verdict: ' + det11.verdict + '.');
+  }
+  if (gate && gate.record) { const ks = gate.record.kernels; items.push('<b>The gate</b> — ' + fmt(sum(ks.map((k) => k.killed))) + ' of ' + fmt(sum(ks.map((k) => k.mutants))) + ' planted bugs caught across ' + ks.length + ' kernels, ' + sum(ks.map((k) => k.baselined.length)) + ' let through with a written reason, ' + sum(ks.map((k) => k.survived)) + ' survived.'); }
+  host.innerHTML = '';
+  host.append(...(items.length ? items.map((h) => el('li', { html: h })) : [el('li', {}, 'The receipts could not be loaded — reconnect and reload.')]));
+})();
 
 // ── run all ──────────────────────────────────────────────────────────────────────────────────
 $('runall').addEventListener('click', async () => {

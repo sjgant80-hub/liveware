@@ -17,6 +17,8 @@ jobs:
             node /tmp/witness6/witness.mjs mutate src/$k.mjs --timeout 180000 --cap 800 --test node --test test/$k.test.mjs | tee /tmp/w-$k.txt
             grep -q '"clean": true' /tmp/w-$k.txt || { echo "::error::mutants survived in src/$k.mjs"; exit 1; }
           done
+      - name: the gate receipt — the blueprint's test and mutant counts re-derive from this run's witness output
+        run: node tools/gate-receipt.mjs --from /tmp --check
       - name: the four receipts re-derive byte for byte from the sealed claims and the committed samples
         run: node tools/measure.mjs --check
       - name: T11 — the guarantee's three committed runs re-derive from their recorded replies, every receipt is attacked, nothing is typed into the page

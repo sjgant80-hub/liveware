@@ -22,7 +22,9 @@ Pieces marked **ROADMAP** are designed but not on the page yet; each moves up wh
 - **What:** a gate in front of a deliberately naive core, that learns every attack.
 - **How:** the LIGHT packet door checks size, magic, version, length, dictionary, sender, signature and replay counter
   on the raw bytes — before the body is ever decoded — then a schema check. Standard exploit payloads (SQL, script, a
-  shell line, an HTTP request) arrive in a language the core does not speak and fail at the magic number. Every refusal
+  shell line, an HTTP request) arrive in a language the core does not speak and are refused before any of
+  their bytes is read as data: each is shorter than the smallest LIGHT packet, so the receipt names the check «size»
+  (a longer one would fail at the magic number). Every refusal
   becomes two antibodies: the exact bytes (recognised on sight, no second signature check) and their shape (a near copy
   is named a variant of a known family). An independent referee holds the ledger of bodies the genuine sender really
   signed; anything else reaching the core, or anything reaching it twice, is a breach.
@@ -78,10 +80,15 @@ Pieces marked **ROADMAP** are designed but not on the page yet; each moves up wh
   measurement refuses to run if that file changed, and the commit is on the page.
 - **Receipts** — each test writes a record of its inputs, outputs and verdict; its id is the SHA-256 of that record.
   Your run's id must match the expected id shown beside each test.
-- **CI** — GitHub runs the same four tests headlessly on every change and publishes the receipts; a third party
+- **CI** — GitHub runs the same tests headlessly on every change and publishes the receipts; a third party
   reproduces the result, not just the author.
 - **Mutation testing (the witness)** — a bug is planted in every kernel and the build fails unless a test catches it.
   Two reviewed-equivalent mutants are documented, with their differential check, in `src/witness.baseline.json`.
+  The gate's own figures (tests, mutants planted, caught, baselined, survived — per kernel) are a receipt too,
+  `receipts/gate.json`, re-derived from the witness's output on every push by `tools/gate-receipt.mjs --check`;
+  the page's blueprint reads it.
+- **Vendored code pinned** — every file under `vendor/` is checked against the SHA-256 its sources manifest pins
+  (`test/vendor.test.mjs`), and nothing may sit there unpinned.
 - **Failures kept** — losing compression rows and any failed claim stay visible.
 
 ---
@@ -102,5 +109,8 @@ Pieces marked **ROADMAP** are designed but not on the page yet; each moves up wh
 ---
 
 ## Credits
-LIGHT language and the Konomi architecture: Thomas Frumkin. GEP and behavioural-entropy ideas: Gary W. Floyd
-(CC BY 4.0), where used. Built by Simon Gant, AI-Native Solutions. Code MIT.
+Powered by the Konomi architecture, created by Thomas Frumkin; the LIGHT language: Thomas Frumkin. The Guided Entropy
+Principle and Behavioral Entropy Signatures, where used: Gary W. Floyd, Lumiea Systems Research Division — ThunderStruck
+Service LLC — "The Laws of Entropy-Time: Rewriting Thermodynamics with the Guided Entropy Principle," February 2026, and
+"GEP-Based Security: Behavioral Entropy Signatures for Cybersecurity and DevOps," 2025 (CC BY 4.0). Built by Simon Gant,
+AI Native Solutions. Code MIT (`LICENSE`).

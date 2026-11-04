@@ -1,0 +1,116 @@
+{
+ "kind": "liveware.receipts",
+ "test": "gate",
+ "record": {
+  "test": "gate",
+  "witness": "v0.6",
+  "kernels": [
+   {
+    "kernel": "receipt",
+    "src": "src/receipt.mjs",
+    "test": "test/receipt.test.mjs",
+    "tests": 4,
+    "mutants": 17,
+    "killed": 17,
+    "baselined": [],
+    "survived": 0,
+    "capped": false,
+    "clean": true
+   },
+   {
+    "kernel": "rng",
+    "src": "src/rng.mjs",
+    "test": "test/rng.test.mjs",
+    "tests": 3,
+    "mutants": 3,
+    "killed": 3,
+    "baselined": [],
+    "survived": 0,
+    "capped": false,
+    "clean": true
+   },
+   {
+    "kernel": "compress",
+    "src": "src/compress.mjs",
+    "test": "test/compress.test.mjs",
+    "tests": 5,
+    "mutants": 13,
+    "killed": 13,
+    "baselined": [],
+    "survived": 0,
+    "capped": false,
+    "clean": true
+   },
+   {
+    "kernel": "seed",
+    "src": "src/seed.mjs",
+    "test": "test/seed.test.mjs",
+    "tests": 19,
+    "mutants": 66,
+    "killed": 64,
+    "baselined": [
+     {
+      "line": 31,
+      "mutation": "> → >="
+     },
+     {
+      "line": 31,
+      "mutation": "< → <="
+     }
+    ],
+    "survived": 0,
+    "capped": false,
+    "clean": true
+   },
+   {
+    "kernel": "door",
+    "src": "src/door.mjs",
+    "test": "test/door.test.mjs",
+    "tests": 12,
+    "mutants": 32,
+    "killed": 32,
+    "baselined": [],
+    "survived": 0,
+    "capped": false,
+    "clean": true
+   },
+   {
+    "kernel": "mesh",
+    "src": "src/mesh.mjs",
+    "test": "test/mesh.test.mjs",
+    "tests": 15,
+    "mutants": 38,
+    "killed": 38,
+    "baselined": [],
+    "survived": 0,
+    "capped": false,
+    "clean": true
+   },
+   {
+    "kernel": "t11",
+    "src": "src/t11.mjs",
+    "test": "test/t11.test.mjs",
+    "tests": 10,
+    "mutants": 21,
+    "killed": 21,
+    "baselined": [],
+    "survived": 0,
+    "capped": false,
+    "clean": true
+   },
+   {
+    "kernel": "mintcase",
+    "src": "src/mintcase.mjs",
+    "test": "test/mintcase.test.mjs",
+    "tests": 9,
+    "mutants": 21,
+    "killed": 21,
+    "baselined": [],
+    "survived": 0,
+    "capped": false,
+    "clean": true
+   }
+  ]
+ },
+ "id": "c43dfe23c1fa11985182a09d287fb2b6abbfd2a7c370d838f5afa240e0867858"
+}
