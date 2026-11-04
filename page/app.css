@@ -331,3 +331,5 @@ dl.risks dd { margin: 0; color: var(--soft); font-size: 14px; }
   #bp-vendor td.wrap { word-break: normal; font-size: 13px; }
   #bp-vendor td:nth-child(3), #bp-vendor td:nth-child(4) { display: inline-block; margin-right: 12px; font-size: 12px; }
 }
+/* the sample picker never pushes the page sideways on a narrow phone: it shrinks to its row and truncates long names */
+#t5pick { max-width: 100%; min-width: 0; text-overflow: ellipsis; }
